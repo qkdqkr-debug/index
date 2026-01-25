@@ -34,13 +34,17 @@
 </head>
 <body>
     <header>
-        <h1>MBTI & IQ 테스트</h1>
+        <h1 data-key="site_title">MBTI & IQ 테스트</h1>
+        <div class="language-selector">
+            <button id="lang-ko" class="lang-button active" data-lang="ko">KO</button>
+            <button id="lang-en" class="lang-button" data-lang="en">EN</button>
+        </div>
         <nav>
             <ul>
-                <li><a href="#" id="nav-home">홈</a></li>
-                <li><a href="#" id="nav-mbti">MBTI 테스트</a></li>
-                <li><a href="#" id="nav-iq">IQ 테스트</a></li>
-                <li><a href="#" id="nav-about">사이트 소개</a></li>
+                <li><a href="#" id="nav-home" data-key="nav_home">홈</a></li>
+                <li><a href="#" id="nav-mbti" data-key="nav_mbti">MBTI 테스트</a></li>
+                <li><a href="#" id="nav-iq" data-key="nav_iq">IQ 테스트</a></li>
+                <li><a href="#" id="nav-about" data-key="nav_about">사이트 소개</a></li>
             </ul>
         </nav>
     </header>
@@ -60,55 +64,54 @@
         </div>
 
         <section id="home-section" class="active-section">
-            <h2>나를 알아가는 시간: MBTI & IQ 테스트</h2>
-            <p><strong>자신을 이해하고 잠재력을 발견하세요!</strong></p>
-            <p>이 웹사이트는 여러분이 자신의 성격 유형과 지능 지수를 무료로 탐색할 수 있도록 설계되었습니다. MBTI (Myers-Briggs Type Indicator)는 개인의 선호도를 바탕으로 16가지 성격 유형을 분류하여 자기 이해를 돕고, IQ (Intelligence Quotient) 테스트는 인지 능력과 문제 해결 능력을 측정하여 지적 강점을 파악하는 데 유용합니다.</p>
-            <p>우리 테스트는 쉽고 재미있게 구성되어 있으며, 여러분이 자신을 더 깊이 이해하고 개인적인 성장을 위한 통찰력을 얻는 데 도움이 될 것입니다. 한국인과 외국인 모두에게 유익한 콘텐츠를 제공하며, 여러분의 궁금증을 해소하고 새로운 자신을 발견하는 여정을 응원합니다.</p>
+            <h2 data-key="home_title">나를 알아가는 시간: MBTI & IQ 테스트</h2>
+            <p><strong data-key="home_subtitle">자신을 이해하고 잠재력을 발견하세요!</strong></p>
+            <p data-key="home_paragraph1">이 웹사이트는 여러분이 자신의 성격 유형과 지능 지수를 무료로 탐색할 수 있도록 설계되었습니다. MBTI (Myers-Briggs Type Indicator)는 개인의 선호도를 바탕으로 16가지 성격 유형을 분류하여 자기 이해를 돕고, IQ (Intelligence Quotient) 테스트는 인지 능력과 문제 해결 능력을 측정하여 지적 강점을 파악하는 데 유용합니다.</p>
+            <p data-key="home_paragraph2">우리 테스트는 쉽고 재미있게 구성되어 있으며, 여러분이 자신을 더 깊이 이해하고 개인적인 성장을 위한 통찰력을 얻는 데 도움이 될 것입니다. 한국인과 외국인 모두에게 유익한 콘텐츠를 제공하며, 여러분의 궁금증을 해소하고 새로운 자신을 발견하는 여정을 응원합니다.</p>
             <div class="test-options">
-                <button id="start-mbti">MBTI 테스트 시작</button>
-                <button id="start-iq">IQ 테스트 시작</button>
+                <button id="start-mbti" data-key="start_mbti">MBTI 테스트 시작</button>
+                <button id="start-iq" data-key="start_iq">IQ 테스트 시작</button>
             </div>
         </section>
 
         <section id="mbti-section" style="display:none;">
-            <h2>MBTI 성격 유형 테스트</h2>
-            <p>당신은 어떤 유형의 사람일까요? 흥미로운 질문들을 통해 당신의 성격 선호도를 알아보세요.</p>
+            <h2 data-key="mbti_section_title">MBTI 성격 유형 테스트</h2>
+            <p data-key="mbti_section_description">당신은 어떤 유형의 사람일까요? 흥미로운 질문들을 통해 당신의 성격 선호도를 알아보세요.</p>
             <div id="mbti-test-container"><mbti-test></mbti-test></div>
         </section>
 
         <section id="iq-section" style="display:none;">
-            <h2>IQ 테스트</h2>
-            <p>당신의 지능 지수를 확인해보세요! 논리력, 추론력, 문제 해결 능력을 평가하는 다양한 문제들이 준비되어 있습니다.</p>
+            <h2 data-key="iq_section_title">IQ 테스트</h2>
+            <p data-key="iq_section_description">당신의 지능 지수를 확인해보세요! 논리력, 추론력, 문제 해결 능력을 평가하는 다양한 문제들이 준비되어 있습니다.</p>
             <div id="iq-test-container"><iq-test></iq-test></div>
         </section>
 
         <section id="about-section" style="display:none;">
-            <h2>우리에 대하여</h2>
-            <p>저희 MBTI & IQ 테스트 웹사이트는 사용자들이 자신을 더 잘 이해하고 개인적인 성장을 도모할 수 있도록 돕기 위해 만들어졌습니다. 우리는 MBTI 성격 유형과 IQ 지수를 쉽고 접근 가능한 방식으로 제공함으로써, 자기 탐색의 여정에 동반자가 되고자 합니다.</p>
-            <p>모든 테스트는 무료로 제공되며, 재미있고 교육적인 경험을 선사하기 위해 노력하고 있습니다. 여러분의 피드백은 언제나 환영하며, 더 나은 서비스를 위해 지속적으로 발전해 나가겠습니다.</p>
-            <p>문의사항이 있으시면 언제든지 아래 폼을 통해 연락 주십시오.</p>
+            <h2 data-key="about_section_title">우리에 대하여</h2>
+            <p data-key="about_paragraph1">저희 MBTI & IQ 테스트 웹사이트는 사용자들이 자신을 더 잘 이해하고 개인적인 성장을 도모할 수 있도록 돕기 위해 만들어졌습니다. 우리는 MBTI 성격 유형과 IQ 지수를 쉽고 접근 가능한 방식으로 제공함으로써, 자기 탐색의 여정에 동반자가 되고자 합니다.</p>
+            <p data-key="about_paragraph2">모든 테스트는 무료로 제공되며, 재미있고 교육적인 경험을 선사하기 위해 노력하고 있습니다. 여러분의 피드백은 언제나 환영하며, 더 나은 서비스를 위해 지속적으로 발전해 나가겠습니다.</p>
+            <p data-key="about_contact_prompt">문의사항이 있으시면 언제든지 아래 폼을 통해 연락 주십시오.</p>
             
             <form action="https://formspree.io/f/xeeawbok" method="POST" class="contact-form">
-                <label for="name">이름:</label>
+                <label for="name" data-key="form_name_label">이름:</label>
                 <input type="text" id="name" name="name" required>
                 
-                <label for="email">이메일:</label>
+                <label for="email" data-key="form_email_label">이메일:</label>
                 <input type="email" id="email" name="_replyto" required>
                 
-                <label for="message">메시지:</label>
+                <label for="message" data-key="form_message_label">메시지:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
                 
-                <button type="submit">문의하기</button>
+                <button type="submit" data-key="form_submit_button">문의하기</button>
             </form>
         </section>
     </main>
 
     <footer>
         <p>
-            &copy; 2026 MBTI & IQ Test. All rights reserved. |
-            <a href="#" id="footer-privacy">개인정보처리방침</a> |
-            <a href="#" id="footer-terms">이용약관</a>
+            <span data-key="footer_copyright">&copy; 2026 MBTI & IQ Test. All rights reserved.</span> |
+            <a href="#" id="footer-privacy" data-key="footer_privacy">개인정보처리방침</a> |
+            <a href="#" id="footer-terms" data-key="footer_terms">이용약관</a>
         </p>
     </footer>
-</body>
 </html>
