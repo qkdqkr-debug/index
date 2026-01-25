@@ -29,6 +29,7 @@ const translations = {
         "footer_copyright": "&copy; 2026 MBTI & IQ Test. All rights reserved.",
         "footer_privacy": "개인정보처리방침",
         "footer_terms": "이용약관",
+        "alert_not_implemented": " 페이지로 이동합니다. (아직 구현되지 않았습니다)",
         // MBTI Descriptions
         "ISTJ_desc": "청렴결백한 논리주의자 (The Logistician): 실용적이고 사실을 중시하는 사람들로, 신뢰할 수 있는 성격입니다. 조용하고 진지하며, 철저하고 신뢰할 수 있음으로써 성공을 이룹니다. 전통과 충성심을 중요하게 생각합니다.",
         "ISFJ_desc": "용감한 수호자 (The Defender): 매우 헌신적이고 따뜻한 보호자로, 언제나 사랑하는 사람들을 지킬 준비가 되어 있습니다. 조용하고 친근하며 책임감이 강하고 양심적이며, 의무를 다하는 데 헌신적이고 꾸준합니다.",
@@ -96,6 +97,7 @@ const translations = {
         "footer_copyright": "&copy; 2026 MBTI & IQ Test. All rights reserved.",
         "footer_privacy": "Privacy Policy",
         "footer_terms": "Terms of Service",
+        "alert_not_implemented": " page (not implemented yet)",
         // MBTI Descriptions
         "ISTJ_desc": "ISTJ (The Logistician): Practical and fact-minded individuals whose reliability cannot be doubted. They are quiet, serious, and earn success by being thorough and dependable, valuing tradition and loyalty.",
         "ISFJ_desc": "ISFJ (The Defender): Very dedicated and warm protectors, always ready to defend their loved ones. They are quiet, friendly, responsible, and conscientious, committed and steady in meeting their obligations.",
@@ -135,6 +137,140 @@ const translations = {
         "iq_result_title": "Your Estimated IQ is...",
         "iq_result_disclaimer": "This is a simple test result; please consult an expert for accurate IQ measurement.",
         "retake_button": "Retake Test"
+    },
+    "ja": {
+        "site_title": "MBTI & IQ テスト",
+        "nav_home": "ホーム",
+        "nav_mbti": "MBTI テスト",
+        "nav_iq": "IQ テスト",
+        "nav_about": "サイト紹介",
+        "home_title": "自分を知る時間: MBTI & IQ テスト",
+        "home_subtitle": "自分を理解し、可能性を発見しましょう！",
+        "home_paragraph1": "このウェブサイトは、あなたが自分の性格タイプと知能指数を無料で探求できるように設計されています。MBTI (Myers-Briggs Type Indicator) は、個人の好みに基づいて16の性格タイプを分類し、自己理解を助けます。IQ (Intelligence Quotient) テストは、認知能力と問題解決能力を測定し、知的な強みを特定するのに役立ちます。",
+        "home_paragraph2": "私たちのテストは簡単で楽しく設計されており、あなたが自分をより深く理解し、個人的な成長のための洞察を得るのに役立ちます。韓国人および外国人の方々にも役立つコンテンツを提供し、あなたの好奇心を探求し、新しい自分を発見する旅を応援します。",
+        "start_mbti": "MBTI テスト開始",
+        "start_iq": "IQ テスト開始",
+        "mbti_section_title": "MBTI 性格タイプテスト",
+        "mbti_section_description": "あなたはどんなタイプの人ですか？興味深い質問を通してあなたの性格の好みを調べてください。",
+        "iq_section_title": "IQ テスト",
+        "iq_section_description": "あなたの知能指数を確認してください！論理的思考力、推論力、問題解決能力を評価するためのさまざまな問題が用意されています。",
+        "about_section_title": "私たちについて",
+        "about_paragraph1": "私たちのMBTI＆IQテストウェブサイトは、ユーザーが自分自身をよりよく理解し、個人の成長を促進するのを助けるために作成されました。私たちは、MBTI性格タイプとIQスコアを簡単でアクセスしやすい方法で提供することにより、自己発見の旅の仲間となることを目指しています。",
+        "about_paragraph2": "すべてのテストは無料で提供されており、楽しく教育的な体験を提供するために努力しています。皆様からのフィードバックはいつでも歓迎しており、より良いサービスのために継続的に発展していきます。",
+        "about_contact_prompt": "ご質問がございましたら、以下のフォームよりお問い合わせください。",
+        "form_name_label": "名前：",
+        "form_email_label": "メール：",
+        "form_message_label": "メッセージ：",
+        "form_submit_button": "お問い合わせ",
+        "footer_copyright": "&copy; 2026 MBTI & IQテスト. 無断転載を禁じます。",
+        "footer_privacy": "プライバシーポリシー",
+        "footer_terms": "利用規約",
+        "alert_not_implemented": "ページに移動します。(まだ実装されていません)",
+        // MBTI Descriptions (Google Translated)
+        "ISTJ_desc": "ISTJ（管理者）：実用的で事実に基づいた個人で、信頼性は疑う余地がありません。彼らは静かで真面目で、徹底的で信頼できることで成功を収め、伝統と忠誠心を重んじます。",
+        "ISFJ_desc": "ISFJ（擁護者）：非常に献身的で温かい保護者で、常に愛する人を守る準備ができています。彼らは静かで友好的で責任感が強く誠実で、義務を果たすことに献身的で着実です。",
+        "INFJ_desc": "INFJ（提唱者）：静かで神秘的ですが、非常に感動的で疲れを知らない理想主義者です。彼らはアイデア、人間関係、物質的所持品に意味とつながりを求め、人々を動機づけるものを理解しようとし、他者について洞察力があります。",
+        "INTJ_desc": "INTJ（建築家）：想像力豊かで戦略的な思想家で、あらゆることの計画を持っています。彼らは独創的な思考を持ち、アイデアを実行し目標を達成するという強い意欲を持っています。外部の出来事のパターンを素早く見抜き、長期的な説明的視点を開発します。",
+        "ISTP_desc": "ISTP（巨匠）：大胆で実践的な実験者で、あらゆる種類の道具の達人です。彼らは寛容で柔軟で、問題が発生するまでは静かな観察者ですが、問題が現れると迅速に実行可能な解決策を見つけ出します。",
+        "ISFP_desc": "ISFP（冒険家）：柔軟で魅力的な芸術家で、常に何か新しいことを探求し体験する準備ができています。彼らは静かで友好的で敏感で親切で、現在の瞬間と周囲で起こっていることを楽しんでいます。",
+        "INFP_desc": "INFP（仲介者）：詩的で親切で利他的な人々で、常に良い目的を助けることに熱心です。彼らは理想主義的で、自分の価値観と大切な人々に忠実で、自分の価値観に合致する生活を送りたいと願っています。",
+        "INTP_desc": "INTP（論理学者）：知識への飽くなき渇望を持つ革新的な発明家です。彼らは興味のあるすべてのことについて論理的な説明を開発しようとし、理論的で抽象的で、社会的な交流よりもアイデアに関心があります。",
+        "ESTP_desc": "ESTP（起業家）：賢く、エネルギッシュで、非常に洞察力のある人々で、まさに危険を冒すことを楽しんでいます。彼らは柔軟で寛容で、即座の結果に焦点を当てた実用的なアプローチを取ります。",
+        "ESFP_desc": "ESFP（エンターテイナー）：自発的でエネルギッシュで熱心な人々で、彼らの周りでは決して退屈しません。彼らは社交的で友好的で受け入れやすく、人生、人々、物質的な快適さを熱烈に愛しています。",
+        "ENFP_desc": "ENFP（広報運動家）：熱心で創造的で社交的な自由な精神で、常に笑顔になる理由を見つけます。彼らは暖かく熱心で想像力豊かで、人生を可能性に満ちたものと見なし、出来事と情報のつながりを非常に素早く見出します。",
+        "ENTP_desc": "ENTP（討論者）：賢く好奇心旺盛な思想家で、知的な挑戦を拒むことができません。彼らは素早く、巧妙で、刺激的で、率直で、新しく困難な問題解決に長けています。",
+        "ESTJ_desc": "ESTJ（幹部）：物事や人を管理するのに優れた管理者です。彼らは実践的で現実的で実際的で、決断力があり、迅速に決定を実行します。",
+        "ESFJ_desc": "ESFJ（領事）：非常に思いやりがあり、社交的で人気のある人々で、常に助けることを熱望しています。彼らは温厚で良心的で協力的で、環境の調和を望み、それを確立するために決意を持って働きます。",
+        "ENFJ_desc": "ENFJ（主人公）：カリスマ的で感動的なリーダーで、聴衆を魅了することができます。彼らは温かく共感的で、応答性が高く責任感があり、他者の感情、ニーズ、動機に非常に敏感です。",
+        "ENTJ_desc": "ENTJ（司令官）：大胆で想像力豊かで意志の強いリーダーで、常に道を見つけるか、道を作ります。彼らは率直で断固としており、容易にリーダーシップを発揮し、非論理的で非効率的な手順を迅速に特定して、包括的な解決策を開発し実行します。",
+        // MBTI Questions (Google Translated)
+        "mbti_q1": "新しい人との交流を楽しんでいますか？", "mbti_q1_opt1": "はい、楽しんでいます。", "mbti_q1_opt2": "いいえ、静かに過ごすことを好みます。",
+        "mbti_q2": "パーティーや社交的な集まりの後、エネルギーが消耗したと感じますか？", "mbti_q2_opt1": "はい、そうです。", "mbti_q2_opt2": "いいえ、むしろエネルギーを得ます。",
+        "mbti_q3": "現実的で具体的な事実に焦点を当てますか？", "mbti_q3_opt1": "はい、現実的なことを重視します。", "mbti_q3_opt2": "いいえ、未来の可能性や抽象的なアイデアにもっと興味があります。",
+        "mbti_q4": "新しいアイデアを探求する方が好きですか、それとも実証済みの方法にこだわる方が好きですか？", "mbti_q4_opt1": "新しいアイデアを探求します。", "mbti_q4_opt2": "実証済みの方法を好みます。",
+        "mbti_q5": "意思決定をする際、論理と客観的な分析を優先しますか？", "mbti_q5_opt1": "はい、論理的な判断を好みます。", "mbti_q5_opt2": "いいえ、他人の感情や状況を考慮します。",
+        "mbti_q6": "他人の気持ちに共感し、理解するのは簡単ですか？", "mbti_q6_opt1": "はい、簡単に共感します。", "mbti_q6_opt2": "いいえ、客観的に状況を見ます。",
+        "mbti_q7": "計画を立てて体系的にタスクを処理するのが好きですか？", "mbti_q7_opt1": "はい、計画を立てるのが好きです。", "mbti_q7_opt2": "いいえ、柔軟で即興的なものを好みます。",
+        "mbti_q8": "締め切りが近づくと集中力が高まる方ですか？", "mbti_q8_opt1": "はい、そうです。", "mbti_q8_opt2": "いいえ、事前に計画してタスクを完了します。",
+        "mbti_result_title": "あなたのMBTIタイプは...",
+        "mbti_result_disclaimer": "詳細については、専門のMBTIウェブサイトをご覧ください！",
+        // IQ Questions (Google Translated)
+        "iq_q1": "次の数列の次の数字は何ですか？ 1, 3, 6, 10, 15, ?", "iq_q1_opt1": "20", "iq_q1_opt2": "21", "iq_q1_opt3": "22", "iq_q1_opt4": "23",
+        "iq_q2": "鋼鉄が鋳鉄より強い場合、鋳鉄は紙と比較してどうですか？", "iq_q2_opt1": "強い", "iq_q2_opt2": "弱い", "iq_q2_opt3": "同じ", "iq_q2_opt4": "関係ない",
+        "iq_q3": "残りの3つと異なるものはどれですか？（オブジェクトに基づく）", "iq_q3_opt1": "リンゴ", "iq_q3_opt2": "バナナ", "iq_q3_opt3": "ジャガイモ", "iq_q3_opt4": "オレンジ",
+        "iq_q4": "28日ある月もあれば、30日ある月もあります。すべての月は何日ありますか？", "iq_q4_opt1": "28日", "iq_q4_opt2": "29日", "iq_q4_opt3": "30日", "iq_q4_opt4": "31日",
+        "iq_q5": "意味に基づいて、他の単語とは無関係な単語はどれですか？", "iq_q5_opt1": "幸福", "iq_q5_opt2": "喜び", "iq_q5_opt3": "悲しみ", "iq_q5_opt4": "楽しみ",
+        "iq_q6": "次の空白に入る数字は何ですか？ 2, 4, 8, 16, ?", "iq_q6_opt1": "24", "iq_q6_opt2": "32", "iq_q6_opt3": "48", "iq_q6_opt4": "64",
+        "iq_result_title": "推定IQは...",
+        "iq_result_disclaimer": "これは簡単なテスト結果です。正確なIQ測定については専門家にご相談ください。",
+        "retake_button": "再テスト"
+    },
+    "zh": {
+        "site_title": "MBTI & IQ 测试",
+        "nav_home": "主页",
+        "nav_mbti": "MBTI 测试",
+        "nav_iq": "IQ 测试",
+        "nav_about": "关于我们",
+        "home_title": "了解自己的时间：MBTI & IQ 测试",
+        "home_subtitle": "了解自己，发现潜力！",
+        "home_paragraph1": "本网站旨在让您免费探索自己的性格类型和智商。MBTI（Myers-Briggs Type Indicator）根据个人偏好将16种性格类型进行分类，帮助您更好地了解自己，而IQ（智商）测试则通过测量认知能力和解决问题的能力来识别智力优势。",
+        "home_paragraph2": "我们的测试设计简单有趣，将帮助您更深入地了解自己，并为个人成长提供见解。我们为韩国人和外国人提供有价值的内容，支持您探索好奇心并发现新自我的旅程。",
+        "start_mbti": "开始 MBTI 测试",
+        "start_iq": "开始 IQ 测试",
+        "mbti_section_title": "MBTI 性格类型测试",
+        "mbti_section_description": "你是什么样的人？通过有趣的问题找出你的性格偏好。",
+        "iq_section_title": "IQ 测试",
+        "iq_section_description": "检查你的智商！准备了各种旨在评估你的逻辑、推理和解决问题能力的问题。",
+        "about_section_title": "关于我们",
+        "about_paragraph1": "我们的MBTI＆IQ测试网站旨在帮助用户更好地了解自己并促进个人成长。我们旨在通过提供简单易懂的MBTI性格类型和IQ分数，成为您自我发现之旅的伙伴。",
+        "about_paragraph2": "所有测试均免费提供，我们努力提供有趣和教育性的体验。我们随时欢迎您的反馈，并将不断发展以提供更好的服务。",
+        "about_contact_prompt": "如果您有任何问题，请通过以下表格联系我们。",
+        "form_name_label": "姓名：",
+        "form_email_label": "电子邮件：",
+        "form_message_label": "消息：",
+        "form_submit_button": "发送查询",
+        "footer_copyright": "&copy; 2026 MBTI & IQ测试. 保留所有权利。",
+        "footer_privacy": "隐私政策",
+        "footer_terms": "服务条款",
+        "alert_not_implemented": "页面（尚未实现）",
+        // MBTI Descriptions (Google Translated - Simplified Chinese)
+        "ISTJ_desc": "ISTJ（物流师）：实际、注重事实的个体，其可靠性毋庸置疑。他们安静、认真，通过细致和可靠获得成功，重视传统和忠诚。",
+        "ISFJ_desc": "ISFJ（守护者）：非常敬业、温暖的保护者，随时准备好保护他们所爱的人。他们安静、友善、负责任、认真，忠实而坚定地履行自己的义务。",
+        "INFJ_desc": "INFJ（倡导者）：安静而神秘，却又极具启发性和不懈的理想主义者。他们寻求思想、人际关系和物质财产中的意义和联系，希望了解人们的动机，并对他人有深刻的洞察力。",
+        "INTJ_desc": "INTJ（建筑师）：富有想象力、战略性的思想家，对一切都有计划。他们拥有独创的思维，并具有实施其想法和实现其目标的强大动力。他们能迅速发现外部事件中的模式，并发展出长期的解释性视角。",
+        "ISTP_desc": "ISTP（鉴赏家）：大胆而实用的实验者，各种工具的掌握者。他们宽容而灵活，在问题出现之前是安静的观察者，然后迅速采取行动寻找可行的解决方案。",
+        "ISFP_desc": "ISFP（冒险家）：灵活而迷人的艺术家，随时准备探索和体验新事物。他们安静、友善、敏感、善良，享受当下和周围发生的一切。",
+        "INFP_desc": "INFP（调停者）：诗意、善良、利他主义者，总是渴望帮助崇高的事业。他们是理想主义者，忠于自己的价值观和对自己重要的人，希望过上与自己的价值观一致的生活。",
+        "INTP_desc": "INTP（逻辑学家）：具有永不满足的求知欲的创新发明家。他们试图为自己感兴趣的一切事物发展出逻辑解释，他们是理论化和抽象的，对思想的兴趣超过了社交互动。",
+        "ESTP_desc": "ESTP（创业家）：聪明、精力充沛、洞察力极强的人，真正享受生活在边缘。他们灵活、宽容，采取务实的方法，专注于即时结果。",
+        "ESFP_desc": "ESFP（表演者）：自发、充满活力、热情洋溢的人——与他们在一起永远不会无聊。他们外向、友善、乐于接受，是生活、人和物质享受的热爱者。",
+        "ENFP_desc": "ENFP（竞选者）：热情、富有创造力、善于社交的自由精神，总能找到微笑的理由。他们热情洋溢、富有想象力，将生活视为充满可能，并能迅速将事件和信息联系起来。",
+        "ENTP_desc": "ENTP（辩论家）：聪明、好奇的思想家，无法抗拒智力挑战。他们反应迅速、机智、富有启发性、直言不讳，擅长解决新颖和具有挑战性的问题。",
+        "ESTJ_desc": "ESTJ（高管）：杰出的管理者，在管理事务或人员方面无人能及。他们务实、现实、实事求是、果断，并迅速实施决策。",
+        "ESFJ_desc": "ESFJ（执政官）：异常关心、善于社交、受欢迎的人，总是渴望帮助。他们热情、认真、合作，希望环境和谐，并决心为之努力。",
+        "ENFJ_desc": "ENFJ（主人公）：魅力非凡、鼓舞人心的领导者，能够迷住听众。他们热情、富有同情心、反应迅速、负责任，对他人情感、需求和动机非常敏感。",
+        "ENTJ_desc": "ENTJ（指挥官）：大胆、富有想象力、意志坚强的领导者，总能找到出路或创造出路。他们坦率、果断，乐于承担领导责任，能迅速识别不合逻辑和低效的程序，并开发和实施全面的解决方案。",
+        // MBTI Questions (Google Translated - Simplified Chinese)
+        "mbti_q1": "你喜欢与新朋友交往吗？", "mbti_q1_opt1": "是的，我喜欢。", "mbti_q1_opt2": "不，我更喜欢安静地度过。",
+        "mbti_q2": "派对或社交聚会后，你是否感到精力耗尽？", "mbti_q2_opt1": "是的，我感到耗尽。", "mbti_q2_opt2": "不，我反而从中获得能量。",
+        "mbti_q3": "你关注现实和具体的事实吗？", "mbti_q3_opt1": "是的，我重视现实。", "mbti_q3_opt2": "不，我对未来的可能性和抽象概念更感兴趣。",
+        "mbti_q4": "你喜欢探索新想法还是坚持久经考验的方法？", "mbti_q4_opt1": "我探索新想法。", "mbti_q4_opt2": "我更喜欢久经考验的方法。",
+        "mbti_q5": "在做决定时，你是否优先考虑逻辑和客观分析？", "mbti_q5_opt1": "是的，我倾向于逻辑判断。", "mbti_q5_opt2": "不，我考虑他人的感受和情况。",
+        "mbti_q6": "你是否容易与他人的感受产生共鸣和理解？", "mbti_q6_opt1": "是的，我很容易产生共鸣。", "mbti_q6_opt2": "不，我客观地看待情况。",
+        "mbti_q7": "你喜欢有计划、有条理地处理任务吗？", "mbti_q7_opt1": "是的，我喜欢计划。", "mbti_q7_opt2": "不，我更喜欢灵活和即兴。",
+        "mbti_q8": "当截止日期临近时，你是否更容易集中注意力？", "mbti_q8_opt1": "是的，我更容易集中。", "mbti_q8_opt2": "不，我提前计划并完成任务。",
+        "mbti_result_title": "你的MBTI类型是...",
+        "mbti_result_disclaimer": "请在专业的MBTI网站上查找更详细的信息！",
+        // IQ Questions (Google Translated - Simplified Chinese)
+        "iq_q1": "数列中的下一个数字是什么？ 1, 3, 6, 10, 15, ?", "iq_q1_opt1": "20", "iq_q1_opt2": "21", "iq_q1_opt3": "22", "iq_q1_opt4": "23",
+        "iq_q2": "如果钢比铸铁坚固，那么铸铁与纸相比如何？", "iq_q2_opt1": "更坚固", "iq_q2_opt2": "更弱", "iq_q2_opt3": "相同", "iq_q2_opt4": "无关",
+        "iq_q3": "以下哪个与其他三个不同？（基于对象）", "iq_q3_opt1": "苹果", "iq_q3_opt2": "香蕉", "iq_q3_opt3": "土豆", "iq_q3_opt4": "橙子",
+        "iq_q4": "有些月份有28天，有些有30天。所有月份都有多少天？", "iq_q4_opt1": "28天", "iq_q4_opt2": "29天", "iq_q4_opt3": "30天", "iq_q4_opt4": "31天",
+        "iq_q5": "根据含义，以下哪个词与其他的无关？", "iq_q5_opt1": "幸福", "iq_q5_opt2": "喜悦", "iq_q5_opt3": "悲伤", "iq_q5_opt4": "乐趣",
+        "iq_q6": "空白处的下一个数字是什么？ 2, 4, 8, 16, ?", "iq_q6_opt1": "24", "iq_q6_opt2": "32", "iq_q6_opt3": "48", "iq_q6_opt4": "64",
+        "iq_result_title": "你的估计智商是...",
+        "iq_result_disclaimer": "这是一个简单的测试结果；请咨询专家以获取准确的智商测量。",
+        "retake_button": "重新测试"
     }
 };
 
@@ -255,12 +391,12 @@ startIqButton.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     footerPrivacyLink.addEventListener('click', (e) => {
         e.preventDefault();
-        alert(translations[currentLang].footer_privacy + ' 페이지로 이동합니다. (아직 구현되지 않았습니다)');
+        alert(translations[currentLang].footer_privacy + translations[currentLang].alert_not_implemented);
         console.log('Navigate to Privacy Policy');
     });
     footerTermsLink.addEventListener('click', (e) => {
         e.preventDefault();
-        alert(translations[currentLang].footer_terms + ' 페이지로 이동합니다. (아직 구현되지 않았습니다)');
+        alert(translations[currentLang].footer_terms + translations[currentLang].alert_not_implemented);
         console.log('Navigate to Terms of Service');
     });
 });
