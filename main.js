@@ -30,6 +30,7 @@ function showSection(sectionName) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// Event listeners for navigation links
 navLinks.home.addEventListener('click', (e) => {
     e.preventDefault();
     showSection('home');
@@ -37,56 +38,15 @@ navLinks.home.addEventListener('click', (e) => {
 navLinks.mbti.addEventListener('click', (e) => {
     e.preventDefault();
     showSection('mbti');
-    if (mbtiTestComponent) {
-        mbtiTestComponent.resetTest();
-    } else {
-        console.error("MBTI Test Component not found.");
-    }
+    mbtiTestComponent?.resetTest();
 });
 navLinks.iq.addEventListener('click', (e) => {
     e.preventDefault();
     showSection('iq');
-    if (iqTestComponent) {
-        iqTestComponent.resetTest();
-    } else {
-        console.error("IQ Test Component not found.");
-    }
+    iqTestComponent?.resetTest();
 });
 
-startMbtiButton.addEventListener('click', () => {
-    showSection('mbti');
-    if (mbtiTestComponent) {
-        mbtiTestComponent.resetTest();
-    } else {
-        console.error("MBTI Test Component not found.");
-    }
-});
-startIqButton.addEventListener('click', () => {
-    showSection('iq');
-    if (iqTestComponent) {
-        iqTestComponent.resetTest();
-    } else {
-        console.error("IQ Test Component not found.");
-    }
-});
-
-// Initially show the home section and initialize web component references
-document.addEventListener('DOMContentLoaded', () => {
-    showSection('home');
-    mbtiTestComponent = document.querySelector('mbti-test');
-    iqTestComponent = document.querySelector('iq-test');
-});
-navLinks.mbti.addEventListener('click', (e) => {
-    e.preventDefault();
-    showSection('mbti');
-    mbtiTestComponent?.resetTest(); // Call resetTest on the actual component
-});
-navLinks.iq.addEventListener('click', (e) => {
-    e.preventDefault();
-    showSection('iq');
-    iqTestComponent?.resetTest(); // Call resetTest on the actual component
-});
-
+// Event listeners for start buttons
 startMbtiButton.addEventListener('click', () => {
     showSection('mbti');
     mbtiTestComponent?.resetTest();
@@ -95,6 +55,34 @@ startIqButton.addEventListener('click', () => {
     showSection('iq');
     iqTestComponent?.resetTest();
 });
+
+// Initially show the home section and initialize web component references
+document.addEventListener('DOMContentLoaded', () => {
+    showSection('home');
+    mbtiTestComponent = document.querySelector('mbti-test');
+    iqTestComponent = document.querySelector('iq-test');
+});
+
+
+// --- MBTI Test Web Component ---
+class MbtiTest extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+        this.questions = [
+            { question: "새로운 사람들과 어울리는 것을 즐기시나요?", options: [{ text: "네, 즐깁니다.", value: "E" }, { text: "아니요, 조용히 보내는 것을 선호합니다.", value: "I" }] },
+            { question: "파티나 모임이 끝나면 에너지가 고갈되는 느낌인가요?", options: [{ text: "네, 그렇습니다.", value: "I" }, { text: "아니요, 오히려 에너지를 얻습니다.", value: "E" }] },
+            { question: "현실적이고 구체적인 사실에 집중하나요?", options: [{ text: "네, 현실적인 것을 중요하게 생각합니다.", value: "S" }, { text: "아니요, 미래 가능성과 추상적인 아이디어에 관심이 많습니다.", value: "N" }] },
+            { question: "새로운 아이디어를 탐색하는 것을 좋아하나요, 아니면 검증된 방법에 머무는 것을 선호하나요?", options: [{ text: "새로운 아이디어를 탐색합니다.", value: "N" }, { text: "검증된 방법을 선호합니다.", value: "S" }] },
+            { question: "결정을 내릴 때 논리와 객관적인 분석을 중요하게 생각하나요?", options: [{ text: "네, 논리적인 판단을 선호합니다.", value: "T" }, { text: "아니요, 다른 사람들의 감정과 상황을 고려합니다.", value: "F" }] },
+            { question: "다른 사람의 감정을 공감하고 이해하는 것이 쉬운가요?", options: [{ text: "네, 쉽게 공감합니다.", value: "F" }, { text: "아니요, 객관적으로 상황을 봅니다.", value: "T" }] },
+            { question: "계획을 세우고 체계적으로 일을 처리하는 것을 좋아하나요?", options: [{ text: "네, 계획적인 것을 좋아합니다.", value: "J" }, { text: "아니요, 유연하고 즉흥적인 것을 선호합니다.", value: "P" }] },
+            { question: "마감 기한이 임박했을 때 집중력이 높아지는 편인가요?", options: [{ text: "네, 그렇습니다.", value: "P" }, { text: "아니요, 미리 계획하고 완수합니다.", value: "J" }] }
+        ];
+        this.answers = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+        this.currentQuestionIndex = 0;
+        this.render();
+    }
 
     render() {
         this.shadowRoot.innerHTML = `
@@ -246,6 +234,7 @@ startIqButton.addEventListener('click', () => {
     resetTest() {
         this.answers = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
         this.currentQuestionIndex = 0;
+        this.render(); // Make sure render is called after reset
     }
 }
 customElements.define('mbti-test', MbtiTest);
@@ -288,26 +277,26 @@ class IqTest extends HTMLElement {
                     margin-bottom: 15px;
                     color: var(--primary-color);
                 }
-                .answer-input {
-                    width: calc(100% - 22px);
-                    padding: 10px;
-                    margin-bottom: 15px;
-                    border: 1px solid var(--border-color);
+                .option-button {
+                    display: block;
+                    width: 100%;
+                    padding: 12px 15px;
+                    margin-bottom: 10px;
+                    border: 1px solid var(--primary-color);
                     border-radius: 5px;
+                    background-color: transparent;
+                    color: var(--primary-color);
                     font-size: 1em;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
                 }
-                .submit-button {
+                .option-button:hover {
                     background-color: var(--primary-color);
                     color: white;
-                    border: none;
-                    padding: 10px 20px;
-                    font-size: 1em;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    transition: background-color 0.3s ease;
                 }
-                .submit-button:hover {
-                    background-color: #3A7BDC;
+                .option-button:focus {
+                    outline: none;
+                    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.5);
                 }
                 .results-container h3 {
                     color: var(--primary-color);
@@ -399,6 +388,7 @@ class IqTest extends HTMLElement {
         this.userAnswers = [];
         this.currentQuestionIndex = 0;
         this.score = 0;
+        this.render();
     }
 }
 customElements.define('iq-test', IqTest);
