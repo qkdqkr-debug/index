@@ -765,13 +765,11 @@ startIqButton.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     footerPrivacyLink.addEventListener('click', (e) => {
         e.preventDefault();
-        alert(translations[currentLang].footer_privacy + translations[currentLang].alert_not_implemented);
-        console.log('Navigate to Privacy Policy');
+        window.location.href = 'privacy.html';
     });
     footerTermsLink.addEventListener('click', (e) => {
         e.preventDefault();
-        alert(translations[currentLang].footer_terms + translations[currentLang].alert_not_implemented);
-        console.log('Navigate to Terms of Service');
+        window.location.href = 'terms.html';
     });
 });
 
