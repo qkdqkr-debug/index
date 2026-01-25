@@ -3,6 +3,8 @@
 // --- Translation Data ---
 const translations = {
     "ko": {
+        "seo_title": "2026 무료 MBTI 테스트 및 정확한 IQ 지능 검사 - 내 성격 유형 알아보기",
+        "seo_description": "가장 정확한 무료 MBTI 테스트와 IQ 테스트를 경험해보세요. 16가지 성격 유형 분석과 인지 능력 측정을 통해 나를 더 깊이 이해할 수 있습니다.",
         "site_title": "MBTI & IQ 테스트",
         "nav_home": "홈",
         "nav_mbti": "MBTI 테스트",
@@ -10,10 +12,17 @@ const translations = {
         "nav_about": "사이트 소개",
         "home_title": "나를 알아가는 시간: MBTI & IQ 테스트",
         "home_subtitle": "자신을 이해하고 잠재력을 발견하세요!",
-        "home_paragraph1": "이 웹사이트는 여러분이 자신의 성격 유형과 지능 지수를 무료로 탐색할 수 있도록 설계되었습니다. MBTI (Myers-Briggs Type Indicator)는 개인의 선호도를 바탕으로 16가지 성격 유형을 분류하여 자기 이해를 돕고, IQ (Intelligence Quotient) 테스트는 인지 능력과 문제 해결 능력을 측정하여 지적 강점을 파악하는 데 유용합니다.",
-        "home_paragraph2": "우리 테스트는 쉽고 재미있게 구성되어 있으며, 여러분이 자신을 더 깊이 이해하고 개인적인 성장을 위한 통찰력을 얻는 데 도움이 될 것입니다. 한국인과 외국인 모두에게 유익한 콘텐츠를 제공하며, 여러분의 궁금증을 해소하고 새로운 자신을 발견하는 여정을 응원합니다.",
+        "home_paragraph1_seo": "MBTI (Myers-Briggs Type Indicator)와 IQ (Intelligence Quotient) 테스트는 자기 이해와 인지 능력 향상을 위한 강력한 도구입니다. 이 웹사이트에서는 최신 심리 측정 이론을 바탕으로 설계된 무료 MBTI 성격 유형 테스트와 정확한 IQ 지능 검사를 제공합니다. 당신의 성격 유형을 파악하고, 논리력, 추론력, 문제 해결 능력을 측정하여 당신의 숨겨진 잠재력을 발견하세요. 직업 선택, 대인 관계 개선, 학습 전략 수립 등 다양한 분야에서 유용한 통찰력을 얻을 수 있습니다.",
+        "home_paragraph2_seo": "MBTI 16가지 성격 유형은 개인의 선호도를 명확히 보여주며, 각 유형별 특징과 강점, 약점을 이해하는 데 도움을 줍니다. INFJ, ENFP, INTJ, ISTP 등 다양한 유형의 심층 분석을 통해 당신과 타인의 차이점을 존중하고 효과적으로 소통하는 방법을 배울 수 있습니다. 또한, IQ 테스트는 단순한 점수를 넘어선 인지 능력의 다양한 측면을 평가하며, 당신의 지적 강점과 개선이 필요한 영역을 제시합니다. 모든 테스트는 최적의 신뢰도와 타당도를 확보하기 위해 지속적으로 검토 및 보완됩니다.",
+        "home_paragraph3_seo": "저희 사이트는 한국인뿐만 아니라 전 세계 사용자들이 자신의 심리적 특성과 지적 능력을 탐색할 수 있도록 다국어 지원을 제공합니다. 지금 바로 무료 테스트를 시작하고, 나 자신을 더 깊이 이해하는 여정을 시작해보세요!",
         "start_mbti": "MBTI 테스트 시작",
         "start_iq": "IQ 테스트 시작",
+        "mbti_info_title": "MBTI 성격 유형, 왜 중요할까요?",
+        "mbti_info_content1": "MBTI는 개인이 세상을 인식하고 결정을 내리는 방식에 대한 선호도를 보여주는 지표입니다. 외향-내향(E-I), 감각-직관(S-N), 사고-감정(T-F), 판단-인식(J-P)의 네 가지 이분법을 통해 총 16가지 성격 유형으로 분류됩니다. 각 유형은 고유한 특성과 강점, 그리고 발전이 필요한 영역을 가지고 있습니다. MBTI를 이해하는 것은 자기 이해를 돕고, 타인과의 관계에서 발생할 수 있는 오해를 줄이며, 팀워크와 리더십 능력을 향상시키는 데 기여합니다. 특히 직업 선택이나 학업 경로를 결정할 때 자신의 강점과 흥미를 고려하는 데 유용한 가이드가 될 수 있습니다.",
+        "mbti_info_content2": "예를 들어, INTJ 유형은 전략적 사고와 독립적인 경향이 강하며, ENFP 유형은 열정적이고 창의적인 아이디어를 선호합니다. 자신의 유형을 파악하면 어떤 환경에서 가장 큰 만족감과 성과를 얻을 수 있는지, 어떤 유형의 사람들과 잘 어울리는지 등에 대한 통찰을 얻을 수 있습니다. 하지만 MBTI는 성격을 규정하는 절대적인 척도가 아니라 자기 이해를 위한 도구 중 하나임을 기억하는 것이 중요합니다.",
+        "iq_info_title": "IQ 테스트, 지능 지수의 의미",
+        "iq_info_content1": "IQ (Intelligence Quotient) 테스트는 인간의 인지 능력을 측정하는 표준화된 도구입니다. 이는 주로 논리적 추론, 문제 해결 능력, 기억력, 언어 능력, 공간 지각 능력 등 다양한 지적 요소를 평가합니다. IQ 점수는 단순히 숫자에 불과한 것이 아니라, 개인이 정보를 얼마나 효율적으로 처리하고 새로운 상황에 얼마나 잘 적응하는지를 나타내는 지표로 활용될 수 있습니다.",
+        "iq_info_content2": "하지만 IQ 점수는 지능의 모든 측면을 측정하지 못하며, 후천적인 교육과 환경, 심지어 검사 당일의 컨디션이나 집중도에 따라서도 달라질 수 있습니다. 교육은 IQ 점수를 일정 기간마다 상승시키거나 최소한 IQ 테스트 수행 능력을 향상시킨다는 연구 결과도 있습니다. 따라서 IQ 검사는 절대적인 선천적 지능을 측정하는 것이 아니며, 지능 지수는 평균치인 100에서 멀어질수록 신뢰도가 떨어진다는 비판도 존재합니다.",
         "mbti_section_title": "MBTI 성격 유형 테스트",
         "mbti_section_description": "당신은 어떤 유형의 사람일까요? 흥미로운 질문들을 통해 당신의 성격 선호도를 알아보세요.",
         "iq_section_title": "IQ 테스트",
@@ -71,6 +80,8 @@ const translations = {
         "retake_button": "다시 테스트하기"
     },
     "en": {
+        "seo_title": "2026 Free MBTI Test & Accurate IQ Intelligence Test - Discover Your Personality Type",
+        "seo_description": "Experience the most accurate free MBTI test and IQ test. Understand yourself more deeply through 16 personality type analyses and cognitive ability measurements.",
         "site_title": "MBTI & IQ Test",
         "nav_home": "Home",
         "nav_mbti": "MBTI Test",
@@ -78,10 +89,17 @@ const translations = {
         "nav_about": "About Us",
         "home_title": "Time to Know Yourself: MBTI & IQ Test",
         "home_subtitle": "Understand yourself and discover your potential!",
-        "home_paragraph1": "This website is designed for you to freely explore your personality type and intelligence quotient. The MBTI (Myers-Briggs Type Indicator) helps you understand yourself by classifying 16 personality types based on individual preferences, and the IQ (Intelligence Quotient) test is useful for identifying intellectual strengths by measuring cognitive abilities and problem-solving skills.",
-        "home_paragraph2": "Our tests are designed to be easy and fun, and they will help you understand yourself more deeply and gain insights for personal growth. We provide valuable content for both Koreans and foreigners, supporting your journey to explore your curiosities and discover a new you.",
+        "home_paragraph1_seo": "MBTI (Myers-Briggs Type Indicator) and IQ (Intelligence Quotient) tests are powerful tools for self-understanding and enhancing cognitive abilities. This website offers free MBTI personality type tests and accurate IQ intelligence tests designed based on the latest psychometric theories. Discover your personality type, measure your logical reasoning, inferential skills, and problem-solving abilities to uncover your hidden potential. Gain valuable insights for career choices, improving interpersonal relationships, and developing learning strategies.",
+        "home_paragraph2_seo": "The 16 MBTI personality types clearly show individual preferences, helping you understand the characteristics, strengths, and weaknesses of each type. Through in-depth analysis of various types like INFJ, ENFP, INTJ, and ISTP, you can learn to respect differences between yourself and others and communicate effectively. Furthermore, IQ tests assess various aspects of cognitive ability beyond a mere score, suggesting your intellectual strengths and areas for improvement. All tests are continuously reviewed and supplemented to ensure optimal reliability and validity.",
+        "home_paragraph3_seo": "Our site provides multilingual support, allowing users worldwide, not just Koreans, to explore their psychological characteristics and intellectual abilities. Start your free test now and embark on a journey to understand yourself more deeply!",
         "start_mbti": "Start MBTI Test",
         "start_iq": "Start IQ Test",
+        "mbti_info_title": "Why is MBTI Personality Type Important?",
+        "mbti_info_content1": "MBTI is an indicator that shows an individual's preference in perceiving the world and making decisions. It classifies 16 personality types through four dichotomous preference indicators: Extraversion-Introversion (E-I), Sensing-Intuition (S-N), Thinking-Feeling (T-F), and Judging-Perceiving (J-P). Each type has unique characteristics, strengths, and areas for development. Understanding MBTI helps with self-understanding, reduces misunderstandings in relationships with others, and contributes to improving teamwork and leadership skills. It can serve as a useful guide when choosing a career or academic path, considering one's strengths and interests.",
+        "mbti_info_content2": "For example, INTJ types tend to be strong in strategic thinking and independence, while ENFP types prefer passionate and creative ideas. Identifying your type can provide insights into what environments offer the greatest satisfaction and performance, and what types of people you get along with best. However, it's important to remember that MBTI is one tool for self-understanding, not an absolute measure that defines personality.",
+        "iq_info_title": "IQ Test: The Meaning of the Intelligence Quotient",
+        "iq_info_content1": "The IQ (Intelligence Quotient) test is a standardized tool designed to measure a part of human intelligence. It primarily assesses various intellectual elements such as logical reasoning, problem-solving ability, memory, language skills, and spatial perception. An IQ score is not merely a number but can be used as an indicator of how efficiently an individual processes information and how well they adapt to new situations.",
+        "iq_info_content2": "However, IQ tests do not measure all aspects of intelligence (e.g., emotional intelligence, creative intelligence), and an IQ score is not the sole determinant of an individual's success or happiness. Our site's IQ test offers a fun and challenging opportunity to gauge your current cognitive abilities. Through the test results, you can understand your strengths and be motivated to improve your thinking and problem-solving skills.",
         "mbti_section_title": "MBTI Personality Type Test",
         "mbti_section_description": "What type of person are you? Find out your personality preferences through interesting questions.",
         "iq_section_title": "IQ Test",
@@ -139,6 +157,8 @@ const translations = {
         "retake_button": "Retake Test"
     },
     "ja": {
+        "seo_title": "2026年無料MBTI診断＆正確なIQ知能テスト - あなたの性格タイプを見つけよう",
+        "seo_description": "最も正確な無料MBTI診断とIQテストを体験してください。16種類の性格タイプ分析と認知能力測定を通して、あなた自身をより深く理解することができます。",
         "site_title": "MBTI & IQ テスト",
         "nav_home": "ホーム",
         "nav_mbti": "MBTI テスト",
@@ -146,10 +166,17 @@ const translations = {
         "nav_about": "サイト紹介",
         "home_title": "自分を知る時間: MBTI & IQ テスト",
         "home_subtitle": "自分を理解し、可能性を発見しましょう！",
-        "home_paragraph1": "このウェブサイトは、あなたが自分の性格タイプと知能指数を無料で探求できるように設計されています。MBTI (Myers-Briggs Type Indicator) は、個人の好みに基づいて16の性格タイプを分類し、自己理解を助けます。IQ (Intelligence Quotient) テストは、認知能力と問題解決能力を測定し、知的な強みを特定するのに役立ちます。",
-        "home_paragraph2": "私たちのテストは簡単で楽しく設計されており、あなたが自分をより深く理解し、個人的な成長のための洞察を得るのに役立ちます。韓国人および外国人の方々にも役立つコンテンツを提供し、あなたの好奇心を探求し、新しい自分を発見する旅を応援します。",
+        "home_paragraph1_seo": "MBTI（Myers-Briggs Type Indicator）とIQ（Intelligence Quotient）テストは、自己理解と認知能力向上に役立つ強力なツールです。このウェブサイトでは、最新の心理測定理論に基づいて設計された無料のMBTI性格タイプテストと正確なIQ知能テストを提供しています。あなたの性格タイプを把握し、論理的思考力、推論力、問題解決能力を測定して、隠れた潜在能力を発見しましょう。職業選択、対人関係の改善、学習戦略の構築など、様々な分野で役立つ洞察を得ることができます。",
+        "home_paragraph2_seo": "MBTIの16種類の性格タイプは、個人の好みを明確に示し、各タイプの特性、強み、弱みを理解するのに役立ちます。INFJ、ENFP、INTJ、ISTPなど、様々なタイプの詳細な分析を通じて、自分と他者の違いを尊重し、効果的にコミュニケーションする方法を学ぶことができます。また、IQテストは単なるスコアだけでなく、認知能力の様々な側面を評価し、あなたの知的な強みと改善が必要な領域を提示します。すべてのテストは、最適な信頼性と妥当性を確保するために継続的に見直し、補完されています。",
+        "home_paragraph3_seo": "当サイトは、日本人だけでなく世界中のユーザーが自身の心理的特性と知的能力を探求できるよう、多言語サポートを提供しています。今すぐ無料テストを開始し、自分自身をより深く理解する旅を始めましょう！",
         "start_mbti": "MBTI テスト開始",
         "start_iq": "IQ テスト開始",
+        "mbti_info_title": "MBTI性格タイプ、なぜ重要なのでしょうか？",
+        "mbti_info_content1": "MBTIは、個人が世界を認識し、意思決定を行う方法に関する選好度を示す指標です。外向-内向（E-I）、感覚-直観（S-N）、思考-感情（T-F）、判断-知覚（J-P）の4つの二分法を通じて、合計16種類の性格タイプに分類されます。各タイプには、固有の特性、強み、そして開発が必要な領域があります。MBTIを理解することは、自己理解を助け、他人との関係で発生しうる誤解を減らし、チームワークとリーダーシップ能力を向上させることに貢献します。特に、職業選択や学業経路を決定する際に、自分の強みと興味を考慮するのに有用なガイドとなる可能性があります。",
+        "mbti_info_content2": "例えば、INTJタイプは戦略的思考と独立心が強く、ENFPタイプは情熱的で創造的なアイデアを好みます。自分のタイプを把握することで、どのような環境で最大の満足感と成果を得られるか、どのようなタイプの人々と相性が良いかなどについての洞察を得ることができます。しかし、MBTIは性格を規定する絶対的な尺度ではなく、自己理解のためのツールの一つであることを覚えておくことが重要です。",
+        "iq_info_title": "IQテスト、知能指数の意味",
+        "iq_info_content1": "IQ（Intelligence Quotient）テストは、人間の認知能力の一部を測定するために考案された標準化されたツールです。これは主に、論理的推論、問題解決能力、記憶力、言語能力、空間知覚能力など、様々な知的要素を評価します。IQスコアは単なる数字ではなく、個人が情報をどれだけ効率的に処理し、新しい状況にどれだけうまく適応するかを示す指標として活用することができます。",
+        "iq_info_content2": "しかし、IQテストは知能のすべての側面（例：感情知能、創造的知能）を測定するものではなく、個人の成功や幸福を決定する唯一の要素ではありません。当サイトのIQテストは、あなたの現在の認知能力を測るための楽しく挑戦的な機会を提供します。テスト結果を通じて自分の強みを理解し、さらには思考力と問題解決能力を向上させるための動機付けを得ることができます。",
         "mbti_section_title": "MBTI 性格タイプテスト",
         "mbti_section_description": "あなたはどんなタイプの人ですか？興味深い質問を通してあなたの性格の好みを調べてください。",
         "iq_section_title": "IQ テスト",
@@ -206,6 +233,8 @@ const translations = {
         "retake_button": "再テスト"
     },
     "zh": {
+        "seo_title": "2026年免费MBTI测试与准确智商测试 - 探索你的性格类型",
+        "seo_description": "体验最准确的免费MBTI测试和智商测试。通过16种性格类型分析和认知能力测量，更深入地了解自己。",
         "site_title": "MBTI & IQ 测试",
         "nav_home": "主页",
         "nav_mbti": "MBTI 测试",
@@ -213,10 +242,17 @@ const translations = {
         "nav_about": "关于我们",
         "home_title": "了解自己的时间：MBTI & IQ 测试",
         "home_subtitle": "了解自己，发现潜力！",
-        "home_paragraph1": "本网站旨在让您免费探索自己的性格类型和智商。MBTI（Myers-Briggs Type Indicator）根据个人偏好将16种性格类型进行分类，帮助您更好地了解自己，而IQ（智商）测试则通过测量认知能力和解决问题的能力来识别智力优势。",
-        "home_paragraph2": "我们的测试设计简单有趣，将帮助您更深入地了解自己，并为个人成长提供见解。我们为韩国人和外国人提供有价值的内容，支持您探索好奇心并发现新自我的旅程。",
+        "home_paragraph1_seo": "MBTI（Myers-Briggs Type Indicator）和IQ（智商）测试是自我理解和提升认知能力的强大工具。本网站提供基于最新心理测量理论设计的免费MBTI性格类型测试和准确的智商测试。发现你的性格类型，测量你的逻辑推理、推断能力和解决问题的能力，以发掘你的潜能。获得职业选择、改善人际关系和制定学习策略等各个领域的宝贵见解。",
+        "home_paragraph2_seo": "MBTI的16种性格类型清晰地展现了个人偏好，帮助你了解每种类型的特点、优势和劣势。通过对INFJ、ENFP、INTJ、ISTP等各种类型的深入分析，你可以学会尊重自己和他人的差异，并有效沟通。此外，智商测试不仅仅是一个分数，它还评估了认知能力的各个方面，提示你的智力优势和需要改进的领域。所有测试都经过持续审查和补充，以确保最佳的信度和效度。",
+        "home_paragraph3_seo": "我们的网站提供多语言支持，允许全球用户，而不仅仅是韩国人，探索他们的心理特征和智力。立即开始你的免费测试，踏上更深入了解自己的旅程！",
         "start_mbti": "开始 MBTI 测试",
         "start_iq": "开始 IQ 测试",
+        "mbti_info_title": "MBTI性格类型，为何重要？",
+        "mbti_info_content1": "MBTI是衡量个体感知世界和做出决策偏好的指标。它通过外向-内向（E-I）、感觉-直觉（S-N）、思考-情感（T-F）和判断-知觉（J-P）四个二分法，将性格分为16种类型。每种类型都有其独特的特点、优势和需要发展的领域。了解MBTI有助于自我认识，减少人际关系中的误解，并有助于提高团队合作和领导能力。在选择职业或学业道路时，它能作为一个有用的指南，帮助考虑自己的优势和兴趣。",
+        "mbti_info_content2": "例如，INTJ类型在战略思维和独立性方面较强，而ENFP类型则偏爱充满激情和创造性的想法。识别自己的类型可以深入了解哪些环境能带来最大的满足感和表现，以及自己与哪种类型的人最合得来。然而，重要的是要记住，MBTI是自我理解的工具之一，而不是定义性格的绝对衡量标准。",
+        "iq_info_title": "IQ测试：智商的含义",
+        "iq_info_content1": "IQ（智商）测试是衡量人类智能的一部分的标准化工具。它主要评估逻辑推理、解决问题的能力、记忆力、语言能力和空间感知能力等各种智力要素。智商分数不仅仅是一个数字，它还可以作为衡量个体处理信息效率和适应新情况能力的指标。",
+        "iq_info_content2": "然而，智商测试不能衡量智力的所有方面（例如，情商、创造性智力），智商分数也不是决定个人成功或幸福的唯一因素。我们网站的智商测试提供了一个有趣且具有挑战性的机会，以衡量您当前的认知能力。通过测试结果，您可以了解自己的优势，并获得提高思维和解决问题能力的动力。",
         "mbti_section_title": "MBTI 性格类型测试",
         "mbti_section_description": "你是什么样的人？通过有趣的问题找出你的性格偏好。",
         "iq_section_title": "IQ 测试",
@@ -285,6 +321,16 @@ function setLanguage(lang) {
         const key = element.dataset.key;
         if (translations[currentLang] && translations[currentLang][key]) {
             element.textContent = translations[currentLang][key];
+            // Special handling for <title> and <meta name="description"> and <meta name="og:title"> etc.
+            if (key === "seo_title") {
+                document.title = translations[currentLang][key];
+                document.querySelector('meta[property="og:title"]').setAttribute('content', translations[currentLang][key]);
+                document.querySelector('meta[property="twitter:title"]').setAttribute('content', translations[currentLang][key]);
+            } else if (key === "seo_description") {
+                document.querySelector('meta[name="description"]').setAttribute('content', translations[currentLang][key]);
+                document.querySelector('meta[property="og:description"]').setAttribute('content', translations[currentLang][key]);
+                document.querySelector('meta[property="twitter:description"]').setAttribute('content', translations[currentLang][key]);
+            }
         }
     });
 
