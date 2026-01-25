@@ -30,19 +30,15 @@
 </head>
 <body>
     <header>
-        <h1 data-key="site_title">MBTI & IQ 테스트</h1>
-        <div class="language-selector">
-            <button id="lang-ko" class="lang-button active" data-lang="ko">KO</button>
-            <button id="lang-en" class="lang-button" data-lang="en">EN</button>
-            <button id="lang-ja" class="lang-button" data-lang="ja">JA</button>
-            <button id="lang-zh" class="lang-button" data-lang="zh">CH</button>
-        </div>
         <nav>
+            <div class="logo">
+                <a href="index.html">InsightHub</a>
+            </div>
             <ul>
-                <li><a href="#" id="nav-home" data-key="nav_home">홈</a></li>
-                <li><a href="#" id="nav-mbti" data-key="nav_mbti">MBTI 테스트</a></li>
-                <li><a href="#" id="nav-iq" data-key="nav_iq">IQ 테스트</a></li>
-                <li><a href="#" id="nav-about" data-key="nav_about">사이트 소개</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -61,65 +57,44 @@
             </script>
         </div>
 
-        <section id="home-section" class="active-section">
-            <h2 data-key="home_title">나를 알아가는 시간: MBTI & IQ 테스트</h2>
-            <p><strong data-key="home_subtitle">자신을 이해하고 잠재력을 발견하세요!</strong></p>
-            <p data-key="home_paragraph1_seo">MBTI (Myers-Briggs Type Indicator)와 IQ (Intelligence Quotient) 테스트는 자기 이해와 인지 능력 향상을 위한 강력한 도구입니다. 이 웹사이트에서는 최신 심리 측정 이론을 바탕으로 설계된 무료 MBTI 성격 유형 테스트와 정확한 IQ 지능 검사를 제공합니다. 당신의 성격 유형을 파악하고, 논리력, 추론력, 문제 해결 능력을 측정하여 당신의 숨겨진 잠재력을 발견하세요. 직업 선택, 대인 관계 개선, 학습 전략 수립 등 다양한 분야에서 유용한 통찰력을 얻을 수 있습니다.</p>
-            <p data-key="home_paragraph2_seo">MBTI 16가지 성격 유형은 개인의 선호도를 명확히 보여주며, 각 유형별 특징과 강점, 약점을 이해하는 데 도움을 줍니다. INFJ, ENFP, INTJ, ISTP 등 다양한 유형의 심층 분석을 통해 당신과 타인의 차이점을 존중하고 효과적으로 소통하는 방법을 배울 수 있습니다. 또한, IQ 테스트는 단순한 점수를 넘어선 인지 능력의 다양한 측면을 평가하며, 당신의 지적 강점과 개선이 필요한 영역을 제시합니다. 모든 테스트는 최적의 신뢰도와 타당도를 확보하기 위해 지속적으로 검토 및 보완됩니다.</p>
-            <p data-key="home_paragraph3_seo">저희 사이트는 한국인뿐만 아니라 전 세계 사용자들이 자신의 심리적 특성과 지적 능력을 탐색할 수 있도록 다국어 지원을 제공합니다. 지금 바로 무료 테스트를 시작하고, 나 자신을 더 깊이 이해하는 여정을 시작해보세요!</p>
-            <div class="test-options">
-                <button id="start-mbti" data-key="start_mbti">MBTI 테스트 시작</button>
-                <button id="start-iq" data-key="start_iq">IQ 테스트 시작</button>
+        <section class="hero-section">
+            <h1>Welcome to InsightHub</h1>
+            <p>Your source for insightful articles, in-depth analyses, and thought-provoking content.</p>
+            <p>Explore a wide range of topics from technology and science to lifestyle and culture.</p>
+            <a href="blog/index.html" class="button">Read Our Blog</a>
+        </section>
+
+        <section class="latest-posts-section">
+            <h2>Latest Posts</h2>
+            <div class="post-grid">
+                <article class="post-card">
+                    <h3><a href="blog/post1.html">The Future of AI: A Glimpse into Tomorrow</a></h3>
+                    <p class="post-excerpt">Artificial Intelligence (AI) is no longer a concept confined to science fiction; it is a rapidly evolving reality that is reshaping industries, economies, and our daily lives...</p>
+                    <a href="blog/post1.html" class="read-more">Read More</a>
+                </article>
+                <article class="post-card">
+                    <h3><a href="blog/post2.html">Exploring the Depths of Ocean Conservation</a></h3>
+                    <p class="post-excerpt">Our oceans are vast, mysterious, and teeming with life, yet they face unprecedented threats from human activities. Ocean conservation is not just about protecting marine species...</p>
+                    <a href="blog/post2.html" class="read-more">Read More</a>
+                </article>
+                <article class="post-card">
+                    <h3><a href="blog/post3.html">The Rise of Sustainable Living: A Guide to Eco-Friendly Practices</a></h3>
+                    <p class="post-excerpt">Sustainable living is more than just a trend; it's a conscious lifestyle choice aimed at reducing one's environmental impact and promoting the long-term health of our planet...</p>
+                    <a href="blog/post3.html" class="read-more">Read More</a>
+                </article>
             </div>
-            
-            <h3 data-key="mbti_info_title" style="margin-top: 40px; text-align: center; color: var(--primary-color);">MBTI 성격 유형, 왜 중요할까요?</h3>
-            <p data-key="mbti_info_content1">MBTI는 개인이 세상을 인식하고 결정을 내리는 방식에 대한 선호도를 보여주는 지표입니다. 외향-내향(E-I), 감각-직관(S-N), 사고-감정(T-F), 판단-인식(J-P)의 네 가지 이분법을 통해 총 16가지 성격 유형으로 분류됩니다. 각 유형은 고유한 특성과 강점, 그리고 발전이 필요한 영역을 가지고 있습니다. MBTI를 이해하는 것은 자기 이해를 돕고, 타인과의 관계에서 발생할 수 있는 오해를 줄이며, 팀워크와 리더십 능력을 향상시키는 데 기여합니다. 특히 직업 선택이나 학업 경로를 결정할 때 자신의 강점과 흥미를 고려하는 데 유용한 가이드가 될 수 있습니다.</p>
-            <p data-key="mbti_info_content2">예를 들어, INTJ 유형은 전략적 사고와 독립적인 경향이 강하며, ENFP 유형은 열정적이고 창의적인 아이디어를 선호합니다. 자신의 유형을 파악하면 어떤 환경에서 가장 큰 만족감과 성과를 얻을 수 있는지, 어떤 유형의 사람들과 잘 어울리는지 등에 대한 통찰을 얻을 수 있습니다. 하지만 MBTI는 성격을 규정하는 절대적인 척도가 아니라 자기 이해를 위한 도구 중 하나임을 기억하는 것이 중요합니다.</p>
-
-            <h3 data-key="iq_info_title" style="margin-top: 40px; text-align: center; color: var(--primary-color);">IQ 테스트, 지능 지수의 의미</h3>
-            <p data-key="iq_info_content1">IQ (Intelligence Quotient) 테스트는 인간의 인지 능력을 측정하는 표준화된 도구입니다. 이는 주로 논리적 추론, 문제 해결 능력, 기억력, 언어 능력, 공간 지각 능력 등 다양한 지적 요소를 평가합니다. IQ 점수는 단순히 숫자에 불과한 것이 아니라, 개인이 정보를 얼마나 효율적으로 처리하고 새로운 상황에 얼마나 잘 적응하는지를 나타내는 지표로 활용될 수 있습니다.</p>
-            <p data-key="iq_info_content2">하지만 IQ 테스트가 모든 형태의 지능(예: 정서 지능, 창의적 지능)을 측정하지는 않으며, 개인의 성공이나 행복을 결정하는 유일한 요소는 아닙니다. 저희 사이트의 IQ 테스트는 여러분의 현재 인지 능력을 가늠해볼 수 있는 재미있고 도전적인 기회를 제공합니다. 테스트 결과를 통해 자신의 강점을 이해하고, 더 나아가 사고력과 문제 해결 능력을 향상시키기 위한 동기를 부여받을 수 있습니다.</p>
-        </section>
-
-        <section id="mbti-section" style="display:none;">
-            <h2 data-key="mbti_section_title">MBTI 성격 유형 테스트</h2>
-            <p data-key="mbti_section_description">당신은 어떤 유형의 사람일까요? 흥미로운 질문들을 통해 당신의 성격 선호도를 알아보세요.</p>
-            <div id="mbti-test-container"><mbti-test></mbti-test></div>
-        </section>
-
-        <section id="iq-section" style="display:none;">
-            <h2 data-key="iq_section_title">IQ 테스트</h2>
-            <p data-key="iq_section_description">당신의 지능 지수를 확인해보세요! 논리력, 추론력, 문제 해결 능력을 평가하는 다양한 문제들이 준비되어 있습니다.</p>
-            <div id="iq-test-container"><iq-test></iq-test></div>
-        </section>
-
-        <section id="about-section" style="display:none;">
-            <h2 data-key="about_section_title">우리에 대하여: MBTI & IQ 테스트 웹사이트</h2>
-            <p data-key="about_paragraph1">저희 MBTI & IQ 테스트 웹사이트는 개인의 자기 이해와 성장을 돕는 것을 최우선 가치로 삼고 있습니다. 우리는 MBTI 성격 유형 분석과 과학적인 IQ 지능 검사를 통해 사용자들이 자신의 강점과 잠재력을 발견하고, 더 나아가 삶의 여러 영역에서 현명한 결정을 내릴 수 있도록 돕는 것을 목표로 합니다.</p>
-            <p data-key="about_paragraph2">복잡하고 빠르게 변화하는 세상 속에서 자신을 정확히 아는 것은 매우 중요합니다. 저희 사이트는 단순한 테스트 결과 제공을 넘어, 각 성격 유형과 지능 영역에 대한 깊이 있는 해석과 실용적인 조언을 제공하여 사용자들이 자신을 이해하고 타인과 효과적으로 소통하는 데 기여하고자 합니다. 모든 콘텐츠는 심리학 전문가들의 자문과 최신 연구 결과를 바탕으로 신뢰성과 정확성을 기하고 있습니다.</p>
-            <p data-key="about_paragraph3">우리는 모든 서비스가 사용자 친화적이고 접근 가능해야 한다고 믿습니다. 따라서 모든 테스트는 무료로 제공되며, 직관적인 인터페이스와 다국어 지원을 통해 전 세계 사용자들이 편리하게 이용할 수 있도록 설계되었습니다. 여러분의 소중한 피드백은 저희 서비스를 지속적으로 개선하고 발전시키는 데 큰 힘이 됩니다. 더 나은 자기 발견의 여정을 위해 끊임없이 노력하는 MBTI & IQ 테스트 웹사이트가 되겠습니다.</p>
-            <p data-key="about_contact_prompt">문의사항이 있으시거나 제휴를 원하시면 언제든지 아래 폼을 통해 연락 주십시오. 여러분의 의견을 기다립니다.</p>
-            
-            <form action="https://formspree.io/f/xeeawbok" method="POST" class="contact-form">
-                <label for="name" data-key="form_name_label">이름:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email" data-key="form_email_label">이메일:</label>
-                <input type="email" id="email" name="_replyto" required>
-                
-                <label for="message" data-key="form_message_label">메시지:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                
-                <button type="submit" data-key="form_submit_button">문의하기</button>
-            </form>
         </section>
     </main>
 
     <footer>
-        <p>
-            <span data-key="footer_copyright">&copy; 2026 MBTI & IQ Test. All rights reserved.</span> |
-            <a href="privacy.html" id="footer-privacy" data-key="footer_privacy">개인정보처리방침</a> |
-            <a href="terms.html" id="footer-terms" data-key="footer_terms">이용약관</a>
-        </p>
+        <nav>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 InsightHub. All rights reserved.</p>
     </footer>
 </html>
