@@ -38,15 +38,23 @@ To ensure discoverability by Korean and international users:
 -   **Clean URLs:** Ensure readable and semantic URLs.
 -   **Content Quality:** Provide high-quality, relevant content for each test and result explanation.
 
+## Current Requested Changes
+
+The user has requested the following modifications:
+1.  **MBTI Test:** Increase the number of test questions.
+2.  **IQ Test:**
+    *   Increase the number of test questions.
+    *   Change the question format from free-text input to multiple-choice (4 options).
+
 ## Current Plan for Requested Change
 
-### Goal: Create a website with MBTI and IQ tests, optimize for SEO, commit to Git, and deploy to Firebase.
+### Goal: Implement the requested changes for MBTI and IQ tests.
 
 ### Steps:
-1.  **Create initial blueprint.md detailing the project plan, technologies, design, features, and SEO strategy.** (Status: Completed)
+1.  **Update blueprint.md to reflect the new requirements for increasing question count and changing IQ test format.** (Status: In Progress)
 2.  **Develop index.html with basic structure, meta tags for SEO (Korean and English keywords), and links to CSS and JS.** (Status: Completed)
 3.  **Develop style.css to implement a modern, visually appealing, and responsive design, adhering to modern CSS practices.** (Status: Completed)
 4.  **Develop main.js to implement Web Components for MBTI and IQ tests, including test logic, scoring, and results display.** (Status: Completed)
 5.  **Enhance SEO further by ensuring appropriate keywords and descriptions in meta tags and considering schema.org markup.** (Status: Completed)
-6.  **Commit all created and modified files to Git with a descriptive message.** (Status: Pending)
-7.  **Configure and deploy the website to Firebase.** (Status: Pending)
+6.  **Commit all created and modified files to Git with a descriptive message.** (Status: Completed)
+7.  **Configure and deploy the website to Firebase.** (Status: Completed)

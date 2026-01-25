@@ -62,9 +62,13 @@ class MbtiTest extends HTMLElement {
         this.attachShadow({ mode: 'open' });
         this.questions = [
             { question: "새로운 사람들과 어울리는 것을 즐기시나요?", options: [{ text: "네, 즐깁니다.", value: "E" }, { text: "아니요, 조용히 보내는 것을 선호합니다.", value: "I" }] },
+            { question: "파티나 모임이 끝나면 에너지가 고갈되는 느낌인가요?", options: [{ text: "네, 그렇습니다.", value: "I" }, { text: "아니요, 오히려 에너지를 얻습니다.", value: "E" }] },
             { question: "현실적이고 구체적인 사실에 집중하나요?", options: [{ text: "네, 현실적인 것을 중요하게 생각합니다.", value: "S" }, { text: "아니요, 미래 가능성과 추상적인 아이디어에 관심이 많습니다.", value: "N" }] },
+            { question: "새로운 아이디어를 탐색하는 것을 좋아하나요, 아니면 검증된 방법에 머무는 것을 선호하나요?", options: [{ text: "새로운 아이디어를 탐색합니다.", value: "N" }, { text: "검증된 방법을 선호합니다.", value: "S" }] },
             { question: "결정을 내릴 때 논리와 객관적인 분석을 중요하게 생각하나요?", options: [{ text: "네, 논리적인 판단을 선호합니다.", value: "T" }, { text: "아니요, 다른 사람들의 감정과 상황을 고려합니다.", value: "F" }] },
-            { question: "계획을 세우고 체계적으로 일을 처리하는 것을 좋아하나요?", options: [{ text: "네, 계획적인 것을 좋아합니다.", value: "J" }, { text: "아니요, 유연하고 즉흥적인 것을 선호합니다.", value: "P" }] }
+            { question: "다른 사람의 감정을 공감하고 이해하는 것이 쉬운가요?", options: [{ text: "네, 쉽게 공감합니다.", value: "F" }, { text: "아니요, 객관적으로 상황을 봅니다.", value: "T" }] },
+            { question: "계획을 세우고 체계적으로 일을 처리하는 것을 좋아하나요?", options: [{ text: "네, 계획적인 것을 좋아합니다.", value: "J" }, { text: "아니요, 유연하고 즉흥적인 것을 선호합니다.", value: "P" }] },
+            { question: "마감 기한이 임박했을 때 집중력이 높아지는 편인가요?", options: [{ text: "네, 그렇습니다.", value: "P" }, { text: "아니요, 미리 계획하고 완수합니다.", value: "J" }] }
         ];
         this.answers = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
         this.currentQuestionIndex = 0;
@@ -231,11 +235,14 @@ class IqTest extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
         this.questions = [
-            { question: "다음 숫자 배열의 다음 숫자는 무엇일까요? 1, 2, 4, 7, 11, ?", answer: "16" },
-            { question: "다음 도형 패턴의 빈 칸에 들어갈 도형은? (설명을 위한 텍스트입니다, 실제로는 이미지 필요)", answer: "특정 패턴을 완성하는 도형" },
-            { question: "사과 한 개가 100원입니다. 10개를 사려면 얼마가 필요할까요?", answer: "1000" }
+            { question: "다음 숫자 배열의 다음 숫자는 무엇일까요? 1, 3, 6, 10, 15, ?", options: ["20", "21", "22", "23"], correctAnswerIndex: 1 }, // +2, +3, +4, +5, +6
+            { question: "강철이 무쇠보다 강하다면, 무쇠는 종이보다 어떤가요?", options: ["강하다", "약하다", "같다", "관련 없다"], correctAnswerIndex: 0 },
+            { question: "다음 중 나머지 셋과 다른 하나는? (사물 기준)", options: ["사과", "바나나", "감자", "오렌지"], correctAnswerIndex: 2 },
+            { question: "어떤 달은 28일까지 있고, 또 어떤 달은 30일까지 있습니다. 모든 달은 며칠까지 있나요?", options: ["28일", "29일", "30일", "31일"], correctAnswerIndex: 3 },
+            { question: "다음 단어들 중 관련 없는 하나는? (의미 기준)", options: ["행복", "기쁨", "슬픔", "즐거움"], correctAnswerIndex: 2 },
+            { question: "다음 빈칸에 들어갈 숫자는? 2, 4, 8, 16, ?", options: ["24", "32", "48", "64"], correctAnswerIndex: 1 } // x2 progression
         ];
-        this.userAnswers = [];
+        this.userAnswers = Array(this.questions.length).fill(null);
         this.currentQuestionIndex = 0;
         this.score = 0;
         this.render();
@@ -318,24 +325,22 @@ class IqTest extends HTMLElement {
             testContent.innerHTML = `
                 <div class="question-container">
                     <p class="question-text">${q.question}</p>
-                    <input type="text" class="answer-input" placeholder="정답을 입력하세요">
-                    <button class="submit-button">다음</button>
+                    ${q.options.map((option, index) => `
+                        <button class="option-button" data-index="${index}">${option}</button>
+                    `).join('')}
                 </div>
             `;
-            this.shadowRoot.querySelector('.submit-button').addEventListener('click', this.handleAnswer.bind(this));
-            this.shadowRoot.querySelector('.answer-input').addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    this.handleAnswer();
-                }
+            testContent.querySelectorAll('.option-button').forEach(button => {
+                button.addEventListener('click', this.handleAnswer.bind(this));
             });
         } else {
             this.showResults();
         }
     }
 
-    handleAnswer() {
-        const input = this.shadowRoot.querySelector('.answer-input');
-        this.userAnswers[this.currentQuestionIndex] = input.value.trim();
+    handleAnswer(event) {
+        const selectedOptionIndex = parseInt(event.target.dataset.index);
+        this.userAnswers[this.currentQuestionIndex] = selectedOptionIndex;
         this.currentQuestionIndex++;
         this.displayQuestion();
     }
@@ -343,15 +348,13 @@ class IqTest extends HTMLElement {
     calculateIqScore() {
         let correctCount = 0;
         this.questions.forEach((q, index) => {
-            // Simple case-insensitive comparison for demonstration
-            if (this.userAnswers[index]?.toLowerCase() === q.answer.toLowerCase()) {
+            if (this.userAnswers[index] === q.correctAnswerIndex) {
                 correctCount++;
             }
         });
-        // Very simplistic IQ calculation for demonstration
-        const rawScore = (correctCount / this.questions.length) * 100;
-        return Math.round(rawScore * 0.8 + 60); // Scale to a more typical IQ range (60-140)
-    }
+        // Simplistic IQ calculation for demonstration, scaled from 80-160
+        const rawScore = (correctCount / this.questions.length);
+        return Math.round(80 + (rawScore * 80)); 
 
     showResults() {
         const testContent = this.shadowRoot.getElementById('test-content');
