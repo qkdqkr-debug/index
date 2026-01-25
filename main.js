@@ -39,6 +39,7 @@ const translations = {
         "footer_privacy": "개인정보처리방침",
         "footer_terms": "이용약관",
         "alert_not_implemented": " 페이지로 이동합니다. (아직 구현되지 않았습니다)",
+        "mbti_type_not_found": "MBTI 유형을 찾을 수 없습니다.",
         // MBTI Descriptions
         "ISTJ_desc": "청렴결백한 논리주의자 (The Logistician): 실용적이고 사실을 중시하는 사람들로, 신뢰할 수 있는 성격입니다. 조용하고 진지하며, 철저하고 신뢰할 수 있음으로써 성공을 이룹니다. 전통과 충성심을 중요하게 생각합니다.",
         "ISFJ_desc": "용감한 수호자 (The Defender): 매우 헌신적이고 따뜻한 보호자로, 언제나 사랑하는 사람들을 지킬 준비가 되어 있습니다. 조용하고 친근하며 책임감이 강하고 양심적이며, 의무를 다하는 데 헌신적이고 꾸준합니다.",
@@ -65,6 +66,19 @@ const translations = {
         "mbti_q6": "다른 사람의 감정을 공감하고 이해하는 것이 쉬운가요?", "mbti_q6_opt1": "네, 쉽게 공감합니다.", "mbti_q6_opt2": "아니요, 객관적으로 상황을 봅니다.",
         "mbti_q7": "계획을 세우고 체계적으로 일을 처리하는 것을 좋아하나요?", "mbti_q7_opt1": "네, 계획적인 것을 좋아합니다.", "mbti_q7_opt2": "아니요, 유연하고 즉흥적인 것을 선호합니다.",
         "mbti_q8": "마감 기한이 임박했을 때 집중력이 높아지는 편인가요?", "mbti_q8_opt1": "네, 그렇습니다.", "mbti_q8_opt2": "아니요, 미리 계획하고 완수합니다.",
+        "mbti_q9": "새로운 환경에 적응하는 것을 즐기나요?", "mbti_q9_opt1": "네, 즐깁니다.", "mbti_q9_opt2": "아니요, 익숙한 것을 선호합니다.",
+        "mbti_q10": "단체 활동보다는 혼자 하는 작업을 선호하나요?", "mbti_q10_opt1": "네, 선호합니다.", "mbti_q10_opt2": "아니요, 함께 하는 것을 좋아합니다.",
+        "mbti_q11": "미래의 가능성과 아이디어에 더 집중하나요?", "mbti_q11_opt1": "네, 그렇습니다.", "mbti_q11_opt2": "아니요, 현재의 사실에 집중합니다.",
+        "mbti_q12": "현실적인 문제 해결에 더 흥미를 느끼나요?", "mbti_q12_opt1": "네, 흥미를 느낍니다.", "mbti_q12_opt2": "아니요, 이론적인 것에 관심이 많습니다.",
+        "mbti_q13": "결정을 내릴 때 개인적인 가치와 조화를 중요하게 생각하나요?", "mbti_q13_opt1": "네, 중요하게 생각합니다.", "mbti_q13_opt2": "아니요, 객관적인 기준을 따릅니다.",
+        "mbti_q14": "다른 사람의 입장에서 생각하는 것이 쉬운가요?", "mbti_q14_opt1": "네, 쉽습니다.", "mbti_q14_opt2": "아니요, 어려운 편입니다.",
+        "mbti_q15": "일정을 미리 세우고 그에 따라 움직이는 것을 좋아하나요?", "mbti_q15_opt1": "네, 좋아합니다.", "mbti_q15_opt2": "아니요, 상황에 맞춰 유연하게 대처합니다.",
+        "mbti_q16": "새로운 정보를 얻으면 바로 행동하기보다 충분히 생각하고 결정하나요?", "mbti_q16_opt1": "네, 그렇습니다.", "mbti_q16_opt2": "아니요, 즉각적인 행동을 선호합니다.",
+        "mbti_q17": "갈등 상황에서 해결책을 찾기 위해 객관적인 분석을 먼저 시도하나요?", "mbti_q17_opt1": "네, 그렇습니다.", "mbti_q17_opt2": "아니요, 관계 개선을 우선합니다.",
+        "mbti_q18": "다수의 의견보다는 소수의 의견이라도 설득력 있다면 따르는 편인가요?", "mbti_q18_opt1": "네, 따릅니다.", "mbti_q18_opt2": "아니요, 다수의 의견을 따릅니다.",
+        "mbti_q19": "복잡한 문제에 직면했을 때, 큰 그림을 먼저 보려고 노력하나요?", "mbti_q19_opt1": "네, 노력합니다.", "mbti_q19_opt2": "아니요, 세부 사항부터 살핍니다.",
+        "mbti_q20": "일상생활에서 새로운 경험을 추구하는 편인가요?", "mbti_q20_opt1": "네, 그렇습니다.", "mbti_q20_opt2": "아니요, 안정적인 것을 선호합니다.",
+
         "mbti_result_title": "당신의 MBTI 유형은...",
         "mbti_result_disclaimer": "더 자세한 정보는 MBTI 전문 사이트에서 확인해보세요!",
 
@@ -75,6 +89,22 @@ const translations = {
         "iq_q4": "어떤 달은 28일까지 있고, 또 어떤 달은 30일까지 있습니다. 모든 달은 며칠까지 있나요?", "iq_q4_opt1": "28일", "iq_q4_opt2": "29일", "iq_q4_opt3": "30일", "iq_q4_opt4": "31일",
         "iq_q5": "다음 단어들 중 관련 없는 하나는? (의미 기준)", "iq_q5_opt1": "행복", "iq_q5_opt2": "기쁨", "iq_q5_opt3": "슬픔", "iq_q5_opt4": "즐거움",
         "iq_q6": "다음 빈칸에 들어갈 숫자는? 2, 4, 8, 16, ?", "iq_q6_opt1": "24", "iq_q6_opt2": "32", "iq_q6_opt3": "48", "iq_q6_opt4": "64",
+        "iq_q7": "A는 B보다 키가 크고, C는 A보다 키가 작습니다. B와 C 중 누가 더 큰가요?", "iq_q7_opt1": "B", "iq_q7_opt2": "C", "iq_q7_opt3": "같다", "iq_q7_opt4": "알 수 없다",
+        "iq_q8": "빨간색과 파란색을 섞으면 어떤 색이 되나요?", "iq_q8_opt1": "초록색", "iq_q8_opt2": "보라색", "iq_q8_opt3": "주황색", "iq_q8_opt4": "검은색",
+        "iq_q9": "고양이가 '야옹'하고 짖고, 개가 '멍멍'하고 짖습니다. 새는 어떻게 짖을까요?", "iq_q9_opt1": "깍깍", "iq_q9_opt2": "짹짹", "iq_q9_opt3": "음메", "iq_q9_opt4": "찍찍",
+        "iq_q10": "거울을 보며 머리를 빗고 있습니다. 거울 속 당신은 오른손으로 빗고 있습니다. 실제로는 어떤 손으로 빗고 있나요?", "iq_q10_opt1": "왼손", "iq_q10_opt2": "오른손", "iq_q10_opt3": "양손", "iq_q10_opt4": "알 수 없다",
+        "iq_q11": "어떤 수가 5로 나누어 떨어지고 3으로 나누어 떨어집니다. 이 수는 다음 중 무엇일까요?", "iq_q11_opt1": "10", "iq_q11_opt2": "12", "iq_q11_opt3": "15", "iq_q11_opt4": "20",
+        "iq_q12": "모든 새는 날 수 있습니다. 참새는 새입니다. 그러므로 참새는 날 수 있습니다. 이 추론은 무엇인가요?", "iq_q12_opt1": "연역법", "iq_q12_opt2": "귀납법", "iq_q12_opt3": "유추", "iq_q12_opt4": "오류",
+        "iq_q13": "어떤 그림에 3개의 삼각형과 2개의 사각형이 있습니다. 총 몇 개의 도형이 있나요?", "iq_q13_opt1": "2", "iq_q13_opt2": "3", "iq_q13_opt3": "5", "iq_q13_opt4": "6",
+        "iq_q14": "만약 어제는 내일의 어제였다면, 오늘은 무슨 요일일까요?", "iq_q14_opt1": "월요일", "iq_q14_opt2": "화요일", "iq_q14_opt3": "수요일", "iq_q14_opt4": "목요일",
+        "iq_q15": "물고기는 물속에서 삽니다. 다음 중 물고기가 아닌 것은 무엇일까요?", "iq_q15_opt1": "고래", "iq_q15_opt2": "상어", "iq_q15_opt3": "문어", "iq_q15_opt4": "개구리",
+        "iq_q16": "어떤 건물에 100개의 방이 있습니다. 각 방에는 10개의 문이 있습니다. 총 몇 개의 문이 있을까요?", "iq_q16_opt1": "10", "iq_q16_opt2": "100", "iq_q16_opt3": "1000", "iq_q16_opt4": "10000",
+        "iq_q17": "항상 당신 앞에 있지만 볼 수 없는 것은 무엇일까요?", "iq_q17_opt1": "과거", "iq_q17_opt2": "미래", "iq_q17_opt3": "어둠", "iq_q17_opt4": "꿈",
+        "iq_q18": "다음 중 가장 작은 것은 무엇일까요?", "iq_q18_opt1": "행성", "iq_q18_opt2": "달", "iq_q18_opt3": "별", "iq_q18_opt4": "은하",
+        "iq_q19": "어떤 집에 4개의 벽이 있고, 각 벽은 남쪽을 향하고 있습니다. 곰이 이 집으로 들어오면 곰의 색깔은 무엇일까요?", "iq_q19_opt1": "갈색", "iq_q19_opt2": "흰색", "iq_q19_opt3": "검은색", "iq_q19_opt4": "회색",
+        "iq_q20": "나는 항상 배고프고, 나를 먹여 살리는 것은 무엇이든 나를 약하게 만듭니다. 나는 무엇일까요?", "iq_q20_opt1": "불", "iq_q20_opt2": "물", "iq_q20_opt3": "흙", "iq_q20_opt4": "공기",
+
+
         "iq_result_title": "당신의 예상 IQ는...",
         "iq_result_disclaimer": "이것은 간단한 테스트 결과이며, 정확한 IQ 측정은 전문가에게 문의하십시오.",
         "retake_button": "다시 테스트하기"
@@ -142,6 +172,154 @@ const translations = {
         "mbti_q6": "Is it easy for you to empathize with and understand others' feelings?", "mbti_q6_opt1": "Yes, I easily empathize.", "mbti_q6_opt2": "No, I view situations objectively.",
         "mbti_q7": "Do you like to plan and process tasks systematically?", "mbti_q7_opt1": "Yes, I like planning.", "mbti_q7_opt2": "No, I prefer flexibility and spontaneity.",
         "mbti_q8": "Do you become more focused when a deadline is approaching?", "mbti_q8_opt1": "Yes, I do.", "mbti_q8_opt2": "No, I plan and complete tasks in advance.",
+        "mbti_q9": "Do you enjoy adapting to new environments?", "mbti_q9_opt1": "Yes, I enjoy it.", "mbti_q9_opt2": "No, I prefer familiar things.",
+        "mbti_q10": "Do you prefer working alone over group activities?", "mbti_q10_opt1": "Yes, I prefer it.", "mbti_q10_opt2": "No, I like working with others.",
+        "mbti_q11": "Do you focus more on future possibilities and ideas?", "mbti_q11_opt1": "Yes, I do.", "mbti_q11_opt2": "No, I focus on present facts.",
+        "mbti_q12": "Are you more interested in practical problem-solving?", "mbti_q12_opt1": "Yes, I am.", "mbti_q12_opt2": "No, I'm more interested in theoretical matters.",
+        "mbti_q13": "When making decisions, do you prioritize personal values and harmony?", "mbti_q13_opt1": "Yes, I do.", "mbti_q13_opt2": "No, I follow objective criteria.",
+        "mbti_q14": "Is it easy for you to put yourself in others' shoes?", "mbti_q14_opt1": "Yes, it is easy.", "mbti_q14_opt2": "No, it's difficult.",
+        "mbti_q15": "Do you like to set a schedule in advance and stick to it?", "mbti_q15_opt1": "Yes, I do.", "mbti_q15_opt2": "No, I adapt flexibly to situations.",
+        "mbti_q16": "When you get new information, do you think thoroughly before acting?", "mbti_q16_opt1": "Yes, I do.", "mbti_q16_opt2": "No, I prefer immediate action.",
+        "mbti_q17": "In conflict situations, do you first try objective analysis to find a solution?", "mbti_q17_opt1": "Yes, I do.", "mbti_q17_opt2": "No, I prioritize improving relationships.",
+        "mbti_q18": "Do you tend to follow a minority opinion if it's convincing, rather than the majority?", "mbti_q18_opt1": "Yes, I do.", "mbti_q18_opt2": "No, I follow the majority opinion.",
+        "mbti_q19": "When faced with a complex problem, do you try to see the big picture first?", "mbti_q19_opt1": "Yes, I do.", "mbti_q19_opt2": "No, I examine the details first.",
+        "mbti_q20": "Do you seek new experiences in daily life?", "mbti_q20_opt1": "Yes, I do.", "mbti_q20_opt2": "No, I prefer stability.",
+        "mbti_q21": "새로운 아이디어를 내는 것을 즐기시나요?", "mbti_q21_opt1": "네, 즐깁니다.", "mbti_q21_opt2": "아니요, 기존 아이디어를 발전시키는 것을 선호합니다.",
+        "mbti_q22": "다른 사람의 감정을 헤아리는 데 능숙한 편인가요?", "mbti_q22_opt1": "네, 능숙합니다.", "mbti_q22_opt2": "아니요, 객관적인 판단에 더 집중합니다.",
+        "mbti_q23": "일정을 미리 정해두는 것이 마음 편한가요?", "mbti_q23_opt1": "네, 그렇습니다.", "mbti_q23_opt2": "아니요, 유동적인 것이 좋습니다.",
+        "mbti_q24": "문제 해결 시 논리적인 접근 방식을 주로 사용하나요?", "mbti_q24_opt1": "네, 주로 사용합니다.", "mbti_q24_opt2": "아니요, 직관이나 경험을 더 믿습니다.",
+        "mbti_q25": "자신의 감정을 쉽게 표현하는 편인가요?", "mbti_q25_opt1": "네, 그렇습니다.", "mbti_q25_opt2": "아니요, 감정을 잘 드러내지 않습니다.",
+        "mbti_q26": "새로운 사람들과의 만남에서 에너지를 얻는 편인가요?", "mbti_q26_opt1": "네, 얻습니다.", "mbti_q26_opt2": "아니요, 피곤함을 느낍니다.",
+        "mbti_q27": "일을 시작하기 전에 완벽하게 계획을 세워야 마음이 놓이나요?", "mbti_q27_opt1": "네, 그렇습니다.", "mbti_q27_opt2": "아니요, 유연하게 시작합니다.",
+        "mbti_q28": "복잡한 정보보다 구체적이고 사실적인 정보에 더 끌리나요?", "mbti_q28_opt1": "네, 끌립니다.", "mbti_q28_opt2": "아니요, 추상적인 정보에 더 흥미를 느낍니다.",
+        "mbti_q29": "다른 사람들의 필요와 감정을 자신의 것보다 우선시하는 경향이 있나요?", "mbti_q29_opt1": "네, 그렇습니다.", "mbti_q29_opt2": "아니요, 자신의 필요를 우선합니다.",
+        "mbti_q30": "결정을 내릴 때, 모든 가능성을 열어두고 마지막까지 탐색하는 편인가요?", "mbti_q30_opt1": "네, 그렇습니다.", "mbti_q30_opt2": "아니요, 빨리 결정을 내리는 편입니다.",
+
+        "mbti_result_title": "당신의 MBTI 유형은...",
+        "mbti_result_disclaimer": "더 자세한 정보는 MBTI 전문 사이트에서 확인해보세요!",
+
+        // IQ Questions
+        "iq_q1": "다음 숫자 배열의 다음 숫자는 무엇일까요? 1, 3, 6, 10, 15, ?", "iq_q1_opt1": "20", "iq_q1_opt2": "21", "iq_q1_opt3": "22", "iq_q1_opt4": "23",
+        "iq_q2": "강철이 무쇠보다 강하다면, 무쇠는 종이보다 어떤가요?", "iq_q2_opt1": "강하다", "iq_q2_opt2": "약하다", "iq_q2_opt3": "같다", "iq_q2_opt4": "관련 없다",
+        "iq_q3": "다음 중 나머지 셋과 다른 하나는? (사물 기준)", "iq_q3_opt1": "사과", "iq_q3_opt2": "바나나", "iq_q3_opt3": "감자", "iq_q3_opt4": "오렌지",
+        "iq_q4": "어떤 달은 28일까지 있고, 또 어떤 달은 30일까지 있습니다. 모든 달은 며칠까지 있나요?", "iq_q4_opt1": "28일", "iq_q4_opt2": "29일", "iq_q4_opt3": "30일", "iq_q4_opt4": "31일",
+        "iq_q5": "다음 단어들 중 관련 없는 하나는? (의미 기준)", "iq_q5_opt1": "행복", "iq_q5_opt2": "기쁨", "iq_q5_opt3": "슬픔", "iq_q5_opt4": "즐거움",
+        "iq_q6": "다음 빈칸에 들어갈 숫자는? 2, 4, 8, 16, ?", "iq_q6_opt1": "24", "iq_q6_opt2": "32", "iq_q6_opt3": "48", "iq_q6_opt4": "64",
+        "iq_q7": "A는 B보다 키가 크고, C는 A보다 키가 작습니다. B와 C 중 누가 더 큰가요?", "iq_q7_opt1": "B", "iq_q7_opt2": "C", "iq_q7_opt3": "같다", "iq_q7_opt4": "알 수 없다",
+        "iq_q8": "빨간색과 파란색을 섞으면 어떤 색이 되나요?", "iq_q8_opt1": "초록색", "iq_q8_opt2": "보라색", "iq_q8_opt3": "주황색", "iq_q8_opt4": "검은색",
+        "iq_q9": "고양이가 '야옹'하고 짖고, 개가 '멍멍'하고 짖습니다. 새는 어떻게 짖을까요?", "iq_q9_opt1": "깍깍", "iq_q9_opt2": "짹짹", "iq_q9_opt3": "음메", "iq_q9_opt4": "찍찍",
+        "iq_q10": "거울을 보며 머리를 빗고 있습니다. 거울 속 당신은 오른손으로 빗고 있습니다. 실제로는 어떤 손으로 빗고 있나요?", "iq_q10_opt1": "왼손", "iq_q10_opt2": "오른손", "iq_q10_opt3": "양손", "iq_q10_opt4": "알 수 없다",
+        "iq_q11": "어떤 수가 5로 나누어 떨어지고 3으로 나누어 떨어집니다. 이 수는 다음 중 무엇일까요?", "iq_q11_opt1": "10", "iq_q11_opt2": "12", "iq_q11_opt3": "15", "iq_q11_opt4": "20",
+        "iq_q12": "모든 새는 날 수 있습니다. 참새는 새입니다. 그러므로 참새는 날 수 있습니다. 이 추론은 무엇인가요?", "iq_q12_opt1": "연역법", "iq_q12_opt2": "귀납법", "iq_q12_opt3": "유추", "iq_q12_opt4": "오류",
+        "iq_q13": "어떤 그림에 3개의 삼각형과 2개의 사각형이 있습니다. 총 몇 개의 도형이 있나요?", "iq_q13_opt1": "2", "iq_q13_opt2": "3", "iq_q13_opt3": "5", "iq_q13_opt4": "6",
+        "iq_q14": "만약 어제는 내일의 어제였다면, 오늘은 무슨 요일일까요?", "iq_q14_opt1": "월요일", "iq_q14_opt2": "화요일", "iq_q14_opt3": "수요일", "iq_q14_opt4": "목요일",
+        "iq_q15": "물고기는 물속에서 삽니다. 다음 중 물고기가 아닌 것은 무엇일까요?", "iq_q15_opt1": "고래", "iq_q15_opt2": "상어", "iq_q15_opt3": "문어", "iq_q15_opt4": "개구리",
+        "iq_q16": "어떤 건물에 100개의 방이 있습니다. 각 방에는 10개의 문이 있습니다. 총 몇 개의 문이 있을까요?", "iq_q16_opt1": "10", "iq_q16_opt2": "100", "iq_q16_opt3": "1000", "iq_q16_opt4": "10000",
+        "iq_q17": "항상 당신 앞에 있지만 볼 수 없는 것은 무엇일까요?", "iq_q17_opt1": "과거", "iq_q17_opt2": "미래", "iq_q17_opt3": "어둠", "iq_q17_opt4": "꿈",
+        "iq_q18": "다음 중 가장 작은 것은 무엇일까요?", "iq_q18_opt1": "행성", "iq_q18_opt2": "달", "iq_q18_opt3": "별", "iq_q18_opt4": "은하",
+        "iq_q19": "어떤 집에 4개의 벽이 있고, 각 벽은 남쪽을 향하고 있습니다. 곰이 이 집으로 들어오면 곰의 색깔은 무엇일까요?", "iq_q19_opt1": "갈색", "iq_q19_opt2": "흰색", "iq_q19_opt3": "검은색", "iq_q19_opt4": "회색",
+        "iq_q20": "나는 항상 배고프고, 나를 먹여 살리는 것은 무엇이든 나를 약하게 만듭니다. 나는 무엇일까요?", "iq_q20_opt1": "불", "iq_q20_opt2": "물", "iq_q20_opt3": "흙", "iq_q20_opt4": "공기",
+        "iq_q21": "하나의 바구니에 사과 5개가 있습니다. 당신은 3개를 가져갔습니다. 당신에게 남은 사과는 몇 개인가요?", "iq_q21_opt1": "2개", "iq_q21_opt2": "3개", "iq_q21_opt3": "5개", "iq_q21_opt4": "8개",
+        "iq_q22": "나는 말은 할 수 있지만 입은 없고, 귀는 있지만 듣지 못합니다. 나는 무엇일까요?", "iq_q22_opt1": "책", "iq_q22_opt2": "전화", "iq_q22_opt3": "강", "iq_q22_opt4": "바람",
+        "iq_q23": "나를 만들면 나를 파괴하고 싶어 합니다. 나는 무엇일까요?", "iq_q23_opt1": "다리", "iq_q23_opt2": "비밀", "iq_q23_opt3": "문제", "iq_q23_opt4": "거짓말",
+        "iq_q24": "나는 항상 높이 올라가지만 절대 움직이지 않습니다. 나는 무엇일까요?", "iq_q24_opt1": "구름", "iq_q24_opt2": "나무", "iq_q24_opt3": "산", "iq_q24_opt4": "탑",
+        "iq_q25": "나는 앞과 뒤가 있지만, 위나 아래는 없습니다. 나는 무엇일까요?", "iq_q25_opt1": "책", "iq_q25_opt2": "카드", "iq_q25_opt3": "동전", "iq_q25_opt4": "강",
+        "iq_q26": "나는 태어나자마자 죽지만, 곧 다시 살아납니다. 나는 무엇일까요?", "iq_q26_opt1": "눈", "iq_q26_opt2": "불꽃", "iq_q26_opt3": "하루", "iq_q26_opt4": "파도",
+        "iq_q27": "나는 먹지 않고 살지만, 마시면 죽습니다. 나는 무엇일까요?", "iq_q27_opt1": "불", "iq_q27_opt2": "모래", "iq_q27_opt3": "돌", "iq_q27_opt4": "구름",
+        "iq_q28": "밤에 나타나지만 낮에는 사라지는 것은 무엇일까요?", "iq_q28_opt1": "달", "iq_q28_opt2": "별", "iq_q28_opt3": "어둠", "iq_q28_opt4": "꿈",
+        "iq_q29": "나는 항상 움직이지만 항상 같은 곳에 머뭅니다. 나는 무엇일까요?", "iq_q29_opt1": "시계", "iq_q29_opt2": "강", "iq_q29_opt3": "바퀴", "iq_q29_opt4": "시간",
+        "iq_q30": "나는 많은 것을 가지고 있지만 아무것도 소유하지 않습니다. 나는 무엇일까요?", "iq_q30_opt1": "은행", "iq_q30_opt2": "도서관", "iq_q30_opt3": "창고", "iq_q30_opt4": "지도",
+
+        "iq_result_title": "당신의 예상 IQ는...",
+        "iq_result_disclaimer": "이것은 간단한 테스트 결과이며, 정확한 IQ 측정은 전문가에게 문의하십시오.",
+        "retake_button": "다시 테스트하기"
+    },
+    "en": {
+        "seo_title": "2026 Free MBTI Test & Accurate IQ Intelligence Test - Discover Your Personality Type",
+        "seo_description": "Experience the most accurate free MBTI test and IQ test. Understand yourself more deeply through 16 personality type analyses and cognitive ability measurements.",
+        "site_title": "MBTI & IQ Test",
+        "nav_home": "Home",
+        "nav_mbti": "MBTI Test",
+        "nav_iq": "IQ Test",
+        "nav_about": "About Us",
+        "home_title": "Time to Know Yourself: MBTI & IQ Test",
+        "home_subtitle": "Understand yourself and discover your potential!",
+        "home_paragraph1_seo": "MBTI (Myers-Briggs Type Indicator) and IQ (Intelligence Quotient) tests are powerful tools for self-understanding and enhancing cognitive abilities. This website offers free MBTI personality type tests and accurate IQ intelligence tests designed based on the latest psychometric theories. Discover your personality type, measure your logical reasoning, inferential skills, and problem-solving abilities to uncover your hidden potential. Gain valuable insights for career choices, improving interpersonal relationships, and developing learning strategies.",
+        "home_paragraph2_seo": "The 16 MBTI personality types clearly show individual preferences, helping you understand the characteristics, strengths, and weaknesses of each type. Through in-depth analysis of various types like INFJ, ENFP, INTJ, and ISTP, you can learn to respect differences between yourself and others and communicate effectively. Furthermore, IQ tests assess various aspects of cognitive ability beyond a mere score, suggesting your intellectual strengths and areas for improvement. All tests are continuously reviewed and supplemented to ensure optimal reliability and validity.",
+        "home_paragraph3_seo": "Our site provides multilingual support, allowing users worldwide, not just Koreans, to explore their psychological characteristics and intellectual abilities. Start your free test now and embark on a journey to understand yourself more deeply!",
+        "start_mbti": "Start MBTI Test",
+        "start_iq": "Start IQ Test",
+        "mbti_info_title": "Why is MBTI Personality Type Important?",
+        "mbti_info_content1": "MBTI is an indicator that shows an individual's preference in perceiving the world and making decisions. It classifies 16 personality types through four dichotomous preference indicators: Extraversion-Introversion (E-I), Sensing-Intuition (S-N), Thinking-Feeling (T-F), and Judging-Perceiving (J-P). Each type has unique characteristics, strengths, and areas for development. Understanding MBTI helps with self-understanding, reduces misunderstandings in relationships with others, and contributes to improving teamwork and leadership skills. It can serve as a useful guide when choosing a career or academic path, considering one's strengths and interests.",
+        "mbti_info_content2": "For example, INTJ types tend to be strong in strategic thinking and independence, while ENFP types prefer passionate and creative ideas. Identifying your type can provide insights into what environments offer the greatest satisfaction and performance, and what types of people you get along with best. However, it's important to remember that MBTI is one tool for self-understanding, not an absolute measure that defines personality.",
+        "iq_info_title": "IQ Test: The Meaning of the Intelligence Quotient",
+        "iq_info_content1": "The IQ (Intelligence Quotient) test is a standardized tool designed to measure a part of human intelligence. It primarily assesses various intellectual elements such as logical reasoning, problem-solving ability, memory, language skills, and spatial perception. An IQ score is not merely a number but can be used as an indicator of how efficiently an individual processes information and how well they adapt to new situations.",
+        "iq_info_content2": "However, IQ tests do not measure all aspects of intelligence (e.g., emotional intelligence, creative intelligence), and an IQ score is not the sole determinant of an individual's success or happiness. Our site's IQ test offers a fun and challenging opportunity to gauge your current cognitive abilities. Through the test results, you can understand your strengths and be motivated to improve your thinking and problem-solving skills.",
+        "mbti_section_title": "MBTI Personality Type Test",
+        "mbti_section_description": "What type of person are you? Find out your personality preferences through interesting questions.",
+        "iq_section_title": "IQ Test",
+        "iq_section_description": "Check your intelligence quotient! Various problems designed to assess your logic, reasoning, and problem-solving skills are prepared.",
+        "about_section_title": "About Us",
+        "about_paragraph1": "Our MBTI & IQ Test website was created to help users better understand themselves and foster personal growth. We aim to be a companion on your journey of self-discovery by providing MBTI personality types and IQ scores in an easy and accessible way.",
+        "about_paragraph2": "All tests are provided free of charge, and we strive to offer a fun and educational experience. Your feedback is always welcome, and we will continue to evolve for better service.",
+        "about_contact_prompt": "If you have any questions, please contact us using the form below.",
+        "form_name_label": "Name:",
+        "form_email_label": "Email:",
+        "form_message_label": "Message:",
+        "form_submit_button": "Send Inquiry",
+        "footer_copyright": "&copy; 2026 MBTI & IQ Test. All rights reserved.",
+        "footer_privacy": "Privacy Policy",
+        "footer_terms": "Terms of Service",
+        "alert_not_implemented": " page (not implemented yet)",
+        // MBTI Descriptions
+        "ISTJ_desc": "ISTJ (The Logistician): Practical and fact-minded individuals whose reliability cannot be doubted. They are quiet, serious, and earn success by being thorough and dependable, valuing tradition and loyalty.",
+        "ISFJ_desc": "ISFJ (The Defender): Very dedicated and warm protectors, always ready to defend their loved ones. They are quiet, friendly, responsible, and conscientious, committed and steady in meeting their obligations.",
+        "INFJ_desc": "INFJ (The Advocate): Quiet and mystical, yet very inspiring and tireless idealists. They seek meaning and connection in ideas, relationships, and material possessions, wanting to understand what motivates people and being insightful about others.",
+        "INTJ_desc": "INTJ (The Architect): Imaginative and strategic thinkers with a plan for everything. They have original minds and a great drive for implementing their ideas and achieving their goals. They quickly see patterns in external events and develop long-range explanatory perspectives.",
+        "ISTP_desc": "ISTP (The Virtuoso): Bold and practical experimenters, masters of all kinds of tools. They are tolerant and flexible, quiet observers until a problem appears, then act quickly to find workable solutions.",
+        "ISFP_desc": "ISFP (The Adventurer): Flexible and charming artists, always ready to explore and experience something new. They are quiet, friendly, sensitive, and kind, enjoying the present moment and what's going on around them.",
+        "INFP_desc": "INFP (The Mediator): Poetic, kind, and altruistic people, always eager to help a good cause. They are idealistic, loyal to their values and to people important to them, and want to live a life congruent with their values.",
+        "INTP_desc": "INTP (The Logician): Innovative inventors with an unquenchable thirst for knowledge. They seek to develop logical explanations for everything that interests them, are theoretical and abstract, and are more interested in ideas than social interaction.",
+        "ESTP_desc": "ESTP (The Entrepreneur): Smart, energetic, and very perceptive people, who truly enjoy living on the edge. They are flexible and tolerant, taking a pragmatic approach focused on immediate results.",
+        "ESFP_desc": "ESFP (The Entertainer): Spontaneous, energetic, and enthusiastic people—life is never boring around them. They are outgoing, friendly, and accepting, exuberant lovers of life, people, and material comforts.",
+        "ENFP_desc": "ENFP (The Campaigner): Enthusiastic, creative, and sociable free spirits, who can always find a reason to smile. They are warmly enthusiastic and imaginative, seeing life as full of possibilities and making connections between events and information very quickly.",
+        "ENTP_desc": "ENTP (The Debater): Smart and curious thinkers who cannot resist an intellectual challenge. They are quick, ingenious, stimulating, alert, and outspoken, resourceful in solving new and challenging problems.",
+        "ESTJ_desc": "ESTJ (The Executive): Excellent administrators, unsurpassed at managing things or people. They are practical, realistic, and matter-of-fact, decisive, and quickly move to implement decisions.",
+        "ESFJ_desc": "ESFJ (The Consul): Extraordinarily caring, social, and popular people, always eager to help. They are warmhearted, conscientious, and cooperative, wanting harmony in their environment and working with determination to establish it.",
+        "ENFJ_desc": "ENFJ (The Protagonist): Charismatic and inspiring leaders, able to mesmerize their listeners. They are warm and empathetic, responsive and responsible, highly attuned to the emotions, needs, and motivations of others.",
+        "ENTJ_desc": "ENTJ (The Commander): Bold, imaginative, and strong-willed leaders, always finding a way or making one. They are frank, decisive, and readily assume leadership, quickly identifying illogical and inefficient procedures to develop and implement comprehensive solutions.",
+        // MBTI Questions
+        "mbti_q1": "Do you enjoy mingling with new people?", "mbti_q1_opt1": "Yes, I enjoy it.", "mbti_q1_opt2": "No, I prefer spending time quietly.",
+        "mbti_q2": "Do you feel drained after parties or social gatherings?", "mbti_q2_opt1": "Yes, I do.", "mbti_q2_opt2": "No, I gain energy from them.",
+        "mbti_q3": "Do you focus on realistic and concrete facts?", "mbti_q3_opt1": "Yes, I value realism.", "mbti_q3_opt2": "No, I'm more interested in future possibilities and abstract ideas.",
+        "mbti_q4": "Do you prefer exploring new ideas or sticking to proven methods?", "mbti_q4_opt1": "I explore new ideas.", "mbti_q4_opt2": "I prefer proven methods.",
+        "mbti_q5": "When making decisions, do you prioritize logic and objective analysis?", "mbti_q5_opt1": "Yes, I prefer logical judgment.", "mbti_q5_opt2": "No, I consider other people's feelings and circumstances.",
+        "mbti_q6": "Is it easy for you to empathize with and understand others' feelings?", "mbti_q6_opt1": "Yes, I easily empathize.", "mbti_q6_opt2": "No, I view situations objectively.",
+        "mbti_q7": "Do you like to plan and process tasks systematically?", "mbti_q7_opt1": "Yes, I like planning.", "mbti_q7_opt2": "No, I prefer flexibility and spontaneity.",
+        "mbti_q8": "Do you become more focused when a deadline is approaching?", "mbti_q8_opt1": "Yes, I do.", "mbti_q8_opt2": "No, I plan and complete tasks in advance.",
+        "mbti_q9": "Do you enjoy adapting to new environments?", "mbti_q9_opt1": "Yes, I enjoy it.", "mbti_q9_opt2": "No, I prefer familiar things.",
+        "mbti_q10": "Do you prefer working alone over group activities?", "mbti_q10_opt1": "Yes, I prefer it.", "mbti_q10_opt2": "No, I like working with others.",
+        "mbti_q11": "Do you focus more on future possibilities and ideas?", "mbti_q11_opt1": "Yes, I do.", "mbti_q11_opt2": "No, I focus on present facts.",
+        "mbti_q12": "Are you more interested in practical problem-solving?", "mbti_q12_opt1": "Yes, I am.", "mbti_q12_opt2": "No, I'm more interested in theoretical matters.",
+        "mbti_q13": "When making decisions, do you prioritize personal values and harmony?", "mbti_q13_opt1": "Yes, I do.", "mbti_q13_opt2": "No, I follow objective criteria.",
+        "mbti_q14": "Is it easy for you to put yourself in others' shoes?", "mbti_q14_opt1": "Yes, it is easy.", "mbti_q14_opt2": "No, it's difficult.",
+        "mbti_q15": "Do you like to set a schedule in advance and stick to it?", "mbti_q15_opt1": "Yes, I do.", "mbti_q15_opt2": "No, I adapt flexibly to situations.",
+        "mbti_q16": "When you get new information, do you think thoroughly before acting?", "mbti_q16_opt1": "Yes, I do.", "mbti_q16_opt2": "No, I prefer immediate action.",
+        "mbti_q17": "In conflict situations, do you first try objective analysis to find a solution?", "mbti_q17_opt1": "Yes, I do.", "mbti_q17_opt2": "No, I prioritize improving relationships.",
+        "mbti_q18": "Do you tend to follow a minority opinion if it's convincing, rather than the majority?", "mbti_q18_opt1": "Yes, I do.", "mbti_q18_opt2": "No, I follow the majority opinion.",
+        "mbti_q19": "When faced with a complex problem, do you try to see the big picture first?", "mbti_q19_opt1": "Yes, I do.", "mbti_q19_opt2": "No, I examine the details first.",
+        "mbti_q20": "Do you seek new experiences in daily life?", "mbti_q20_opt1": "Yes, I do.", "mbti_q20_opt2": "No, I prefer stability.",
+        "mbti_q21": "Do you enjoy coming up with new ideas?", "mbti_q21_opt1": "Yes, I enjoy it.", "mbti_q21_opt2": "No, I prefer developing existing ideas.",
+        "mbti_q22": "Are you skilled at understanding other people's emotions?", "mbti_q22_opt1": "Yes, I am skilled.", "mbti_q22_opt2": "No, I focus more on objective judgment.",
+        "mbti_q23": "Does it make you comfortable to set schedules in advance?", "mbti_q23_opt1": "Yes, it does.", "mbti_q23_opt2": "No, I prefer flexibility.",
+        "mbti_q24": "Do you primarily use a logical approach when solving problems?", "mbti_q24_opt1": "Yes, I primarily use it.", "mbti_q24_opt2": "No, I trust intuition or experience more.",
+        "mbti_q25": "Are you apt to express your emotions easily?", "mbti_q25_opt1": "Yes, I am.", "mbti_q25_opt2": "No, I don't easily reveal my emotions.",
+        "mbti_q26": "Do you gain energy from meeting new people?", "mbti_q26_opt1": "Yes, I do.", "mbti_q26_opt2": "No, I feel tired.",
+        "mbti_q27": "Do you feel relieved only after making a perfect plan before starting work?", "mbti_q27_opt1": "Yes, I do.", "mbti_q27_opt2": "No, I start flexibly.",
+        "mbti_q28": "Are you more attracted to concrete and factual information than complex information?", "mbti_q28_opt1": "Yes, I am.", "mbti_q28_opt2": "No, I'm more interested in abstract information.",
+        "mbti_q29": "Do you tend to prioritize others' needs and feelings over your own?", "mbti_q29_opt1": "Yes, I do.", "mbti_q29_opt2": "No, I prioritize my own needs.",
+        "mbti_q30": "When making decisions, do you keep all possibilities open and explore until the end?", "mbti_q30_opt1": "Yes, I do.", "mbti_q30_opt2": "No, I tend to make decisions quickly.",
+
         "mbti_result_title": "Your MBTI Type is...",
         "mbti_result_disclaimer": "Find more detailed information on a professional MBTI website!",
 
@@ -152,6 +330,31 @@ const translations = {
         "iq_q4": "Some months have 28 days, and some have 30. How many days do all months have?", "iq_q4_opt1": "28 days", "iq_q4_opt2": "29 days", "iq_q4_opt3": "30 days", "iq_q4_opt4": "31 days",
         "iq_q5": "Which word is unrelated to the others? (Based on meaning)", "iq_q5_opt1": "Happiness", "iq_q5_opt2": "Joy", "iq_q5_opt3": "Sadness", "iq_q5_opt4": "Pleasure",
         "iq_q6": "What is the next number in the blank? 2, 4, 8, 16, ?", "iq_q6_opt1": "24", "iq_q6_opt2": "32", "iq_q6_opt3": "48", "iq_q6_opt4": "64",
+        "iq_q7": "A is taller than B, and C is shorter than A. Who is taller between B and C?", "iq_q7_opt1": "B", "iq_q7_opt2": "C", "iq_q7_opt3": "Same", "iq_q7_opt4": "Cannot be determined",
+        "iq_q8": "What color do you get when you mix red and blue?", "iq_q8_opt1": "Green", "iq_q8_opt2": "Purple", "iq_q8_opt3": "Orange", "iq_q8_opt4": "Black",
+        "iq_q9": "Cats meow and dogs bark. What sound do birds make?", "iq_q9_opt1": "Caw", "iq_q9_opt2": "Chirp", "iq_q9_opt3": "Moo", "iq_q9_opt4": "Squeak",
+        "iq_q10": "You are brushing your hair while looking in a mirror. In the mirror, you are brushing with your right hand. What hand are you actually brushing with?", "iq_q10_opt1": "Left hand", "iq_q10_opt2": "Right hand", "iq_q10_opt3": "Both hands", "iq_q10_opt4": "Cannot be determined",
+        "iq_q11": "A number is divisible by 5 and also by 3. Which of the following could be that number?", "iq_q11_opt1": "10", "iq_q11_opt2": "12", "iq_q11_opt3": "15", "iq_q11_opt4": "20",
+        "iq_q12": "All birds can fly. A sparrow is a bird. Therefore, a sparrow can fly. What kind of reasoning is this?", "iq_q12_opt1": "Deductive", "iq_q12_opt2": "Inductive", "iq_q12_opt3": "Analogical", "iq_q12_opt4": "Fallacy",
+        "iq_q13": "A picture has 3 triangles and 2 squares. How many shapes are there in total?", "iq_q13_opt1": "2", "iq_q13_opt2": "3", "iq_q13_opt3": "5", "iq_q13_opt4": "6",
+        "iq_q14": "If yesterday was tomorrow's yesterday, what day is today?", "iq_q14_opt1": "Monday", "iq_q14_opt2": "Tuesday", "iq_q14_opt3": "Wednesday", "iq_q14_opt4": "Thursday",
+        "iq_q15": "Fish live in water. Which of the following is NOT a fish?", "iq_q15_opt1": "Whale", "iq_q15_opt2": "Shark", "iq_q15_opt3": "Octopus", "iq_q15_opt4": "Frog",
+        "iq_q16": "A building has 100 rooms. Each room has 10 doors. How many doors are there in total?", "iq_q16_opt1": "10", "iq_q16_opt2": "100", "iq_q16_opt3": "1000", "iq_q16_opt4": "10000",
+        "iq_q17": "What is always in front of you but cannot be seen?", "iq_q17_opt1": "Past", "iq_q17_opt2": "Future", "iq_q17_opt3": "Darkness", "iq_q17_opt4": "Dream",
+        "iq_q18": "Which of the following is the smallest?", "iq_q18_opt1": "Planet", "iq_q18_opt2": "Moon", "iq_q18_opt3": "Star", "iq_q18_opt4": "Galaxy",
+        "iq_q19": "A house has 4 walls, and each wall faces south. If a bear enters the house, what color is the bear?", "iq_q19_opt1": "Brown", "iq_q19_opt2": "White", "iq_q19_opt3": "Black", "iq_q19_opt4": "Gray",
+        "iq_q20": "I am always hungry, and whatever I feed on makes me weak. What am I?", "iq_q20_opt1": "Fire", "iq_q20_opt2": "Water", "iq_q20_opt3": "Earth", "iq_q20_opt4": "Air",
+        "iq_q21": "There are 5 apples in a basket. You take 3. How many apples do you have?", "iq_q21_opt1": "2", "iq_q21_opt2": "3", "iq_q21_opt3": "5", "iq_q21_opt4": "8",
+        "iq_q22": "I can talk but have no mouth, hear but have no ears. What am I?", "iq_q22_opt1": "Book", "iq_q22_opt2": "Phone", "iq_q22_opt3": "River", "iq_q22_opt4": "Wind",
+        "iq_q23": "The more you make of me, the more you leave behind. What am I?", "iq_q23_opt1": "Bridge", "iq_q23_opt2": "Secret", "iq_q23_opt3": "Problem", "iq_q23_opt4": "Footsteps",
+        "iq_q24": "I am always ascending, yet never move. What am I?", "iq_q24_opt1": "Cloud", "iq_q24_opt2": "Tree", "iq_q24_opt3": "Mountain", "iq_q24_opt4": "Stairs",
+        "iq_q25": "I have cities, but no houses; forests, but no trees; and water, but no fish. What am I?", "iq_q25_opt1": "Map", "iq_q25_opt2": "Globe", "iq_q25_opt3": "Book", "iq_q25_opt4": "Painting",
+        "iq_q26": "What has an eye, but cannot see?", "iq_q26_opt1": "Needle", "iq_q26_opt2": "Storm", "iq_q26_opt3": "Potato", "iq_q26_opt4": "Key",
+        "iq_q27": "What is full of holes but still holds water?", "iq_q27_opt1": "Sponge", "iq_q27_opt2": "Cup", "iq_q27_opt3": "Bottle", "iq_q27_opt4": "Bucket",
+        "iq_q28": "What gets wet while drying?", "iq_q28_opt1": "Towel", "iq_q28_opt2": "Clothes", "iq_q28_opt3": "Hair", "iq_q28_opt4": "Socks",
+        "iq_q29": "What has to be broken before you can use it?", "iq_q29_opt1": "Egg", "iq_q29_opt2": "Glass", "iq_q29_opt3": "Plate", "iq_q29_opt4": "Mirror",
+        "iq_q30": "What is always coming, but never arrives?", "iq_q30_opt1": "Tomorrow", "iq_q30_opt2": "Today", "iq_q30_opt3": "Yesterday", "iq_q30_opt4": "Future",
+
         "iq_result_title": "Your Estimated IQ is...",
         "iq_result_disclaimer": "This is a simple test result; please consult an expert for accurate IQ measurement.",
         "retake_button": "Retake Test"
@@ -219,15 +422,63 @@ const translations = {
         "mbti_q6": "他人の気持ちに共感し、理解するのは簡単ですか？", "mbti_q6_opt1": "はい、簡単に共感します。", "mbti_q6_opt2": "いいえ、客観的に状況を見ます。",
         "mbti_q7": "計画を立てて体系的にタスクを処理するのが好きですか？", "mbti_q7_opt1": "はい、計画を立てるのが好きです。", "mbti_q7_opt2": "いいえ、柔軟で即興的なものを好みます。",
         "mbti_q8": "締め切りが近づくと集中力が高まる方ですか？", "mbti_q8_opt1": "はい、そうです。", "mbti_q8_opt2": "いいえ、事前に計画してタスクを完了します。",
+        "mbti_q9": "新しい環境に順応することを楽しんでいますか？", "mbti_q9_opt1": "はい、楽しんでいます。", "mbti_q9_opt2": "いいえ、慣れ親しんだものを好みます。",
+        "mbti_q10": "グループ活動よりも一人での作業を好みますか？", "mbti_q10_opt1": "はい、好みます。", "mbti_q10_opt2": "いいえ、他の人と一緒に作業するのが好きです。",
+        "mbti_q11": "将来の可能性やアイデアに重点を置いていますか？", "mbti_q11_opt1": "はい、そうです。", "mbti_q11_opt2": "いいえ、現在の事実に焦点を当てています。",
+        "mbti_q12": "実用的な問題解決にもっと興味がありますか？", "mbti_q12_opt1": "はい、あります。", "mbti_q12_opt2": "いいえ、理論的な事柄にもっと興味があります。",
+        "mbti_q13": "意思決定をする際、個人的な価値観と調和を優先しますか？", "mbti_q13_opt1": "はい、優先します。", "mbti_q13_opt2": "いいえ、客観的な基準に従います。",
+        "mbti_q14": "他人の立場になって考えるのは簡単ですか？", "mbti_q14_opt1": "はい、簡単です。", "mbti_q14_opt2": "いいえ、難しいです。",
+        "mbti_q15": "事前にスケジュールを設定し、それに従うのが好きですか？", "mbti_q15_opt1": "はい、好きです。", "mbti_q15_opt2": "いいえ、状況に応じて柔軟に対応します。",
+        "mbti_q16": "新しい情報を得たとき、すぐに行動する前にじっくり考えますか？", "mbti_q16_opt1": "はい、考えます。", "mbti_q16_opt2": "いいえ、すぐに行動する方を好みます。",
+        "mbti_q17": "紛争状況で解決策を見つけるために、まず客観的な分析を試みますか？", "mbti_q17_opt1": "はい、試みます。", "mbti_q17_opt2": "いいえ、関係改善を優先します。",
+        "mbti_q18": "説得力があれば、多数派の意見よりも少数派の意見に従う傾向がありますか？", "mbti_q18_opt1": "はい、従います。", "mbti_q18_opt2": "いいえ、多数派の意見に従います。",
+        "mbti_q19": "複雑な問題に直面したとき、まず全体像を把握しようとしますか？", "mbti_q19_opt1": "はい、努力します。", "mbti_q19_opt2": "いいえ、まず詳細を調べます。",
+        "mbti_q20": "日常生活で新しい経験を求めていますか？", "mbti_q20_opt1": "はい、そうです。", "mbti_q20_opt2": "いいえ、安定を好みます。",
+        "mbti_q21": "新しいアイデアを出すことを楽しんでいますか？", "mbti_q21_opt1": "はい、楽しんでいます。", "mbti_q21_opt2": "いいえ、既存のアイデアを発展させることを好みます。",
+        "mbti_q22": "他人の感情を理解することに長けていますか？", "mbti_q22_opt1": "はい、長けています。", "mbti_q22_opt2": "いいえ、客観的な判断にもっと集中します。",
+        "mbti_q23": "事前にスケジュールを設定すると安心しますか？", "mbti_q23_opt1": "はい、そうです。", "mbti_q23_opt2": "いいえ、柔軟性がある方が良いです。",
+        "mbti_q24": "問題解決の際に論理的なアプローチを主に使用しますか？", "mbti_q24_opt1": "はい、主に使用します。", "mbti_q24_opt2": "いいえ、直感や経験をより信頼します。",
+        "mbti_q25": "自分の感情を簡単に表現する方ですか？", "mbti_q25_opt1": "はい、そうです。", "mbti_q25_opt2": "いいえ、感情をあまり表に出しません。",
+        "mbti_q26": "新しい人との出会いからエネルギーを得る方ですか？", "mbti_q26_opt1": "はい、得ます。", "mbti_q26_opt2": "いいえ、疲労を感じます。",
+        "mbti_q27": "仕事を始める前に完璧な計画を立てて安心しますか？", "mbti_q27_opt1": "はい、そうです。", "mbti_q27_opt2": "いいえ、柔軟に始めます。",
+        "mbti_q28": "複雑な情報よりも具体的で事実的な情報に惹かれますか？", "mbti_q28_opt1": "はい、惹かれます。", "mbti_q28_opt2": "いいえ、抽象的な情報にもっと興味があります。",
+        "mbti_q29": "自分のニーズや感情よりも他人のニーズや感情を優先する傾向がありますか？", "mbti_q29_opt1": "はい、そうです。", "mbti_q29_opt2": "いいえ、自分のニーズを優先します。",
+        "mbti_q30": "意思決定をする際、あらゆる可能性を残し、最後まで探求する方ですか？", "mbti_q30_opt1": "はい、そうです。", "mbti_q30_opt2": "いいえ、早く決断する方です。",
+
         "mbti_result_title": "あなたのMBTIタイプは...",
         "mbti_result_disclaimer": "詳細については、専門のMBTIウェブサイトをご覧ください！",
-        // IQ Questions (Google Translated)
+
+        // IQ Questions
         "iq_q1": "次の数列の次の数字は何ですか？ 1, 3, 6, 10, 15, ?", "iq_q1_opt1": "20", "iq_q1_opt2": "21", "iq_q1_opt3": "22", "iq_q1_opt4": "23",
         "iq_q2": "鋼鉄が鋳鉄より強い場合、鋳鉄は紙と比較してどうですか？", "iq_q2_opt1": "強い", "iq_q2_opt2": "弱い", "iq_q2_opt3": "同じ", "iq_q2_opt4": "関係ない",
         "iq_q3": "残りの3つと異なるものはどれですか？（オブジェクトに基づく）", "iq_q3_opt1": "リンゴ", "iq_q3_opt2": "バナナ", "iq_q3_opt3": "ジャガイモ", "iq_q3_opt4": "オレンジ",
         "iq_q4": "28日ある月もあれば、30日ある月もあります。すべての月は何日ありますか？", "iq_q4_opt1": "28日", "iq_q4_opt2": "29日", "iq_q4_opt3": "30日", "iq_q4_opt4": "31日",
         "iq_q5": "意味に基づいて、他の単語とは無関係な単語はどれですか？", "iq_q5_opt1": "幸福", "iq_q5_opt2": "喜び", "iq_q5_opt3": "悲しみ", "iq_q5_opt4": "楽しみ",
         "iq_q6": "次の空白に入る数字は何ですか？ 2, 4, 8, 16, ?", "iq_q6_opt1": "24", "iq_q6_opt2": "32", "iq_q6_opt3": "48", "iq_q6_opt4": "64",
+        "iq_q7": "AはBより背が高い。CはAより背が低い。BとCではどちらが背が高いですか？", "iq_q7_opt1": "B", "iq_q7_opt2": "C", "iq_q7_opt3": "同じ", "iq_q7_opt4": "判断できない",
+        "iq_q8": "赤と青を混ぜると何色になりますか？", "iq_q8_opt1": "緑", "iq_q8_opt2": "紫", "iq_q8_opt3": "オレンジ", "iq_q8_opt4": "黒",
+        "iq_q9": "猫は「ニャー」、犬は「ワン」と鳴きます。鳥は何と鳴きますか？", "iq_q9_opt1": "カーカー", "iq_q9_opt2": "チュンチュン", "iq_q9_opt3": "モー", "iq_q9_opt4": "キーキー",
+        "iq_q10": "鏡を見ながら髪を梳かしています。鏡の中のあなたは右手で梳かしています。あなたは実際にどちらの手で梳かしていますか？", "iq_q10_opt1": "左手", "iq_q10_opt2": "右手", "iq_q10_opt3": "両手", "iq_q10_opt4": "判断できない",
+        "iq_q11": "ある数字は5で割り切れ、3でも割り切れます。その数字は次のうちどれですか？", "iq_q11_opt1": "10", "iq_q11_opt2": "12", "iq_q11_opt3": "15", "iq_q11_opt4": "20",
+        "iq_q12": "すべての鳥は飛べます。スズメは鳥です。したがって、スズメは飛べます。この推論は何ですか？", "iq_q12_opt1": "演繹法", "iq_q12_opt2": "帰納法", "iq_q12_opt3": "類推", "iq_q12_opt4": "誤謬",
+        "iq_q13": "ある絵には3つの三角形と2つの四角形があります。合計でいくつの図形がありますか？", "iq_q13_opt1": "2", "iq_q13_opt2": "3", "iq_q13_opt3": "5", "iq_q13_opt4": "6",
+        "iq_q14": "もし昨日が明日の昨日だったとしたら、今日は何曜日ですか？", "iq_q14_opt1": "月曜日", "iq_q14_opt2": "火曜日", "iq_q14_opt3": "水曜日", "iq_q14_opt4": "木曜日",
+        "iq_q15": "魚は水中に住んでいます。次のうち魚ではないものはどれですか？", "iq_q15_opt1": "クジラ", "iq_q15_opt2": "サメ", "iq_q15_opt3": "タコ", "iq_q15_opt4": "カエル",
+        "iq_q16": "ある建物には100の部屋があります。各部屋には10のドアがあります。ドアは全部でいくつありますか？", "iq_q16_opt1": "10", "iq_q16_opt2": "100", "iq_q16_opt3": "1000", "iq_q16_opt4": "10000",
+        "iq_q17": "いつもあなたの目の前にあるのに見ることができないものは何ですか？", "iq_q17_opt1": "過去", "iq_q17_opt2": "未来", "iq_q17_opt3": "闇", "iq_q17_opt4": "夢",
+        "iq_q18": "次のうち最も小さいものは何ですか？", "iq_q18_opt1": "惑星", "iq_q18_opt2": "月", "iq_q18_opt3": "星", "iq_q18_opt4": "銀河",
+        "iq_q19": "ある家には4つの壁があり、各壁は南を向いています。クマがこの家に入ってきたら、クマの色は何ですか？", "iq_q19_opt1": "茶色", "iq_q19_opt2": "白", "iq_q19_opt3": "黒", "iq_q19_opt4": "灰色",
+        "iq_q20": "私はいつもお腹を空かせていて、私を養うものは何でも私を弱くします。私は何ですか？", "iq_q20_opt1": "火", "iq_q20_opt2": "水", "iq_q20_opt3": "土", "iq_q20_opt4": "空気",
+        "iq_q21": "かごの中にリンゴが5つあります。あなたは3つ取りました。あなたにはいくつのリンゴが残っていますか？", "iq_q21_opt1": "2つ", "iq_q21_opt2": "3つ", "iq_q21_opt3": "5つ", "iq_q21_opt4": "8つ",
+        "iq_q22": "私は話すことができますが口がなく、耳はありますが聞きません。私は何ですか？", "iq_q22_opt1": "本", "iq_q22_opt2": "電話", "iq_q22_opt3": "川", "iq_q22_opt4": "風",
+        "iq_q23": "私を作れば私を破壊したくなるでしょう。私は何ですか？", "iq_q23_opt1": "橋", "iq_q23_opt2": "秘密", "iq_q23_opt3": "問題", "iq_q23_opt4": "足跡",
+        "iq_q24": "私はいつも上昇しますが、決して動きません。私は何ですか？", "iq_q24_opt1": "雲", "iq_q24_opt2": "木", "iq_q24_opt3": "山", "iq_q24_opt4": "階段",
+        "iq_q25": "私には都市がありますが家がなく、森がありますが木がなく、水がありますが魚がいません。私は何ですか？", "iq_q25_opt1": "地図", "iq_q25_opt2": "地球儀", "iq_q25_opt3": "本", "iq_q25_opt4": "絵画",
+        "iq_q26": "目があるのに見えないものは何ですか？", "iq_q26_opt1": "針", "iq_q26_opt2": "嵐", "iq_q26_opt3": "ジャガイモ", "iq_q26_opt4": "鍵",
+        "iq_q27": "穴だらけなのに水を保持できるものは何ですか？", "iq_q27_opt1": "スポンジ", "iq_q27_opt2": "カップ", "iq_q27_opt3": "ボトル", "iq_q27_opt4": "バケツ",
+        "iq_q28": "乾かしながら濡れるものは何ですか？", "iq_q28_opt1": "タオル", "iq_q28_opt2": "服", "iq_q28_opt3": "髪の毛", "iq_q28_opt4": "靴下",
+        "iq_q29": "使う前に壊さなければならないものは何ですか？", "iq_q29_opt1": "卵", "iq_q29_opt2": "ガラス", "iq_q29_opt3": "皿", "iq_q29_opt4": "鏡",
+        "iq_q30": "いつも来るのに決して到着しないものは何ですか？", "iq_q30_opt1": "明日", "iq_q30_opt2": "今日", "iq_q30_opt3": "昨日", "iq_q30_opt4": "未来",
         "iq_result_title": "推定IQは...",
         "iq_result_disclaimer": "これは簡単なテスト結果です。正確なIQ測定については専門家にご相談ください。",
         "retake_button": "再テスト"
@@ -295,15 +546,64 @@ const translations = {
         "mbti_q6": "你是否容易与他人的感受产生共鸣和理解？", "mbti_q6_opt1": "是的，我很容易产生共鸣。", "mbti_q6_opt2": "不，我客观地看待情况。",
         "mbti_q7": "你喜欢有计划、有条理地处理任务吗？", "mbti_q7_opt1": "是的，我喜欢计划。", "mbti_q7_opt2": "不，我更喜欢灵活和即兴。",
         "mbti_q8": "当截止日期临近时，你是否更容易集中注意力？", "mbti_q8_opt1": "是的，我更容易集中。", "mbti_q8_opt2": "不，我提前计划并完成任务。",
+        "mbti_q9": "你喜欢适应新环境吗？", "mbti_q9_opt1": "是的，我喜欢。", "mbti_q9_opt2": "不，我更喜欢熟悉的事物。",
+        "mbti_q10": "你喜欢独自工作胜过集体活动吗？", "mbti_q10_opt1": "是的，我喜欢。", "mbti_q10_opt2": "不，我喜欢与他人合作。",
+        "mbti_q11": "你更关注未来的可能性和想法吗？", "mbti_q11_opt1": "是的，我更关注。", "mbti_q11_opt2": "不，我关注当前的事实。",
+        "mbti_q12": "你对实际解决问题更感兴趣吗？", "mbti_q12_opt1": "是的，我感兴趣。", "mbti_q12_opt2": "不，我对理论问题更感兴趣。",
+        "mbti_q13": "在做决定时，你是否优先考虑个人价值观和和谐？", "mbti_q13_opt1": "是的，我优先考虑。", "mbti_q13_opt2": "不，我遵循客观标准。",
+        "mbti_q14": "你是否容易设身处地为他人着想？", "mbti_q14_opt1": "是的，很容易。", "mbti_q14_opt2": "不，这很困难。",
+        "mbti_q15": "你喜欢提前制定计划并严格遵守吗？", "mbti_q15_opt1": "是的，我喜欢。", "mbti_q15_opt2": "不，我喜欢灵活应对情况。",
+        "mbti_q16": "当你获得新信息时，你会彻底思考后再行动吗？", "mbti_q16_opt1": "是的，我会。", "mbti_q16_opt2": "不，我更喜欢立即行动。",
+        "mbti_q17": "在冲突情况下，你会首先尝试客观分析以寻找解决方案吗？", "mbti_q17_opt1": "是的，我会。", "mbti_q17_opt2": "不，我优先考虑改善关系。",
+        "mbti_q18": "如果少数人的意见有说服力，你是否倾向于采纳，而不是多数人的意见？", "mbti_q18_opt1": "是的，我采纳。", "mbti_q18_opt2": "不，我采纳多数人的意见。",
+        "mbti_q19": "当遇到复杂问题时，你会先尝试看清全局吗？", "mbti_q19_opt1": "是的，我会。", "mbti_q19_opt2": "不，我先检查细节。",
+        "mbti_q20": "你会在日常生活中寻求新体验吗？", "mbti_q20_opt1": "是的，我会。", "mbti_q20_opt2": "不，我更喜欢稳定。",
+        "mbti_q21": "你喜欢提出新想法吗？", "mbti_q21_opt1": "是的，我喜欢。", "mbti_q21_opt2": "不，我更喜欢发展现有想法。",
+        "mbti_q22": "你擅长理解他人的情绪吗？", "mbti_q22_opt1": "是的，我擅长。", "mbti_q22_opt2": "不，我更注重客观判断。",
+        "mbti_q23": "提前制定计划会让你感到舒服吗？", "mbti_q23_opt1": "是的，会。", "mbti_q23_opt2": "不，我更喜欢灵活性。",
+        "mbti_q24": "解决问题时，你主要采用逻辑方法吗？", "mbti_q24_opt1": "是的，我主要采用。", "mbti_q24_opt2": "不，我更相信直觉或经验。",
+        "mbti_q25": "你是否容易表达自己的情绪？", "mbti_q25_opt1": "是的，我容易。", "mbti_q25_opt2": "不，我不太容易表露情绪。",
+        "mbti_q26": "你是否从与新朋友的会面中获得能量？", "mbti_q26_opt1": "是的，我获得。", "mbti_q26_opt2": "不，我感到疲倦。",
+        "mbti_q27": "开始工作前，是否需要制定完美的计划才能安心？", "mbti_q27_opt1": "是的，需要。", "mbti_q27_opt2": "不，我喜欢灵活开始。",
+        "mbti_q28": "你是否更喜欢具体和事实性信息，而不是复杂信息？", "mbti_q28_opt1": "是的，我喜欢。", "mbti_q28_opt2": "不，我对抽象信息更感兴趣。",
+        "mbti_q29": "你是否倾向于优先考虑他人的需求和感受，而不是自己的？", "mbti_q29_opt1": "是的，我倾向于。", "mbti_q29_opt2": "不，我优先考虑自己的需求。",
+        "mbti_q30": "在做决定时，你是否保持所有可能性开放并探索到最后？", "mbti_q30_opt1": "是的，我保持。", "mbti_q30_opt2": "不，我倾向于快速做决定。",
+
         "mbti_result_title": "你的MBTI类型是...",
         "mbti_result_disclaimer": "请在专业的MBTI网站上查找更详细的信息！",
-        // IQ Questions (Google Translated - Simplified Chinese)
+
+        // IQ Questions
         "iq_q1": "数列中的下一个数字是什么？ 1, 3, 6, 10, 15, ?", "iq_q1_opt1": "20", "iq_q1_opt2": "21", "iq_q1_opt3": "22", "iq_q1_opt4": "23",
         "iq_q2": "如果钢比铸铁坚固，那么铸铁与纸相比如何？", "iq_q2_opt1": "更坚固", "iq_q2_opt2": "更弱", "iq_q2_opt3": "相同", "iq_q2_opt4": "无关",
         "iq_q3": "以下哪个与其他三个不同？（基于对象）", "iq_q3_opt1": "苹果", "iq_q3_opt2": "香蕉", "iq_q3_opt3": "土豆", "iq_q3_opt4": "橙子",
         "iq_q4": "有些月份有28天，有些有30天。所有月份都有多少天？", "iq_q4_opt1": "28天", "iq_q4_opt2": "29天", "iq_q4_opt3": "30天", "iq_q4_opt4": "31天",
         "iq_q5": "根据含义，以下哪个词与其他的无关？", "iq_q5_opt1": "幸福", "iq_q5_opt2": "喜悦", "iq_q5_opt3": "悲伤", "iq_q5_opt4": "乐趣",
         "iq_q6": "空白处的下一个数字是什么？ 2, 4, 8, 16, ?", "iq_q6_opt1": "24", "iq_q6_opt2": "32", "iq_q6_opt3": "48", "iq_q6_opt4": "64",
+        "iq_q7": "A比B高，C比A矮。B和C中谁更高？", "iq_q7_opt1": "B", "iq_q7_opt2": "C", "iq_q7_opt3": "相同", "iq_q7_opt4": "无法确定",
+        "iq_q8": "红色和蓝色混合会变成什么颜色？", "iq_q8_opt1": "绿色", "iq_q8_opt2": "紫色", "iq_q8_opt3": "橙色", "iq_q8_opt4": "黑色",
+        "iq_q9": "猫叫“喵喵”，狗叫“汪汪”。鸟怎么叫？", "iq_q9_opt1": "呱呱", "iq_q9_opt2": "吱吱", "iq_q9_opt3": "哞哞", "iq_q9_opt4": "唧唧",
+        "iq_q10": "你照镜子梳头。镜子里的你用右手梳头。你实际用哪只手梳头？", "iq_q10_opt1": "左手", "iq_q10_opt2": "右手", "iq_q10_opt3": "双手", "iq_q10_opt4": "无法确定",
+        "iq_q11": "某个数可以被5整除，也可以被3整除。这个数可能是以下哪个？", "iq_q11_opt1": "10", "iq_q11_opt2": "12", "iq_q11_opt3": "15", "iq_q11_opt4": "20",
+        "iq_q12": "所有的鸟都会飞。麻雀是鸟。所以麻雀会飞。这是哪种推理？", "iq_q12_opt1": "演绎法", "iq_q12_opt2": "归纳法", "iq_q12_opt3": "类比", "iq_q12_opt4": "谬误",
+        "iq_q13": "一幅画中有3个三角形和2个四边形。总共有多少个图形？", "iq_q13_opt1": "2", "iq_q13_opt2": "3", "iq_q13_opt3": "5", "iq_q13_opt4": "6",
+        "iq_q14": "如果昨天是明天的昨天，那么今天是星期几？", "iq_q14_opt1": "星期一", "iq_q14_opt2": "星期二", "iq_q14_opt3": "星期三", "iq_q14_opt4": "星期四",
+        "iq_q15": "鱼生活在水中。以下哪个不是鱼？", "iq_q15_opt1": "鲸鱼", "iq_q15_opt2": "鲨鱼", "iq_q15_opt3": "章鱼", "iq_q15_opt4": "青蛙",
+        "iq_q16": "一座建筑物有100个房间。每个房间有10扇门。总共有多少扇门？", "iq_q16_opt1": "10", "iq_q16_opt2": "100", "iq_q16_opt3": "1000", "iq_q16_opt4": "10000",
+        "iq_q17": "什么总是摆在你面前，却看不见？", "iq_q17_opt1": "过去", "iq_q17_opt2": "未来", "iq_q17_opt3": "黑暗", "iq_q17_opt4": "梦想",
+        "iq_q18": "以下哪个最小？", "iq_q18_opt1": "行星", "iq_q18_opt2": "月亮", "iq_q18_opt3": "恒星", "iq_q18_opt4": "星系",
+        "iq_q19": "一所房子有4堵墙，每堵墙都朝南。如果一只熊走进房子，那只熊是什么颜色？", "iq_q19_opt1": "棕色", "iq_q19_opt2": "白色", "iq_q19_opt3": "黑色", "iq_q19_opt4": "灰色",
+        "iq_q20": "我总是饥饿，任何喂给我的东西都会使我虚弱。我是什么？", "iq_q20_opt1": "火", "iq_q20_opt2": "水", "iq_q20_opt3": "土", "iq_q20_opt4": "空气",
+        "iq_q21": "一个篮子里有5个苹果。你拿了3个。你还剩下多少个苹果？", "iq_q21_opt1": "2个", "iq_q21_opt2": "3个", "iq_q21_opt3": "5个", "iq_q21_opt4": "8个",
+        "iq_q22": "我能说话却没有嘴，有耳朵却听不见。我是什么？", "iq_q22_opt1": "书", "iq_q22_opt2": "电话", "iq_q22_opt3": "河流", "iq_q22_opt4": "风",
+        "iq_q23": "你越制造我，就越想摧毁我。我是什么？", "iq_q23_opt1": "桥", "iq_q23_opt2": "秘密", "iq_q23_opt3": "问题", "iq_q23_opt4": "谎言",
+        "iq_q24": "我总是在上升，却从不动。我是什么？", "iq_q24_opt1": "云", "iq_q24_opt2": "树", "iq_q24_opt3": "山", "iq_q24_opt4": "楼梯",
+        "iq_q25": "我有城市，但没有房屋；有森林，但没有树木；有水，但没有鱼。我是什么？", "iq_q25_opt1": "地图", "iq_q25_opt2": "地球仪", "iq_q25_opt3": "书", "iq_q25_opt4": "绘画",
+        "iq_q26": "什么有眼睛却看不见？", "iq_q26_opt1": "针", "iq_q26_opt2": "风暴", "iq_q26_opt3": "土豆", "iq_q26_opt4": "钥匙",
+        "iq_q27": "什么满是洞却能盛水？", "iq_q27_opt1": "海绵", "iq_q27_opt2": "杯子", "iq_q27_opt3": "瓶子", "iq_q27_opt4": "水桶",
+        "iq_q28": "什么在干燥时会变湿？", "iq_q28_opt1": "毛巾", "iq_q28_opt2": "衣服", "iq_q28_opt3": "头发", "iq_q28_opt4": "袜子",
+        "iq_q29": "什么在使用之前必须先打破？", "iq_q29_opt1": "鸡蛋", "iq_q29_opt2": "玻璃", "iq_q29_opt3": "盘子", "iq_q29_opt4": "镜子",
+        "iq_q30": "什么总是到来，却从不抵达？", "iq_q30_opt1": "明天", "iq_q30_opt2": "今天", "iq_q30_opt3": "昨天", "iq_q30_opt4": "未来",
+
         "iq_result_title": "你的估计智商是...",
         "iq_result_disclaimer": "这是一个简单的测试结果；请咨询专家以获取准确的智商测量。",
         "retake_button": "重新测试"
@@ -455,24 +755,61 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage(currentLang); // Apply initial language
 });
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+    return array;
+}
 
 // --- MBTI Test Web Component ---
 class MbtiTest extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.questions = [
-            { question: "새로운 사람들과 어울리는 것을 즐기시나요?", options: [{ text: "네, 즐깁니다.", value: "E" }, { text: "아니요, 조용히 보내는 것을 선호합니다.", value: "I" }] },
-            { question: "파티나 모임이 끝나면 에너지가 고갈되는 느낌인가요?", options: [{ text: "네, 그렇습니다.", value: "I" }, { text: "아니요, 오히려 에너지를 얻습니다.", value: "E" }] },
-            { question: "현실적이고 구체적인 사실에 집중하나요?", options: [{ text: "네, 현실적인 것을 중요하게 생각합니다.", value: "S" }, { text: "아니요, 미래 가능성과 추상적인 아이디어에 관심이 많습니다.", value: "N" }] },
-            { question: "새로운 아이디어를 탐색하는 것을 좋아하나요, 아니면 검증된 방법에 머무는 것을 선호하나요?", options: [{ text: "새로운 아이디어를 탐색합니다.", value: "N" }, { text: "검증된 방법을 선호합니다.", value: "S" }] },
-            { question: "결정을 내릴 때 논리와 객관적인 분석을 중요하게 생각하나요?", options: [{ text: "네, 논리적인 판단을 선호합니다.", value: "T" }, { text: "아니요, 다른 사람들의 감정과 상황을 고려합니다.", value: "F" }] },
-            { question: "다른 사람의 감정을 공감하고 이해하는 것이 쉬운가요?", options: [{ text: "네, 쉽게 공감합니다.", value: "F" }, { text: "아니요, 객관적으로 상황을 봅니다.", value: "T" }] },
-            { question: "계획을 세우고 체계적으로 일을 처리하는 것을 좋아하나요?", options: [{ text: "네, 계획적인 것을 좋아합니다.", value: "J" }, { text: "아니요, 유연하고 즉흥적인 것을 선호합니다.", value: "P" }] },
-            { question: "마감 기한이 임박했을 때 집중력이 높아지는 편인가요?", options: [{ text: "네, 그렇습니다.", value: "P" }, { text: "아니요, 미리 계획하고 완수합니다.", value: "J" }] }
+        this.allQuestions = [
+            { questionKey: "mbti_q1", options: [{ textKey: "mbti_q1_opt1", value: "E" }, { textKey: "mbti_q1_opt2", value: "I" }] },
+            { questionKey: "mbti_q2", options: [{ textKey: "mbti_q2_opt1", value: "I" }, { textKey: "mbti_q2_opt2", value: "E" }] },
+            { questionKey: "mbti_q3", options: [{ textKey: "mbti_q3_opt1", value: "S" }, { textKey: "mbti_q3_opt2", value: "N" }] },
+            { questionKey: "mbti_q4", options: [{ textKey: "mbti_q4_opt1", value: "N" }, { textKey: "mbti_q4_opt2", value: "S" }] },
+            { questionKey: "mbti_q5", options: [{ textKey: "mbti_q5_opt1", value: "T" }, { textKey: "mbti_q5_opt2", value: "F" }] },
+            { questionKey: "mbti_q6", options: [{ textKey: "mbti_q6_opt1", value: "F" }, { textKey: "mbti_q6_opt2", value: "T" }] },
+            { questionKey: "mbti_q7", options: [{ textKey: "mbti_q7_opt1", value: "J" }, { textKey: "mbti_q7_opt2", value: "P" }] },
+            { questionKey: "mbti_q8", options: [{ textKey: "mbti_q8_opt1", value: "P" }, { textKey: "mbti_q8_opt2", value: "J" }] },
+            { questionKey: "mbti_q9", options: [{ textKey: "mbti_q9_opt1", value: "E" }, { textKey: "mbti_q9_opt2", value: "I" }] },
+            { questionKey: "mbti_q10", options: [{ textKey: "mbti_q10_opt1", value: "I" }, { textKey: "mbti_q10_opt2", value: "E" }] },
+            { questionKey: "mbti_q11", options: [{ textKey: "mbti_q11_opt1", value: "N" }, { textKey: "mbti_q11_opt2", value: "S" }] },
+            { questionKey: "mbti_q12", options: [{ textKey: "mbti_q12_opt1", value: "S" }, { textKey: "mbti_q12_opt2", value: "N" }] },
+            { questionKey: "mbti_q13", options: [{ textKey: "mbti_q13_opt1", value: "F" }, { textKey: "mbti_q13_opt2", value: "T" }] },
+            { questionKey: "mbti_q14", options: [{ textKey: "mbti_q14_opt1", value: "F" }, { textKey: "mbti_q14_opt2", value: "T" }] },
+            { questionKey: "mbti_q15", options: [{ textKey: "mbti_q15_opt1", value: "J" }, { textKey: "mbti_q15_opt2", value: "P" }] },
+            { questionKey: "mbti_q16", options: [{ textKey: "mbti_q16_opt1", value: "P" }, { textKey: "mbti_q16_opt2", value: "J" }] },
+            { questionKey: "mbti_q17", options: [{ textKey: "mbti_q17_opt1", value: "T" }, { textKey: "mbti_q17_opt2", value: "F" }] },
+            { questionKey: "mbti_q18", options: [{ textKey: "mbti_q18_opt1", value: "N" }, { textKey: "mbti_q18_opt2", value: "S" }] },
+            { questionKey: "mbti_q19", options: [{ textKey: "mbti_q19_opt1", value: "N" }, { textKey: "mbti_q19_opt2", value: "S" }] },
+            { questionKey: "mbti_q20", options: [{ textKey: "mbti_q20_opt1", value: "E" }, { textKey: "mbti_q20_opt2", value: "I" }] },
+            { questionKey: "mbti_q21", options: [{ textKey: "mbti_q21_opt1", value: "N" }, { textKey: "mbti_q21_opt2", value: "S" }] },
+            { questionKey: "mbti_q22", options: [{ textKey: "mbti_q22_opt1", value: "F" }, { textKey: "mbti_q22_opt2", value: "T" }] },
+            { questionKey: "mbti_q23", options: [{ textKey: "mbti_q23_opt1", value: "J" }, { textKey: "mbti_q23_opt2", value: "P" }] },
+            { questionKey: "mbti_q24", options: [{ textKey: "mbti_q24_opt1", value: "T" }, { textKey: "mbti_q24_opt2", value: "F" }] },
+            { questionKey: "mbti_q25", options: [{ textKey: "mbti_q25_opt1", value: "F" }, { textKey: "mbti_q25_opt2", value: "T" }] },
+            { questionKey: "mbti_q26", options: [{ textKey: "mbti_q26_opt1", value: "E" }, { textKey: "mbti_q26_opt2", value: "I" }] },
+            { questionKey: "mbti_q27", options: [{ textKey: "mbti_q27_opt1", value: "J" }, { textKey: "mbti_q27_opt2", value: "P" }] },
+            { questionKey: "mbti_q28", options: [{ textKey: "mbti_q28_opt1", value: "S" }, { textKey: "mbti_q28_opt2", value: "N" }] },
+            { questionKey: "mbti_q29", options: [{ textKey: "mbti_q29_opt1", value: "F" }, { textKey: "mbti_q29_opt2", value: "T" }] },
+            { questionKey: "mbti_q30", options: [{ textKey: "mbti_q30_opt1", value: "P" }, { textKey: "mbti_q30_opt2", value: "J" }] },
         ];
+        this.selectedQuestions = []; // Will hold 10 randomly selected questions
+        this.language = currentLang; // Initialize language
+        this.resetTest();
+    }
+
+    resetTest() {
         this.answers = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
         this.currentQuestionIndex = 0;
+        // Randomly select 10 questions
+        this.selectedQuestions = shuffleArray([...this.allQuestions]).slice(0, 10);
         this.render();
     }
 
@@ -548,14 +885,14 @@ class MbtiTest extends HTMLElement {
 
     displayQuestion() {
         const testContent = this.shadowRoot.getElementById('test-content');
-        if (this.currentQuestionIndex < this.questions.length) {
-            const q = this.questions[this.currentQuestionIndex];
+        if (this.currentQuestionIndex < this.selectedQuestions.length) {
+            const q = this.selectedQuestions[this.currentQuestionIndex];
             // Use translation for question text and options
             testContent.innerHTML = `
                 <div class="question-container">
-                    <p class="question-text">${translations[this.language][`mbti_q${this.currentQuestionIndex + 1}`]}</p>
+                    <p class="question-text">${translations[this.language][q.questionKey]}</p>
                     ${q.options.map((option, index) => `
-                        <button class="option-button" data-value="${option.value}">${translations[this.language][`mbti_q${this.currentQuestionIndex + 1}_opt${index + 1}`]}</button>
+                        <button class="option-button" data-value="${option.value}">${translations[this.language][option.textKey]}</button>
                     `).join('')}
                 </div>
             `;
@@ -605,12 +942,6 @@ class MbtiTest extends HTMLElement {
         });
     }
 
-    resetTest() {
-        this.answers = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
-        this.currentQuestionIndex = 0;
-        this.render(); // Make sure render is called after reset
-    }
-
     // New method to update language
     updateLanguage(lang) {
         this.language = lang;
@@ -624,16 +955,51 @@ class IqTest extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.questions = [
-            { question: "다음 숫자 배열의 다음 숫자는 무엇일까요? 1, 3, 6, 10, 15, ?", options: ["20", "21", "22", "23"], correctAnswerIndex: 1 }, // +2, +3, +4, +5, +6
-            { question: "강철이 무쇠보다 강하다면, 무쇠는 종이보다 어떤가요?", options: ["강하다", "약하다", "같다", "관련 없다"], correctAnswerIndex: 0 },
-            { question: "다음 중 나머지 셋과 다른 하나는? (사물 기준)", options: ["사과", "바나나", "감자", "오렌지"], correctAnswerIndex: 2 },
-            { question: "어떤 달은 28일까지 있고, 또 어떤 달은 30일까지 있습니다. 모든 달은 며칠까지 있나요?", options: ["28일", "29일", "30일", "31일"], correctAnswerIndex: 3 },
-            { question: "다음 단어들 중 관련 없는 하나는? (의미 기준)", options: ["행복", "기쁨", "슬픔", "즐거움"], correctAnswerIndex: 2 },
-            { question: "다음 빈칸에 들어갈 숫자는? 2, 4, 8, 16, ?", options: ["24", "32", "48", "64"], correctAnswerIndex: 1 } // x2 progression
+        this.allQuestions = [
+            { questionKey: "iq_q1", optionsKeys: ["iq_q1_opt1", "iq_q1_opt2", "iq_q1_opt3", "iq_q1_opt4"], correctAnswerIndex: 1 }, // +2, +3, +4, +5, +6
+            { questionKey: "iq_q2", optionsKeys: ["iq_q2_opt1", "iq_q2_opt2", "iq_q2_opt3", "iq_q2_opt4"], correctAnswerIndex: 0 },
+            { questionKey: "iq_q3", optionsKeys: ["iq_q3_opt1", "iq_q3_opt2", "iq_q3_opt3", "iq_q3_opt4"], correctAnswerIndex: 2 },
+            { questionKey: "iq_q4", optionsKeys: ["iq_q4_opt1", "iq_q4_opt2", "iq_q4_opt3", "iq_q4_opt4"], correctAnswerIndex: 3 },
+            { questionKey: "iq_q5", optionsKeys: ["iq_q5_opt1", "iq_q5_opt2", "iq_q5_opt3", "iq_q5_opt4"], correctAnswerIndex: 2 },
+            { questionKey: "iq_q6", optionsKeys: ["iq_q6_opt1", "iq_q6_opt2", "iq_q6_opt3", "iq_q6_opt4"], correctAnswerIndex: 1 },
+            { questionKey: "iq_q7", optionsKeys: ["iq_q7_opt1", "iq_q7_opt2", "iq_q7_opt3", "iq_q7_opt4"], correctAnswerIndex: 3 },
+            { questionKey: "iq_q8", optionsKeys: ["iq_q8_opt1", "iq_q8_opt2", "iq_q8_opt3", "iq_q8_opt4"], correctAnswerIndex: 1 },
+            { questionKey: "iq_q9", optionsKeys: ["iq_q9_opt1", "iq_q9_opt2", "iq_q9_opt3", "iq_q9_opt4"], correctAnswerIndex: 1 },
+            { questionKey: "iq_q10", optionsKeys: ["iq_q10_opt1", "iq_q10_opt2", "iq_q10_opt3", "iq_q10_opt4"], correctAnswerIndex: 0 },
+            { questionKey: "iq_q11", optionsKeys: ["iq_q11_opt1", "iq_q11_opt2", "iq_q11_opt3", "iq_q11_opt4"], correctAnswerIndex: 2 },
+            { questionKey: "iq_q12", optionsKeys: ["iq_q12_opt1", "iq_q12_opt2", "iq_q12_opt3", "iq_q12_opt4"], correctAnswerIndex: 0 },
+            { questionKey: "iq_q13", optionsKeys: ["iq_q13_opt1", "iq_q13_opt2", "iq_q13_opt3", "iq_q13_opt4"], correctAnswerIndex: 2 },
+            { questionKey: "iq_q14", optionsKeys: ["iq_q14_opt1", "iq_q14_opt2", "iq_q14_opt3", "iq_q14_opt4"], correctAnswerIndex: 2 },
+            { questionKey: "iq_q15", optionsKeys: ["iq_q15_opt1", "iq_q15_opt2", "iq_q15_opt3", "iq_q15_opt4"], correctAnswerIndex: 3 },
+            { questionKey: "iq_q16", optionsKeys: ["iq_q16_opt1", "iq_q16_opt2", "iq_q16_opt3", "iq_q16_opt4"], correctAnswerIndex: 2 },
+            { questionKey: "iq_q17", optionsKeys: ["iq_q17_opt1", "iq_q17_opt2", "iq_q17_opt3", "iq_q17_opt4"], correctAnswerIndex: 1 },
+            { questionKey: "iq_q18", optionsKeys: ["iq_q18_opt1", "iq_q18_opt2", "iq_q18_opt3", "iq_q18_opt4"], correctAnswerIndex: 1 },
+            { questionKey: "iq_q19", optionsKeys: ["iq_q19_opt1", "iq_q19_opt2", "iq_q19_opt3", "iq_q19_opt4"], correctAnswerIndex: 1 },
+            { questionKey: "iq_q20", optionsKeys: ["iq_q20_opt1", "iq_q20_opt2", "iq_q20_opt3", "iq_q20_opt4"], correctAnswerIndex: 0 },
+            { questionKey: "iq_q21", optionsKeys: ["iq_q21_opt1", "iq_q21_opt2", "iq_q21_opt3", "iq_q21_opt4"], correctAnswerIndex: 1 },
+            { questionKey: "iq_q22", optionsKeys: ["iq_q22_opt1", "iq_q22_opt2", "iq_q22_opt3", "iq_q22_opt4"], correctAnswerIndex: 0 },
+            { questionKey: "iq_q23", optionsKeys: ["iq_q23_opt1", "iq_q23_opt2", "iq_q23_opt3", "iq_q23_opt4"], correctAnswerIndex: 3 },
+            { questionKey: "iq_q24", optionsKeys: ["iq_q24_opt1", "iq_q24_opt2", "iq_q24_opt3", "iq_q24_opt4"], correctAnswerIndex: 2 },
+            { questionKey: "iq_q25", optionsKeys: ["iq_q25_opt1", "iq_q25_opt2", "iq_q25_opt3", "iq_q25_opt4"], correctAnswerIndex: 0 },
+            { questionKey: "iq_q26", optionsKeys: ["iq_q26_opt1", "iq_q26_opt2", "iq_q26_opt3", "iq_q26_opt4"], correctAnswerIndex: 0 },
+            { questionKey: "iq_q27", optionsKeys: ["iq_q27_opt1", "iq_q27_opt2", "iq_q27_opt3", "iq_q27_opt4"], correctAnswerIndex: 0 },
+            { questionKey: "iq_q28", optionsKeys: ["iq_q28_opt1", "iq_q28_opt2", "iq_q28_opt3", "iq_q28_opt4"], correctAnswerIndex: 0 },
+            { questionKey: "iq_q29", optionsKeys: ["iq_q29_opt1", "iq_q29_opt2", "iq_q29_opt3", "iq_q29_opt4"], correctAnswerIndex: 1 },
+            { questionKey: "iq_q30", optionsKeys: ["iq_q30_opt1", "iq_q30_opt2", "iq_q30_opt3", "iq_q30_opt4"], correctAnswerIndex: 0 },
         ];
+        this.selectedQuestions = []; // Will hold 10 randomly selected questions
         this.userAnswers = Array(this.questions.length).fill(null);
         this.currentQuestionIndex = 0;
+        this.language = currentLang; // Initialize language
+        this.resetTest();
+    }
+
+    resetTest() {
+        this.userAnswers = Array(this.selectedQuestions.length).fill(null); // Reset based on selected questions
+        this.currentQuestionIndex = 0;
+        this.score = 0;
+        // Randomly select 10 questions
+        this.selectedQuestions = shuffleArray([...this.allQuestions]).slice(0, 10);
         this.render();
     }
 
@@ -709,14 +1075,14 @@ class IqTest extends HTMLElement {
 
     displayQuestion() {
         const testContent = this.shadowRoot.getElementById('test-content');
-        if (this.currentQuestionIndex < this.questions.length) {
-            const q = this.questions[this.currentQuestionIndex];
+        if (this.currentQuestionIndex < this.selectedQuestions.length) {
+            const q = this.selectedQuestions[this.currentQuestionIndex];
             // Use translation for question text and options
             testContent.innerHTML = `
                 <div class="question-container">
-                    <p class="question-text">${translations[this.language][`iq_q${this.currentQuestionIndex + 1}`]}</p>
-                    ${q.options.map((option, index) => `
-                        <button class="option-button" data-index="${index}">${translations[this.language][`iq_q${this.currentQuestionIndex + 1}_opt${index + 1}`]}</button>
+                    <p class="question-text">${translations[this.language][q.questionKey]}</p>
+                    ${q.optionsKeys.map((optionKey, index) => `
+                        <button class="option-button" data-index="${index}">${translations[this.language][optionKey]}</button>
                     `).join('')}
                 </div>
             `;
@@ -737,13 +1103,13 @@ class IqTest extends HTMLElement {
 
     calculateIqScore() {
         let correctCount = 0;
-        this.questions.forEach((q, index) => {
+        this.selectedQuestions.forEach((q, index) => { // Iterate over selectedQuestions
             if (this.userAnswers[index] === q.correctAnswerIndex) {
                 correctCount++;
             }
         });
         // Simplistic IQ calculation for demonstration, scaled from 80-160
-        const rawScore = (correctCount / this.questions.length);
+        const rawScore = (correctCount / this.selectedQuestions.length);
         return Math.round(80 + (rawScore * 80)); 
     }
 
@@ -762,13 +1128,6 @@ class IqTest extends HTMLElement {
             this.resetTest();
             this.render();
         });
-    }
-
-    resetTest() {
-        this.userAnswers = [];
-        this.currentQuestionIndex = 0;
-        this.score = 0;
-        this.render();
     }
 
     // New method to update language
