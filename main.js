@@ -4,17 +4,21 @@
 const sections = {
     home: document.getElementById('home-section'),
     mbti: document.getElementById('mbti-section'),
-    iq: document.getElementById('iq-section')
+    iq: document.getElementById('iq-section'),
+    about: document.getElementById('about-section')
 };
 
 const navLinks = {
     home: document.getElementById('nav-home'),
     mbti: document.getElementById('nav-mbti'),
-    iq: document.getElementById('nav-iq')
+    iq: document.getElementById('nav-iq'),
+    about: document.getElementById('nav-about')
 };
 
 const startMbtiButton = document.getElementById('start-mbti');
 const startIqButton = document.getElementById('start-iq');
+const footerPrivacyLink = document.getElementById('footer-privacy');
+const footerTermsLink = document.getElementById('footer-terms');
 
 // Get references to the Web Components - declared globally
 let mbtiTestComponent;
@@ -45,6 +49,10 @@ navLinks.iq.addEventListener('click', (e) => {
     showSection('iq');
     iqTestComponent?.resetTest();
 });
+navLinks.about.addEventListener('click', (e) => {
+    e.preventDefault();
+    showSection('about');
+});
 
 // Event listeners for start buttons
 startMbtiButton.addEventListener('click', () => {
@@ -54,6 +62,18 @@ startMbtiButton.addEventListener('click', () => {
 startIqButton.addEventListener('click', () => {
     showSection('iq');
     iqTestComponent?.resetTest();
+});
+
+// Event listeners for footer links (placeholders for now)
+footerPrivacyLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('개인정보처리방침 페이지로 이동합니다. (아직 구현되지 않았습니다)');
+    console.log('Navigate to Privacy Policy');
+});
+footerTermsLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('이용약관 페이지로 이동합니다. (아직 구현되지 않았습니다)');
+    console.log('Navigate to Terms of Service');
 });
 
 // Initially show the home section and initialize web component references
