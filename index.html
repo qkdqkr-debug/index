@@ -1,22 +1,66 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="light">
+<html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>Insight Cognitive Test</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI & IQ 테스트 - 무료 성격 유형 및 지능 검사</title>
+    <meta name="description" content="무료 MBTI 성격 유형 테스트와 아이큐 테스트를 제공합니다. 당신의 성격과 지능을 탐구해보세요. 외국인과 한국인 모두를 위한 심리 테스트 및 지능 검사.">
+    <meta name="keywords" content="MBTI 테스트, 아이큐 테스트, 성격 유형 검사, 지능 검사, 무료 MBTI, 무료 아이큐 테스트, personality type test, intelligence test, free MBTI, free IQ test, MBTI test, IQ test">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="YOUR_WEBSITE_URL"> <!-- Replace with actual URL -->
+    <meta property="og:title" content="MBTI & IQ 테스트 - 무료 성격 유형 및 지능 검사">
+    <meta property="og:description" content="무료 MBTI 성격 유형 테스트와 아이큐 테스트를 제공합니다. 당신의 성격과 지능을 탐구해보세요. 외국인과 한국인 모두를 위한 심리 테스트 및 지능 검사.">
+    <meta property="og:image" content="YOUR_OG_IMAGE_URL"> <!-- Replace with actual image URL -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="YOUR_WEBSITE_URL"> <!-- Replace with actual URL -->
+    <meta property="twitter:title" content="MBTI & IQ 테스트 - 무료 성격 유형 및 지능 검사">
+    <meta property="twitter:description" content="무료 MBTI 성격 유형 테스트와 아이큐 테스트를 제공합니다. 당신의 성격과 지능을 탐구해보세요. 외국인과 한국인 모두를 위한 심리 테스트 및 지능 검사.">
+    <meta property="twitter:image" content="YOUR_OG_IMAGE_URL"> <!-- Replace with actual image URL -->
+
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
 </head>
 <body>
-<div class="container">
-<div class="header">
-    <button id="theme-toggle">Toggle Theme</button>
-</div>
-<h1>Insight Cognitive Test</h1>
-<p>원하는 테스트를 선택하세요</p>
-<button onclick="startIQ()">IQ 테스트</button>
-<button onclick="startMBTI()">MBTI 검사</button>
-<div id="test"></div>
-<div class="footer">※ 본 테스트는 오락 및 자기이해 목적의 비공식 테스트입니다</div>
-</div>
-<script src="main.js"></script>
+    <header>
+        <h1>MBTI & IQ 테스트</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="nav-home">홈</a></li>
+                <li><a href="#" id="nav-mbti">MBTI 테스트</a></li>
+                <li><a href="#" id="nav-iq">IQ 테스트</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home-section" class="active-section">
+            <h2>나를 알아가는 시간</h2>
+            <p>당신의 성격 유형과 지능 지수를 무료로 확인해보세요!</p>
+            <div class="test-options">
+                <button id="start-mbti">MBTI 테스트 시작</button>
+                <button id="start-iq">IQ 테스트 시작</button>
+            </div>
+        </section>
+
+        <section id="mbti-section" style="display:none;">
+            <h2>MBTI 성격 유형 테스트</h2>
+            <p>당신은 어떤 유형의 사람일까요?</p>
+            <div id="mbti-test-container"></div>
+        </section>
+
+        <section id="iq-section" style="display:none;">
+            <h2>IQ 테스트</h2>
+            <p>당신의 지능 지수를 확인해보세요!</p>
+            <div id="iq-test-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MBTI & IQ Test. All rights reserved.</p>
+    </footer>
 </body>
 </html>

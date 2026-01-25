@@ -1,54 +1,52 @@
-# Project Blueprint
+# Project Blueprint: MBTI and IQ Test Website
 
 ## Overview
-This project is a simple web application featuring IQ and MBTI tests. It has been enhanced with a light and dark mode theme toggle for improved user experience.
+This project aims to create a web application offering MBTI (Myers-Briggs Type Indicator) and IQ (Intelligence Quotient) tests. The website will be designed to be user-friendly, visually appealing, accessible, and easily discoverable by both Korean and international users through search engines. The project will leverage modern web standards (HTML, CSS, JavaScript), Web Components for reusability, and Firebase for hosting.
 
-## Implemented Features
-### Initial Version
-*   **IQ Test**: A simple multiple-choice IQ test with a scoring mechanism.
-*   **MBTI Test**: A simple MBTI-like personality test with a basic result interpretation.
-*   **Basic Styling**: Minimal inline CSS for layout and aesthetics.
-*   **Single-page Application**: All content and functionality are within `index.html`.
+## Technologies
+- **Frontend:** HTML5, CSS3 (with modern features like Container Queries, Cascade Layers), JavaScript (ES Modules, Async/Await, Fetch API, modern syntax)
+- **UI Components:** Web Components (Custom Elements, Shadow DOM, HTML Templates)
+- **Deployment:** Firebase Hosting
+- **3D Graphics:** Not applicable for this project.
+- **WebAssembly:** Not applicable for this project.
 
-### Current Version (Theme Toggle Feature)
-*   **Code Refactoring**:
-    *   Moved inline CSS from `index.html` to `style.css`.
-    *   Moved inline JavaScript from `index.html` to `main.js`.
-*   **Theme Toggle Functionality**:
-    *   Added a "Toggle Theme" button to `index.html`.
-    *   Implemented CSS variables in `style.css` to define colors for both light and dark modes.
-    *   Used `data-theme` attribute on the `<html>` element to switch between themes.
-    *   Added JavaScript in `main.js` to:
-        *   Detect and apply user's saved theme preference from `localStorage` on page load.
-        *   Detect and apply system's preferred color scheme if no preference is saved.
-        *   Toggle the theme (`data-theme` attribute) and save the new preference to `localStorage` when the button is clicked.
-    *   Added basic styling for the theme toggle button and updated overall page styling to utilize CSS variables for easier theming.
-*   **Firebase Configuration**:
-    *   Updated `.idx/mcp.json` with Firebase server configurations for deployment.
+## Design Principles
+- **Aesthetics:** Clean, modern, and intuitive user interface with a balanced layout, appropriate typography, and a vibrant color palette.
+- **Responsiveness:** Fully responsive design that adapts seamlessly to various screen sizes (mobile, tablet, desktop).
+- **Accessibility (A11Y):** Adherence to accessibility standards to ensure usability for a diverse range of users.
+- **Interactivity:** Engaging UI components with subtle animations and effects.
 
-## Plan for Current Request: Implement Dark/Light Mode and Deploy
+## Features
+1.  **MBTI Test:**
+    *   A series of multiple-choice questions designed to determine the user's MBTI personality type.
+    *   Clear, interactive question presentation.
+    *   Scoring mechanism to identify the resulting MBTI type.
+    *   Detailed results page explaining the identified MBTI type.
+2.  **IQ Test:**
+    *   A series of questions to assess cognitive abilities.
+    *   Interactive question presentation.
+    *   Scoring mechanism to provide an approximate IQ score.
+    *   Results page displaying the score and a brief explanation.
+3.  **Navigation:** Simple and intuitive navigation between the home page, MBTI test, and IQ test.
 
-### Steps Taken:
-1.  **Read Files**: Reviewed `index.html`, `style.css`, and `main.js` to understand existing structure.
-2.  **Refactor CSS**: Extracted inline CSS from `index.html` and moved it to `style.css`. Linked `style.css` in `index.html`.
-3.  **Refactor JavaScript**: Extracted inline JavaScript from `index.html` and moved it to `main.js`. Linked `main.js` in `index.html`.
-4.  **Update `index.html`**:
-    *   Added `<div class="header"> <button id="theme-toggle">Toggle Theme</button> </div>` above the `h1` element.
-    *   Set `data-theme="light"` on the `<html>` tag as a default.
-5.  **Update `style.css`**:
-    *   Defined `--bg-color`, `--text-color`, `--button-bg-color`, `--button-text-color`, `--container-bg-color`, `--footer-color` CSS variables.
-    *   Applied these variables for the default (light) theme.
-    *   Created `[data-theme="dark"]` selector to override these variables for the dark theme.
-    *   Added styling for the `.header` and `#theme-toggle` button.
-    *   Updated existing styles to use CSS variables.
-6.  **Update `main.js`**:
-    *   Implemented `applyThemePreference()` to load theme from `localStorage` or system preference.
-    *   Implemented `toggleTheme()` to switch themes and save preference.
-    *   Added event listener to `#theme-toggle` button.
-    *   Called `applyThemePreference()` on `DOMContentLoaded`.
-7.  **Update `.idx/mcp.json`**: Added Firebase server configuration.
+## SEO Strategy
+To ensure discoverability by Korean and international users:
+-   **Meta Tags:** Implement comprehensive `<meta>` tags in `index.html` for `title`, `description`, and `keywords` in both Korean and English.
+    -   **Korean Keywords:** `MBTI 테스트`, `아이큐 테스트`, `성격 유형 검사`, `지능 검사`, `무료 MBTI`, `무료 아이큐 테스트`
+    -   **English Keywords:** `MBTI test`, `IQ test`, `personality type test`, `intelligence test`, `free MBTI`, `free IQ test`
+-   **Structured Data:** (Considered if time permits) Use Schema.org markup (e.g., `Quiz`, `EducationalTraining`) to provide rich snippets in search results.
+-   **Clean URLs:** Ensure readable and semantic URLs.
+-   **Content Quality:** Provide high-quality, relevant content for each test and result explanation.
 
-### Next Steps:
-1.  **Verification**: Confirm the theme toggle functionality in the browser preview.
-2.  **Git Commit**: Commit all changes to the git repository.
-3.  **Deployment**: Deploy the application using Firebase.
+## Current Plan for Requested Change
+
+### Goal: Create a website with MBTI and IQ tests, optimize for SEO, commit to Git, and deploy to Firebase.
+
+### Steps:
+1.  **Create initial blueprint.md detailing the project plan, technologies, design, features, and SEO strategy.** (Status: Completed)
+2.  **Develop index.html with basic structure, meta tags for SEO (Korean and English keywords), and links to CSS and JS.** (Status: Completed)
+3.  **Develop style.css to implement a modern, visually appealing, and responsive design, adhering to modern CSS practices.** (Status: Completed)
+4.  **Develop main.js to implement Web Components for MBTI and IQ tests, including test logic, scoring, and results display.** (Status: Completed)
+5.  **Enhance SEO further by ensuring appropriate keywords and descriptions in meta tags and considering schema.org markup.** (Status: Completed)
+6.  **Commit all created and modified files to Git with a descriptive message.** (Status: Pending)
+7.  **Configure and deploy the website to Firebase.** (Status: Pending)
