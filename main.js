@@ -183,6 +183,8 @@ function setLanguage(lang) {
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('lang-ko').addEventListener('click', () => setLanguage('ko'));
     document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+    document.getElementById('lang-ja').addEventListener('click', () => setLanguage('ja'));
+    document.getElementById('lang-zh').addEventListener('click', () => setLanguage('zh'));
 });
 
 // --- Navigation and Section Switching Logic ---
