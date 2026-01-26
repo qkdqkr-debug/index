@@ -254,31 +254,13 @@ function setLanguage(lang) {
                 element.setAttribute('placeholder', translations[currentLang][key]);
             } else if (element.tagName === 'TEXTAREA' && element.hasAttribute('placeholder')) {
                 element.setAttribute('placeholder', translations[currentLang][key]);
+            } else if (element.tagName === 'META') {
+                element.setAttribute('content', translations[currentLang][key]);
+            } else if (element.tagName === 'TITLE') {
+                element.textContent = translations[currentLang][key];
+                document.title = translations[currentLang][key]; // Keep for robustness
             } else {
                 element.textContent = translations[currentLang][key];
-            }
-            
-            // Special handling for meta tags and title
-            if (element.dataset.key === 'title_main') { // Use data-key for title
-                document.title = translations[currentLang][key];
-            } else if (element.dataset.key === 'meta_description_main') {
-                document.querySelector('meta[name="description"]').setAttribute('content', translations[currentLang][key]);
-                document.querySelector('meta[property="og:description"]').setAttribute('content', translations[currentLang][key]);
-                document.querySelector('meta[property="twitter:description"]').setAttribute('content', translations[currentLang][key]);
-            } else if (element.dataset.key === 'meta_keywords_main') {
-                document.querySelector('meta[name="keywords"]').setAttribute('content', translations[currentLang][key]);
-            } else if (element.dataset.key === 'og_title_main') {
-                document.querySelector('meta[property="og:title"]').setAttribute('content', translations[currentLang][key]);
-            } else if (element.dataset.key === 'og_description_main') {
-                document.querySelector('meta[property="og:description"]').setAttribute('content', translations[currentLang][key]);
-            } else if (element.dataset.key === 'twitter_title_main') {
-                document.querySelector('meta[property="twitter:title"]').setAttribute('content', translations[currentLang][key]);
-            } else if (element.dataset.key === 'twitter_description_main') {
-                document.querySelector('meta[property="twitter:description"]').setAttribute('content', translations[currentLang][key]);
-            } else if (element.dataset.key === 'og_image_main') {
-                document.querySelector('meta[property="og:image"]').setAttribute('content', translations[currentLang][key]);
-            } else if (element.dataset.key === 'twitter_image_main') {
-                document.querySelector('meta[property="twitter:image"]').setAttribute('content', translations[currentLang][key]);
             }
 
         } else {
