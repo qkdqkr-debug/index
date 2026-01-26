@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InsightHub - Your Source for Insightful Articles and Analysis</title>
-    <meta name="description" content="Explore insightful articles, in-depth analyses, and thought-provoking content on a wide range of topics from technology and science to lifestyle and culture.">
-    <meta name="keywords" content="InsightHub, articles, analysis, blog, technology, science, lifestyle, culture, insights, content">
+    <title data-key="title_main"></title>
+    <meta name="description" data-key="meta_description_main" content="">
+    <meta name="keywords" data-key="meta_keywords_main" content="">
     
     <meta property="og:url" content="https://www.example.com"> <!-- Replace with actual URL -->
-    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=InsightHub"> <!-- Replace with actual image URL -->
+    <meta property="og:image" data-key="og_image_main" content="https://via.placeholder.com/1200x630.png?text=InsightHub">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.example.com"> <!-- Replace with actual URL -->
-    <meta property="twitter:title" content="InsightHub - Your Source for Insightful Articles and Analysis">
-    <meta property="twitter:description" content="Explore insightful articles, in-depth analyses, and thought-provoking content on a wide range of topics from technology and science to lifestyle and culture.">
-    <meta property="twitter:image" content="https://via.placeholder.com/1200x630.png?text=InsightHub"> <!-- Replace with actual image URL -->
+    <meta property="twitter:title" data-key="twitter_title_main" content="">
+    <meta property="og:title" data-key="og_title_main" content="">
+    <meta property="twitter:description" data-key="twitter_description_main" content="">
+    <meta property="twitter:image" data-key="twitter_image_main" content="https://via.placeholder.com/1200x630.png?text=InsightHub">
 
     <!-- Google AdSense Site Verification -->
     <meta name="google-adsense-account" content="ca-pub-6175762649119675">
@@ -30,17 +31,24 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">InsightHub</a>
+        <div class="header-content">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">InsightHub</a>
+                </div>
+                <ul>
+                    <li><a href="index.html" data-key="nav_home"></a></li>
+                    <li><a href="blog/index.html" data-key="nav_blog"></a></li>
+                    <li><a href="about.html" data-key="nav_about"></a></li>
+                    <li><a href="contact.html" data-key="nav_contact"></a></li>
+                </ul>
+            </nav>
+            <div class="controls">
+                <button id="lang-en" class="lang-button">EN</button>
+                <button id="lang-ko" class="lang-button">KO</button>
+                <button id="theme-toggle" class="theme-toggle-button">🌙</button>
             </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog/index.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        </div>
     </header>
 
     <main>
@@ -58,29 +66,29 @@
         </div>
 
         <section class="hero-section">
-            <h1>Welcome to InsightHub</h1>
-            <p>Your source for insightful articles, in-depth analyses, and thought-provoking content.</p>
-            <p>Explore a wide range of topics from technology and science to lifestyle and culture.</p>
-            <a href="blog/index.html" class="button">Read Our Blog</a>
+            <h1 data-key="hero_title"></h1>
+            <p data-key="hero_subtitle1"></p>
+            <p data-key="hero_subtitle2"></p>
+            <a href="blog/index.html" class="button" data-key="hero_button"></a>
         </section>
 
         <section class="latest-posts-section">
-            <h2>Latest Posts</h2>
+            <h2 data-key="latest_posts_title"></h2>
             <div class="post-grid">
                 <article class="post-card">
-                    <h3><a href="blog/post1.html">The Future of AI: A Glimpse into Tomorrow</a></h3>
-                    <p class="post-excerpt">Artificial Intelligence (AI) is no longer a concept confined to science fiction; it is a rapidly evolving reality that is reshaping industries, economies, and our daily lives...</p>
-                    <a href="blog/post1.html" class="read-more">Read More</a>
+                    <h3><a href="blog/post1.html" data-key="post_ai_title"></a></h3>
+                    <p class="post-excerpt" data-key="post_ai_excerpt"></p>
+                    <a href="blog/post1.html" class="read-more" data-key="read_more_button"></a>
                 </article>
                 <article class="post-card">
-                    <h3><a href="blog/post2.html">Exploring the Depths of Ocean Conservation</a></h3>
-                    <p class="post-excerpt">Our oceans are vast, mysterious, and teeming with life, yet they face unprecedented threats from human activities. Ocean conservation is not just about protecting marine species...</p>
-                    <a href="blog/post2.html" class="read-more">Read More</a>
+                    <h3><a href="blog/post2.html" data-key="post_oc_title"></a></h3>
+                    <p class="post-excerpt" data-key="post_oc_excerpt"></p>
+                    <a href="blog/post2.html" class="read-more" data-key="read_more_button"></a>
                 </article>
                 <article class="post-card">
-                    <h3><a href="blog/post3.html">The Rise of Sustainable Living: A Guide to Eco-Friendly Practices</a></h3>
-                    <p class="post-excerpt">Sustainable living is more than just a trend; it's a conscious lifestyle choice aimed at reducing one's environmental impact and promoting the long-term health of our planet...</p>
-                    <a href="blog/post3.html" class="read-more">Read More</a>
+                    <h3><a href="blog/post3.html" data-key="post_sl_title"></a></h3>
+                    <p class="post-excerpt" data-key="post_sl_excerpt"></p>
+                    <a href="blog/post3.html" class="read-more" data-key="read_more_button"></a>
                 </article>
             </div>
         </section>
@@ -89,12 +97,12 @@
     <footer>
         <nav>
             <ul>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms of Service</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="privacy.html" data-key="footer_privacy"></a></li>
+                <li><a href="terms.html" data-key="footer_terms"></a></li>
+                <li><a href="contact.html" data-key="footer_contact"></a></li>
+                <li><a href="about.html" data-key="footer_about"></a></li>
             </ul>
         </nav>
-        <p>&copy; 2026 InsightHub. All rights reserved.</p>
+        <p data-key="footer_copyright"></p>
     </footer>
 </html>
