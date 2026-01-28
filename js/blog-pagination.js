@@ -1,5 +1,18 @@
 // js/blog-pagination.js
 
+// js/blog-pagination.js
+
+// Helper function to extract date from filename
+function extractDateFromFilename(filename) {
+    const match = filename.match(/^(\d{4}-\d{2}-\d{2})/);
+    if (match) {
+        // Format the date for display, e.g., "YYYY년 M월 D일"
+        const [year, month, day] = match[1].split('-');
+        return `${year}년 ${parseInt(month)}월 ${parseInt(day)}일`;
+    }
+    return '날짜 미상'; // Unknown date
+}
+
 const blogPostsData = [
     {
         filename: '2026-01-28-bitcoin-outlook.html',
@@ -38,6 +51,14 @@ const blogPostsData = [
     }
 ];
 
+// Enrich blogPostsData with the extracted date
+const enrichedBlogPostsData = blogPostsData.map(post => ({
+    ...post,
+    date: extractDateFromFilename(post.filename)
+}));
+
+let currentPosts = [...enrichedBlogPostsData]; // Use this for filtering and pagination
+
 const postsPerPage = 5;
 let currentPage = 1;
 
@@ -56,7 +77,7 @@ function renderBlogPosts() {
 
     const startIndex = (currentPage - 1) * postsPerPage;
     const endIndex = startIndex + postsPerPage;
-    const paginatedPosts = blogPostsData.slice(startIndex, endIndex);
+    const paginatedPosts = currentPosts.slice(startIndex, endIndex); // Use currentPosts
 
     if (paginatedPosts.length === 0) {
         blogPostsContainer.innerHTML = '<p>게시물이 없습니다.</p>';
@@ -68,7 +89,7 @@ function renderBlogPosts() {
         article.classList.add('blog-post-card');
         article.innerHTML = `
             <h3><a href="${post.filename}">${post.title}</a></h3>
-            <p class="post-date">2026년 1월 28일 게시됨</p>
+            <p class="post-date">${post.date} 게시됨</p>
             <p>${post.excerpt}</p>
             <a href="${post.filename}" class="read-more">더 읽기</a>
         `;
@@ -85,7 +106,7 @@ function renderPaginationControls() {
         return;
     }
 
-    const totalPages = Math.ceil(blogPostsData.length / postsPerPage);
+    const totalPages = Math.ceil(currentPosts.length / postsPerPage); // Use currentPosts
     if (totalPages <= 1) { 
         return;
     }
@@ -130,25 +151,56 @@ function renderPaginationControls() {
     paginationContainer.appendChild(nextButton);
 }
 
+function performSearch(query) {
+    currentPage = 1; // Reset to first page on new search
+    if (query) {
+        const lowerCaseQuery = query.toLowerCase();
+        currentPosts = enrichedBlogPostsData.filter(post =>
+            post.title.toLowerCase().includes(lowerCaseQuery) ||
+            post.excerpt.toLowerCase().includes(lowerCaseQuery)
+        );
+    } else {
+        currentPosts = [...enrichedBlogPostsData]; // If query is empty, show all posts
+    }
+    renderBlogPosts();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const currentPathname = window.location.pathname;
 
     const isBlogIndexPage = currentPathname.includes('/blog/') || currentPathname.includes('/blog/index.html');
 
     if (isBlogIndexPage) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const pageParam = urlParams.get('page');
-        if (pageParam && !isNaN(parseInt(pageParam))) {
-            const parsedPage = parseInt(pageParam);
-            const totalPages = Math.ceil(blogPostsData.length / postsPerPage);
-            if (parsedPage >= 1 && parsedPage <= totalPages) {
-                currentPage = parsedPage;
+        const blogPostsContainer = document.getElementById('blog-posts');
+        const paginationContainer = document.getElementById('blog-pagination');
+
+        if (blogPostsContainer && paginationContainer) {
+            // Check for initial page param
+            const urlParams = new URLSearchParams(window.location.search);
+            const pageParam = urlParams.get('page');
+            if (pageParam && !isNaN(parseInt(pageParam))) {
+                const parsedPage = parseInt(pageParam);
+                const totalPages = Math.ceil(currentPosts.length / postsPerPage);
+                if (parsedPage >= 1 && parsedPage <= totalPages) {
+                    currentPage = parsedPage;
+                } else {
+                    currentPage = 1;
+                }
             } else {
                 currentPage = 1;
             }
+
+            // Add event listener for search input
+            const searchInput = document.getElementById('blog-search-input');
+            if (searchInput) {
+                searchInput.addEventListener('input', (event) => {
+                    performSearch(event.target.value);
+                });
+            }
+
+            renderBlogPosts(); // Initial render
         } else {
-            currentPage = 1;
+            console.warn("Dynamic blog post containers not found. Static rendering expected.");
         }
-        renderBlogPosts();
     }
 });
