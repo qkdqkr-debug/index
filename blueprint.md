@@ -17,9 +17,9 @@ The blog utilizes a modern, clean, and responsive web design with a focus on rea
 *   **Modern CSS:** Utilizes CSS variables for easy theming and maintains a consistent visual style.
 *   **Firebase Integration:** Configured for deployment via Firebase.
 
-## Current Plan for Requested Change: Website Translation and Dark/Light Mode
+## Current Plan for Requested Change: Update Homepage Latest Posts
 
-The user has requested to translate the entire website to Korean and implement a site-wide dark/light mode toggle. After these changes, all modifications will be committed to Git and deployment will be attempted.
+The user has requested to update the "최신 게시물" (Latest Posts) section on the `index.html` homepage to dynamically display three selected blog posts from the blog directory. For this static site, I will update the hardcoded "Latest Posts" section to feature the three most recently created posts.
 
 ### Steps:
 
@@ -29,14 +29,11 @@ The user has requested to translate the entire website to Korean and implement a
 4.  **Update `blog/index.html` (Completed):** Added new blog post cards for all four new articles.
 5.  **Commit Changes to Git (Completed):** All new and modified files were staged and committed for the previous task.
 6.  **Deploy Changes (Uncompleted):** Attempted deployment via Firebase, but failed due to authentication issues ("Failed to authenticate, have you run firebase login?"). Manual deployment or authentication will be required.
-7.  **Translate Website to Korean (Completed):**
-    *   **Identified Text:** Scanned `index.html`, `about.html`, `contact.html`, `privacy.html`, `terms.html`, and `blog/index.html` for English text.
-    *   **Translated Content:** Replaced English strings with Korean equivalents directly in the HTML for hardcoded text, and ensured `i18n.js` handles dynamic content. All blog post content was already in Korean.
-    *   **Set `lang="ko"`:** Updated the `<html>` tag in all relevant HTML files to `lang="ko"`.
-    *   **Removed Language Toggles:** Removed `EN` and `KO` language selection buttons from all HTML files and removed the corresponding logic from `js/i18n.js`.
-8.  **Implement Dark/Light Mode Toggle (Completed):**
-    *   **Added Toggle Button:** Integrated the theme toggle button (moon/sun icon) into the header of `index.html`, `about.html`, `contact.html`, `privacy.html`, `terms.html`, `blog/index.html`, and all individual blog post HTML files.
-    *   **Developed JavaScript Logic:** Verified `js/theme.js` already contains the necessary functionality for theme switching, storing preference in `localStorage`, and applying the theme on page load.
-    *   **Integrated CSS:** `style.css` already supports the `dark-mode` class.
-9.  **Commit Changes to Git (Pending):** Stage all modified files and commit with a descriptive message.
-10. **Deploy Changes (Pending):** Attempt to deploy the updated project using the configured Firebase deployment command, acknowledging potential authentication issues.
+7.  **Translate Website to Korean (Completed):** The entire website was translated to Korean, `lang="ko"` was set, and language toggles removed.
+8.  **Implement Dark/Light Mode Toggle (Completed):** Dark/Light mode functionality was implemented across all pages.
+9.  **Update Homepage Latest Posts (Completed):**
+    *   Identified the three most recent blog posts: `blog/necessity-of-nuclear-power.html`, `blog/power-shortage-analysis.html`, `blog/semiconductor-industry-outlook.html`.
+    *   Read the content of these three blog posts to extract their titles and brief excerpts.
+    *   Modified `index.html` to replace the existing hardcoded "Latest Posts" content with the selected three new posts.
+10. **Commit Changes to Git (Pending):** Stage `index.html` and `blueprint.md`, then commit.
+11. **Deploy Changes (Pending):** Push to Git and attempt Firebase deployment, acknowledging previous authentication issues.
