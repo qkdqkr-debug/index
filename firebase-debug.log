@@ -1,12 +1,239 @@
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2026-01-26T05:08:33.100Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
-[debug] [2026-01-26T05:08:33.120Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2026-01-26T05:08:35.517Z] No OAuth tokens found
-[debug] [2026-01-26T05:08:35.517Z] No OAuth tokens found
-[debug] [2026-01-26T05:08:35.517Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2026-01-26T05:08:35.518Z] No OAuth tokens found
-[debug] [2026-01-26T05:08:35.518Z] No OAuth tokens found
-[debug] [2026-01-26T05:08:35.519Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-26T09:35:01.752Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-26T09:35:01.756Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-26T09:35:04.187Z] No OAuth tokens found
+[debug] [2026-01-26T09:35:04.195Z] No OAuth tokens found
+[debug] [2026-01-26T09:35:04.196Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-26T09:35:04.198Z] No OAuth tokens found
+[debug] [2026-01-26T09:35:04.199Z] No OAuth tokens found
+[debug] [2026-01-26T09:35:04.200Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-27T23:57:33.349Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-27T23:57:33.352Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-27T23:57:49.252Z] Running auto auth
+[debug] [2026-01-27T23:57:49.253Z] Running auto auth
+[debug] [2026-01-27T23:57:49.294Z] No OAuth tokens found
+[debug] [2026-01-27T23:57:49.300Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/insighthub-42/billingInfo [none]
+[debug] [2026-01-27T23:57:49.389Z] No OAuth tokens found
+[debug] [2026-01-27T23:57:49.389Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/insighthub-42/billingInfo [none]
+[debug] [2026-01-27T23:57:49.784Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/insighthub-42/billingInfo 403
+[debug] [2026-01-27T23:57:49.786Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/insighthub-42/billingInfo {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-01-28T00:06:32.537Z] ----------------------------------------------------------------------
+[debug] [2026-01-28T00:06:32.541Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/c776mhyhgykcld7p90ajrka149ifn61a-firebase-tools-14.26.0/lib/node_modules/firebase-tools/lib/bin/firebase.js deploy
+[debug] [2026-01-28T00:06:32.543Z] CLI Version:   14.26.0
+[debug] [2026-01-28T00:06:32.544Z] Platform:      linux
+[debug] [2026-01-28T00:06:32.544Z] Node Version:  v20.19.1
+[debug] [2026-01-28T00:06:32.545Z] Time:          Wed Jan 28 2026 00:06:32 GMT+0000 (Coordinated Universal Time)
+[debug] [2026-01-28T00:06:32.545Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-28T00:06:32.551Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2026-01-28T00:06:33.915Z] No OAuth tokens found
+[debug] [2026-01-28T00:06:33.916Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T00:06:33.929Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T00:06:33.930Z] > authorizing via signed-in user (qkdqkr@gmail.com)
+[debug] [2026-01-28T00:06:33.930Z] [iam] checking project insighthub-42 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-01-28T00:06:33.931Z] No OAuth tokens found
+[debug] [2026-01-28T00:06:33.932Z] No OAuth tokens found
+[debug] [2026-01-28T00:06:33.932Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T00:06:33.932Z] > authorizing via signed-in user (qkdqkr@gmail.com)
+[debug] [2026-01-28T00:06:33.933Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/insighthub-42:testIamPermissions [none]
+[debug] [2026-01-28T00:06:33.933Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/insighthub-42:testIamPermissions x-goog-quota-user=projects/insighthub-42
+[debug] [2026-01-28T00:06:33.933Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/insighthub-42:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-01-28T00:06:34.291Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-01-28T00:06:34.291Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2026-01-28T00:06:34.308Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/insighthub-42:testIamPermissions 200
+[debug] [2026-01-28T00:06:34.309Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/insighthub-42:testIamPermissions {}
+[debug] [2026-01-28T00:06:34.309Z] [iam] error while checking permissions, command may fail: Authorization failed. This account is missing the following required permissions on project insighthub-42:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2026-01-28T00:06:34.310Z] No OAuth tokens found
+[debug] [2026-01-28T00:06:34.315Z] No OAuth tokens found
+[debug] [2026-01-28T00:06:34.315Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T00:06:34.316Z] > authorizing via signed-in user (qkdqkr@gmail.com)
+[debug] [2026-01-28T00:06:34.316Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/insighthub-42 [none]
+[debug] [2026-01-28T00:06:34.775Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/insighthub-42 403
+[debug] [2026-01-28T00:06:34.776Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/insighthub-42 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-01-28T00:06:34.779Z] Request to https://firebase.googleapis.com/v1beta1/projects/insighthub-42 had HTTP Error: 403, The caller does not have permission
+[debug] [2026-01-28T00:06:34.782Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/insighthub-42 had HTTP Error: 403, The caller does not have permission
+    at responseToError (/nix/store/c776mhyhgykcld7p90ajrka149ifn61a-firebase-tools-14.26.0/lib/node_modules/firebase-tools/lib/responseToError.js:53:12)
+    at RetryOperation._fn (/nix/store/c776mhyhgykcld7p90ajrka149ifn61a-firebase-tools-14.26.0/lib/node_modules/firebase-tools/lib/apiv2.js:322:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project insighthub-42. Please make sure the project exists and your account has permission to access it.
+[debug] [2026-01-28T00:06:42.703Z] ----------------------------------------------------------------------
+[debug] [2026-01-28T00:06:42.705Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/c776mhyhgykcld7p90ajrka149ifn61a-firebase-tools-14.26.0/lib/node_modules/firebase-tools/lib/bin/firebase.js login --interactive
+[debug] [2026-01-28T00:06:42.706Z] CLI Version:   14.26.0
+[debug] [2026-01-28T00:06:42.706Z] Platform:      linux
+[debug] [2026-01-28T00:06:42.706Z] Node Version:  v20.19.1
+[debug] [2026-01-28T00:06:42.706Z] Time:          Wed Jan 28 2026 00:06:42 GMT+0000 (Coordinated Universal Time)
+[debug] [2026-01-28T00:06:42.707Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-28T00:06:43.382Z] No OAuth tokens found
+[debug] [2026-01-28T00:06:43.383Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[info] i  The Firebase CLI’s MCP server feature can optionally make use of Gemini in Firebase. Learn more about Gemini in Firebase and how it uses your data: https://firebase.google.com/docs/gemini-in-firebase#how-gemini-in-firebase-uses-your-data 
+[debug] [2026-01-28T00:11:57.627Z] ----------------------------------------------------------------------
+[debug] [2026-01-28T00:11:57.634Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/c776mhyhgykcld7p90ajrka149ifn61a-firebase-tools-14.26.0/lib/node_modules/firebase-tools/lib/bin/firebase.js login --interactive
+[debug] [2026-01-28T00:11:57.637Z] CLI Version:   14.26.0
+[debug] [2026-01-28T00:11:57.637Z] Platform:      linux
+[debug] [2026-01-28T00:11:57.637Z] Node Version:  v20.19.1
+[debug] [2026-01-28T00:11:57.638Z] Time:          Wed Jan 28 2026 00:11:57 GMT+0000 (Coordinated Universal Time)
+[debug] [2026-01-28T00:11:57.639Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-28T00:11:58.390Z] No OAuth tokens found
+[debug] [2026-01-28T00:11:58.391Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[info] i  The Firebase CLI’s MCP server feature can optionally make use of Gemini in Firebase. Learn more about Gemini in Firebase and how it uses your data: https://firebase.google.com/docs/gemini-in-firebase#how-gemini-in-firebase-uses-your-data 
+[debug] [2026-01-28T00:17:16.776Z] ----------------------------------------------------------------------
+[debug] [2026-01-28T00:17:16.782Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/c776mhyhgykcld7p90ajrka149ifn61a-firebase-tools-14.26.0/lib/node_modules/firebase-tools/lib/bin/firebase.js deploy --debug
+[debug] [2026-01-28T00:17:16.786Z] CLI Version:   14.26.0
+[debug] [2026-01-28T00:17:16.786Z] Platform:      linux
+[debug] [2026-01-28T00:17:16.787Z] Node Version:  v20.19.1
+[debug] [2026-01-28T00:17:16.788Z] Time:          Wed Jan 28 2026 00:17:16 GMT+0000 (Coordinated Universal Time)
+[debug] [2026-01-28T00:17:16.788Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-28T00:17:17.525Z] No OAuth tokens found
+[debug] [2026-01-28T00:17:17.529Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T00:17:17.536Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T00:17:17.537Z] > authorizing via signed-in user (qkdqkr@gmail.com)
+[debug] [2026-01-28T00:17:17.538Z] [iam] checking project insighthub-42 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-01-28T00:17:17.539Z] No OAuth tokens found
+[debug] [2026-01-28T00:17:17.539Z] No OAuth tokens found
+[debug] [2026-01-28T00:17:17.539Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T00:17:17.540Z] > authorizing via signed-in user (qkdqkr@gmail.com)
+[debug] [2026-01-28T00:17:17.542Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/insighthub-42:testIamPermissions [none]
+[debug] [2026-01-28T00:17:17.543Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/insighthub-42:testIamPermissions x-goog-quota-user=projects/insighthub-42
+[debug] [2026-01-28T00:17:17.543Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/insighthub-42:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-01-28T00:17:18.594Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/insighthub-42:testIamPermissions 200
+[debug] [2026-01-28T00:17:18.595Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/insighthub-42:testIamPermissions {}
+[debug] [2026-01-28T00:17:18.595Z] [iam] error while checking permissions, command may fail: Authorization failed. This account is missing the following required permissions on project insighthub-42:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2026-01-28T00:17:18.597Z] No OAuth tokens found
+[debug] [2026-01-28T00:17:18.599Z] No OAuth tokens found
+[debug] [2026-01-28T00:17:18.599Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T00:17:18.600Z] > authorizing via signed-in user (qkdqkr@gmail.com)
+[debug] [2026-01-28T00:17:18.600Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/insighthub-42 [none]
+[debug] [2026-01-28T00:17:18.977Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/insighthub-42 403
+[debug] [2026-01-28T00:17:18.978Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/insighthub-42 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-01-28T00:17:18.980Z] Request to https://firebase.googleapis.com/v1beta1/projects/insighthub-42 had HTTP Error: 403, The caller does not have permission
+[debug] [2026-01-28T00:17:18.981Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/insighthub-42 had HTTP Error: 403, The caller does not have permission
+    at responseToError (/nix/store/c776mhyhgykcld7p90ajrka149ifn61a-firebase-tools-14.26.0/lib/node_modules/firebase-tools/lib/responseToError.js:53:12)
+    at RetryOperation._fn (/nix/store/c776mhyhgykcld7p90ajrka149ifn61a-firebase-tools-14.26.0/lib/node_modules/firebase-tools/lib/apiv2.js:322:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project insighthub-42. Please make sure the project exists and your account has permission to access it.
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-28T10:03:56.882Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T10:03:56.884Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T10:04:04.048Z] No OAuth tokens found
+[debug] [2026-01-28T10:04:04.049Z] No OAuth tokens found
+[debug] [2026-01-28T10:04:04.050Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T10:04:04.050Z] No OAuth tokens found
+[debug] [2026-01-28T10:04:04.051Z] No OAuth tokens found
+[debug] [2026-01-28T10:04:04.052Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T10:12:35.598Z] No OAuth tokens found
+[debug] [2026-01-28T10:12:35.602Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T10:12:35.604Z] No OAuth tokens found
+[debug] [2026-01-28T10:12:35.605Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T10:12:35.605Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T10:12:39.116Z] No OAuth tokens found
+[debug] [2026-01-28T10:12:39.116Z] No OAuth tokens found
+[debug] [2026-01-28T10:12:39.117Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T10:25:00.593Z] No OAuth tokens found
+[debug] [2026-01-28T10:25:00.597Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T10:25:00.599Z] No OAuth tokens found
+[debug] [2026-01-28T10:25:00.600Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T10:25:00.600Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T10:25:03.144Z] No OAuth tokens found
+[debug] [2026-01-28T10:25:03.144Z] No OAuth tokens found
+[debug] [2026-01-28T10:25:03.145Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T10:47:31.725Z] No OAuth tokens found
+[debug] [2026-01-28T10:47:31.729Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T10:47:31.732Z] No OAuth tokens found
+[debug] [2026-01-28T10:47:31.733Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T10:47:31.734Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T10:47:34.172Z] No OAuth tokens found
+[debug] [2026-01-28T10:47:34.175Z] No OAuth tokens found
+[debug] [2026-01-28T10:47:34.175Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T10:55:24.620Z] No OAuth tokens found
+[debug] [2026-01-28T10:55:24.623Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T10:55:24.627Z] No OAuth tokens found
+[debug] [2026-01-28T10:55:24.627Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T10:55:24.629Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T10:55:27.057Z] No OAuth tokens found
+[debug] [2026-01-28T10:55:27.057Z] No OAuth tokens found
+[debug] [2026-01-28T10:55:27.058Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T11:20:25.272Z] No OAuth tokens found
+[debug] [2026-01-28T11:20:25.276Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T11:20:25.284Z] No OAuth tokens found
+[debug] [2026-01-28T11:20:25.284Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T11:20:25.288Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T11:20:27.738Z] No OAuth tokens found
+[debug] [2026-01-28T11:20:27.739Z] No OAuth tokens found
+[debug] [2026-01-28T11:20:27.741Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T11:34:15.124Z] No OAuth tokens found
+[debug] [2026-01-28T11:34:15.126Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T11:34:15.129Z] No OAuth tokens found
+[debug] [2026-01-28T11:34:15.129Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T11:34:15.130Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T11:34:17.552Z] No OAuth tokens found
+[debug] [2026-01-28T11:34:17.553Z] No OAuth tokens found
+[debug] [2026-01-28T11:34:17.553Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T12:04:20.253Z] No OAuth tokens found
+[debug] [2026-01-28T12:04:20.257Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T12:04:20.260Z] No OAuth tokens found
+[debug] [2026-01-28T12:04:20.260Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T12:04:20.261Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T12:04:22.687Z] No OAuth tokens found
+[debug] [2026-01-28T12:04:22.687Z] No OAuth tokens found
+[debug] [2026-01-28T12:04:22.688Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-28T12:47:47.504Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T12:47:47.508Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T12:47:54.326Z] No OAuth tokens found
+[debug] [2026-01-28T12:47:54.326Z] No OAuth tokens found
+[debug] [2026-01-28T12:47:54.326Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T12:47:54.327Z] No OAuth tokens found
+[debug] [2026-01-28T12:47:54.328Z] No OAuth tokens found
+[debug] [2026-01-28T12:47:54.328Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T12:49:59.813Z] No OAuth tokens found
+[debug] [2026-01-28T12:49:59.816Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T12:49:59.820Z] No OAuth tokens found
+[debug] [2026-01-28T12:49:59.820Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T12:49:59.820Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T12:50:02.384Z] No OAuth tokens found
+[debug] [2026-01-28T12:50:02.386Z] No OAuth tokens found
+[debug] [2026-01-28T12:50:02.390Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]

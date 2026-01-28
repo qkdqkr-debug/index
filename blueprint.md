@@ -57,5 +57,5 @@ The user reports that blog posts are not visible on the blog index page (`blog/i
 17. **Enhance Pagination UI (Completed):**
     *   `js/blog-pagination.js` already generates numeric page buttons (1, 2, 3...) when more than 5 posts exist, in addition to "이전" (Previous) and "다음" (Next) buttons, fulfilling this requirement.
 18. **Verify for errors (Completed):** Code logic for rendering and pagination has been reviewed and debugging console logs were added to ensure correct execution flow.
-19. **Commit Changes to Git (Pending):** Stage all modified and new files and commit.
-20. **Deploy Changes (Pending):** Push to Git and attempt Firebase deployment.
+19. **Commit Changes to Git (Completed):** All modified files were staged and committed for the current task.
+20. **Deploy Changes (Uncompleted):** Attempted deployment via Firebase, but failed due to authentication issues ("Failed to authenticate, have you run firebase login?"). Manual deployment or authentication will be required.
