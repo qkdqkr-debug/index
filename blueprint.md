@@ -1,18 +1,40 @@
-# 프로젝트 개요
+# Project Blueprint: Blog for Financial and Industry Insights
 
-이 프로젝트는 Google AdSense 승인을 목표로 하는 블로그 웹사이트입니다. 양질의 콘텐츠를 지속적으로 발행하고, 사용자 친화적인 UI/UX를 제공하며, AdSense 정책을 준수하는 것을 목표로 합니다.
+## Project Purpose and Capabilities
 
-# 디자인 및 기능
+This blog serves as a platform to share insights and analyses on various economic, industry, and technological topics. It features articles on stock market trends, company-specific outlooks, and broader industry analyses, aiming to provide readers with informed perspectives.
 
-*   **디자인:** 깔끔하고 가독성 높은 미니멀리즘 디자인을 채택했습니다.
-*   **주요 기능:**
-    *   블로그 게시물 목록 및 상세 페이지
-    *   정보 페이지 (소개, 연락처, 개인정보처리방침, 이용약관)
+## Implemented Style, Design, and Features
 
-# 현재 변경 요청 계획
+The blog utilizes a modern, clean, and responsive web design with a focus on readability.
 
-Google AdSense 승인 확률을 높이기 위해 다음과 같은 콘텐츠 보강 및 기술적 개선 작업을 진행합니다.
+*   **Responsive Layout:** Adapts to various screen sizes for optimal viewing on desktop and mobile devices.
+*   **Theming:** Supports light and dark modes with smooth transitions.
+*   **Navigation:** Clear and intuitive navigation bar in the header.
+*   **Blog Post Cards:** On the blog index page (`blog/index.html`), posts are displayed as cards with titles, publication dates, excerpts, and "Read More" links, providing a visually appealing and organized overview.
+*   **Individual Post Pages:** Each blog post has its dedicated page with a title, metadata (publication date), and well-structured content (headings, paragraphs).
+*   **Footer:** Contains copyright information.
+*   **Modern CSS:** Utilizes CSS variables for easy theming and maintains a consistent visual style.
+*   **Firebase Integration:** Configured for deployment via Firebase.
 
-1.  **신규 블로그 게시물 추가:** 양질의 신규 블로그 게시물 5개를 추가하여 전체 콘텐츠 양을 늘리고 독창성을 확보합니다.
-2.  **주요 페이지 내용 보강:** `about.html`, `contact.html`, `privacy.html`, `terms.html` 페이지의 내용을 AdSense 가이드라인에 맞게 상세하고 명확하게 보강합니다.
-3.  **Git 버전 관리 및 배포:** 모든 변경 사항을 Git에 커밋하고 원격 저장소에 푸시한 후, Firebase를 통해 웹사이트를 배포합니다.
+## Current Plan for Requested Change: Adding Multiple Blog Posts
+
+The user has requested the creation of four new blog posts on specific topics: Hyundai Motor Company, Semiconductor Industry Outlook, Power Shortage, and the Necessity of Nuclear Power. These posts will include analysis, forecasts, and opinions. Following their creation, the blog's main index will be updated, and all changes will be committed and deployed.
+
+### Steps:
+
+1.  **Create Blueprint.md (Done):** This file is being created to document the plan.
+2.  **Research and Draft Blog Posts (Completed):**
+    *   **Hyundai Motor Company:** Researched and drafted.
+    *   **Semiconductor Industry Outlook:** Researched and drafted.
+    *   **Power Shortage:** Researched and drafted.
+    *   **Necessity of Nuclear Power:** Researched and drafted.
+3.  **Create HTML Files for Each Post (Completed):**
+    *   `blog/hyundai-motor-outlook.html` created.
+    *   `blog/semiconductor-industry-outlook.html` created.
+    *   `blog/power-shortage-analysis.html` created.
+    *   `blog/necessity-of-nuclear-power.html` created.
+    *   Each file followed the established blog post structure.
+4.  **Update `blog/index.html`:** Add new blog post cards for each of the four new articles to `blog/index.html`, ensuring proper linking and display.
+5.  **Commit Changes to Git:** Stage and commit all new and modified files with a clear and concise commit message.
+6.  **Deploy Changes:** Attempt to deploy the updated project using the configured Firebase deployment command. Acknowledge and report any potential authentication issues.
