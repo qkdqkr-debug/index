@@ -523,6 +523,16 @@ header nav ul {
     line-height: 1.7;
 }
 
+.blog-hero-image {
+    width: 100%;
+    max-width: 800px; /* Limit max width for large screens */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Center the image with some vertical margin */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px var(--shadow-medium);
+}
+
 .blog-post h1 {
     font-size: 2.5em;
     color: var(--primary-color);
