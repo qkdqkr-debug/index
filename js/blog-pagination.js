@@ -41,17 +41,13 @@ function renderBlogPosts() {
     const blogPostsContainer = document.getElementById('blog-posts');
     const paginationContainer = document.getElementById('blog-pagination');
 
-    if (!blogPostsContainer) {
-        console.error('Error: blogPostsContainer not found');
-        return;
-    }
-    if (!paginationContainer) {
-        console.error('Error: paginationContainer not found');
+    if (!blogPostsContainer || !paginationContainer) {
+        console.error('Error: blogPostsContainer or paginationContainer not found');
         return;
     }
 
-    // Clear existing content
-    blogPostsContainer.innerHTML = '';
+    // Clear existing content and show a loading message
+    blogPostsContainer.innerHTML = '<p>블로그 게시물을 로드하는 중...</p>';
     paginationContainer.innerHTML = '';
 
     const startIndex = (currentPage - 1) * postsPerPage;
@@ -60,7 +56,8 @@ function renderBlogPosts() {
 
     console.log(`Rendering page ${currentPage} with posts from index ${startIndex} to ${endIndex}. Number of posts: ${paginatedPosts.length}`);
     
-    if (paginatedPosts.length === 0) {
+    // Clear loading message before rendering actual posts or "no posts" message
+    blogPostsContainer.innerHTML = '';     if (paginatedPosts.length === 0) {
         blogPostsContainer.innerHTML = '<p>게시물이 없습니다.</p>';
         console.log('No posts to display on this page.');
         return;
@@ -147,25 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
                            currentPathname.endsWith('/blog');
 
     if (isBlogIndexPage) {
-        console.log('On blog index page, attempting to render posts.');
-        // Parse page number from URL if available
-        const urlParams = new URLSearchParams(window.location.search);
-        const pageParam = urlParams.get('page');
-        if (pageParam && !isNaN(parseInt(pageParam))) {
-            const parsedPage = parseInt(pageParam);
-            // Validate page number
-            const totalPages = Math.ceil(blogPostsData.length / postsPerPage);
-            if (parsedPage >= 1 && parsedPage <= totalPages) {
-                currentPage = parsedPage;
-                console.log('Page param found and valid:', currentPage);
-            } else {
-                console.warn('Invalid page param, defaulting to page 1.');
-                currentPage = 1;
-            }
-        } else {
-            console.log('No valid page param, defaulting to page 1.');
-        }
+        console.log('isBlogIndexPage is true, proceeding with post rendering.');
         renderBlogPosts();
+        console.log('renderBlogPosts function completed execution.');
     } else {
         console.log('Not on blog index page, skipping post rendering.');
     }
