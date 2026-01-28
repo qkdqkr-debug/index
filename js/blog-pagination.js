@@ -33,142 +33,47 @@ const blogPostsData = [
     }
 ];
 
-const postsPerPage = 999; // Temporarily set to a high number to show all posts
-
+const postsPerPage = 5;
 let currentPage = 1;
 
-
-
 function renderBlogPosts() {
-
-    console.log('renderBlogPosts called');
-
     const blogPostsContainer = document.getElementById('blog-posts');
-
     const paginationContainer = document.getElementById('blog-pagination');
 
-
-
-    if (blogPostsData.length === 0) {
-
-        console.warn('blogPostsData is empty. No posts to render.');
-
-        if (blogPostsContainer) {
-
-            blogPostsContainer.innerHTML = '<p>게시물 데이터가 없습니다.</p>';
-
-        }
-
-        return;
-
-    }
-
-
-
     if (!blogPostsContainer || !paginationContainer) {
-
-        console.error('Error: blogPostsContainer or paginationContainer not found in renderBlogPosts.');
-
-        console.error('blogPostsContainer:', blogPostsContainer);
-
-        console.error('paginationContainer:', paginationContainer);
-
+        console.error('Error: blogPostsContainer or paginationContainer not found');
         return;
-
     }
 
-    console.log('blogPostsContainer successfully found:', blogPostsContainer);
-
-    console.log('paginationContainer successfully found:', paginationContainer);
-
-
-
-    // Clear existing content and show a loading message
-
-    blogPostsContainer.innerHTML = '<p>블로그 게시물을 로드하는 중...</p>';
-
+    // Clear existing content
+    blogPostsContainer.innerHTML = '';
     paginationContainer.innerHTML = '';
 
-
-
     const startIndex = (currentPage - 1) * postsPerPage;
-
     const endIndex = startIndex + postsPerPage;
-
     const paginatedPosts = blogPostsData.slice(startIndex, endIndex);
 
-
-
-    console.log(`Rendering page ${currentPage} with posts from index ${startIndex} to ${endIndex}. Number of posts: ${paginatedPosts.length}`);
-
-    console.log('paginatedPosts:', paginatedPosts);
-
-    
-
-    // Clear loading message before rendering actual posts or "no posts" message
-
-    blogPostsContainer.innerHTML = ''; 
-
-    
-
     if (paginatedPosts.length === 0) {
-
         blogPostsContainer.innerHTML = '<p>게시물이 없습니다.</p>';
-
-        console.log('No posts to display on this page.');
-
         return;
-
     }
 
-
-
-    try {
-
-        paginatedPosts.forEach((post, index) => {
-
-            console.log(`Processing post ${index + 1}: ${post.title}`);
-
-            const article = document.createElement('article');
-
-            article.classList.add('blog-post-card');
-
-            article.innerHTML = `
-
-                <h3><a href="${post.filename}">${post.title}</a></h3>
-
-                <p class="post-date">2026년 1월 28일 게시됨</p>
-
-                <p>${post.excerpt}</p>
-
-                <a href="${post.filename}" class="read-more">더 읽기</a>
-
-            `;
-
-            blogPostsContainer.appendChild(article);
-
-            console.log(`Appended article for post: ${post.title}`);
-
-        });
-
-    } catch (error) {
-
-        console.error('Error rendering blog posts:', error);
-
-        blogPostsContainer.innerHTML = '<p>게시글을 로드하는 중 오류가 발생했습니다.</p>';
-
-    }
-
-
+    paginatedPosts.forEach(post => {
+        const article = document.createElement('article');
+        article.classList.add('blog-post-card');
+        article.innerHTML = `
+            <h3><a href="${post.filename}">${post.title}</a></h3>
+            <p class="post-date">2026년 1월 28일 게시됨</p>
+            <p>${post.excerpt}</p>
+            <a href="${post.filename}" class="read-more">더 읽기</a>
+        `;
+        blogPostsContainer.appendChild(article);
+    });
 
     renderPaginationControls();
-
-    console.log('renderBlogPosts completed execution.');
-
 }
 
 function renderPaginationControls() {
-    console.log('renderPaginationControls called');
     const paginationContainer = document.getElementById('blog-pagination');
     if (!paginationContainer) {
         console.error('Error: paginationContainer not found for controls');
@@ -177,7 +82,6 @@ function renderPaginationControls() {
 
     const totalPages = Math.ceil(blogPostsData.length / postsPerPage);
     if (totalPages <= 1) { 
-        console.log('Only one page, no pagination needed.');
         return;
     }
 
@@ -186,7 +90,7 @@ function renderPaginationControls() {
     prevButton.textContent = '이전';
     prevButton.disabled = currentPage === 1;
     prevButton.addEventListener('click', () => {
-        if (currentPage > 1) { // Ensure currentPage doesn't go below 1
+        if (currentPage > 1) {
             currentPage--;
             renderBlogPosts();
             window.scrollTo(0, 0); 
@@ -212,7 +116,7 @@ function renderPaginationControls() {
     nextButton.textContent = '다음';
     nextButton.disabled = currentPage === totalPages;
     nextButton.addEventListener('click', () => {
-        if (currentPage < totalPages) { // Ensure currentPage doesn't exceed totalPages
+        if (currentPage < totalPages) {
             currentPage++;
             renderBlogPosts();
             window.scrollTo(0, 0);
@@ -222,22 +126,26 @@ function renderPaginationControls() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded and parsed');
     const currentPathname = window.location.pathname;
-    console.log('Current pathname:', currentPathname);
 
-    // More explicit check for the blog index page
-    // Covers: /blog/index.html, /blog/, /blog, /blog/index.html?page=1 etc.
     const isBlogIndexPage = currentPathname.endsWith('/blog/index.html') ||
                            currentPathname.endsWith('/blog/') ||
                            currentPathname.endsWith('/blog');
 
     if (isBlogIndexPage) {
-        console.log('isBlogIndexPage is true, proceeding with post rendering.');
+        const urlParams = new URLSearchParams(window.location.search);
+        const pageParam = urlParams.get('page');
+        if (pageParam && !isNaN(parseInt(pageParam))) {
+            const parsedPage = parseInt(pageParam);
+            const totalPages = Math.ceil(blogPostsData.length / postsPerPage);
+            if (parsedPage >= 1 && parsedPage <= totalPages) {
+                currentPage = parsedPage;
+            } else {
+                currentPage = 1;
+            }
+        } else {
+            currentPage = 1;
+        }
         renderBlogPosts();
-        console.log('renderBlogPosts function completed execution.');
-    } else {
-        console.log('Not on blog index page, skipping post rendering.');
     }
 });
-
