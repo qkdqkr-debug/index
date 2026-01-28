@@ -13,7 +13,7 @@ const translations = {
 
         nav_home: "홈",
         nav_blog: "블로그",
-        nav_about: "회사 소개",
+        nav_about: "블로그 소개",
         nav_contact: "연락처",
 
         hero_title: "미래를 탐구하고 영향을 이해하세요",
@@ -106,15 +106,15 @@ const translations = {
         post_impact_of_big_tech_p3: "However, the pervasive influence of big tech also presents several concerns. These include the potential for manipulation and misinformation, as platforms can control information and influence public attention and political narratives. There are also growing concerns about mental health crises linked to excessive screen time and social media use, leading to feelings of loneliness, anxiety, and depression. Privacy violations are a significant issue due to the extensive collection and analysis of personal data. Other negative impacts include environmental damage, algorithmic bias that can exacerbate societal inequalities, and the concentration of power in a few large corporations. The digital divide, which refers to the gap between those with and without access to technology, can also worsen existing inequalities in education and employment. Lastly, automation, while efficient, raises concerns about job displacement in various sectors.",
         post_impact_of_big_tech_source: "출처: issvalue.com, un.org, medium.com, oup.com, pwc.com.au",
 
-        about_title: "About Us - InsightHub",
-        about_heading: "About InsightHub",
-        about_p1: "Welcome to InsightHub, your source for insightful articles, in-depth analyses, and thought-provoking content. We are a passionate team of writers, thinkers, and creators dedicated to exploring a wide range of topics, from technology and science to lifestyle and culture.",
-        about_p2: "Our mission is to provide our readers with high-quality, well-researched, and engaging content that not only informs but also inspires. We believe in the power of knowledge and the importance of sharing diverse perspectives. At InsightHub, we strive to create a community of curious minds who are eager to learn, grow, and make a positive impact on the world.",
-        our_vision_heading: "Our Vision",
-        our_vision_p1: "At InsightHub, we envision a world where knowledge is accessible, understanding is deepened, and ideas are freely exchanged. We are committed to fostering intellectual curiosity and providing a platform for thoughtful discussion. Our goal is to be a trusted resource for anyone seeking to broaden their horizons and engage with the complexities of the modern world through well-curated and insightful content.",
-        our_team_heading: "Our Team",
-        our_team_p1: "InsightHub is powered by a diverse team of dedicated writers, editors, and subject matter experts. Each member brings a unique perspective and a wealth of experience, ensuring that our content is not only accurate and informative but also engaging and relevant. We are united by a shared passion for learning and a commitment to delivering excellence in every article we publish.",
-        our_team_p2: "Thank you for joining us on this journey. We hope you enjoy our content and become a part of our growing community.",
+        about_title: "인사이트허브 - 블로그 소개",
+        about_heading: "인사이트허브 블로그 소개",
+        about_p1: "인사이트허브 블로그에 오신 것을 환영합니다. 이곳은 심층적인 분석, 통찰력 있는 기사, 그리고 생각을 자극하는 콘텐츠를 제공하는 공간입니다. 저희는 기술과 과학부터 라이프스타일과 문화에 이르기까지 다양한 주제를 탐구하는 열정적인 작가, 사상가, 그리고 창작자들로 구성된 팀입니다.",
+        about_p2: "저희의 미션은 독자들에게 정보를 제공할 뿐만 아니라 영감을 주는 고품질의 잘 연구된 매력적인 콘텐츠를 제공하는 것입니다. 저희는 지식의 힘과 다양한 관점을 공유하는 것의 중요성을 믿습니다. 인사이트허브에서는 배우고, 성장하며, 세상에 긍정적인 영향을 미 미치고자 하는 호기심 많은 사람들의 커뮤니티를 만들고자 노력합니다.",
+        our_vision_heading: "블로그의 비전",
+        our_vision_p1: "인사이트허브 블로그는 지식이 접근 가능하고, 이해가 깊어지며, 아이디어가 자유롭게 교환되는 세상을 envision합니다. 저희는 지적 호기심을 함양하고 사려 깊은 토론을 위한 플랫폼을 제공하기 위해 최선을 다하고 있습니다. 저희의 목표는 잘 큐레이션된 통찰력 있는 콘텐츠를 통해 시야를 넓히고 현대 세계의 복잡성과 소통하고자 하는 모든 이에게 신뢰할 수 있는 자료가 되는 것입니다.",
+        our_team_heading: "저희 팀",
+        our_team_p1: "인사이트허브 블로그는 헌신적인 작가, 편집자 및 주제별 전문가로 구성된 다양한 팀에 의해 운영됩니다. 각 팀원은 독특한 관점과 풍부한 경험을 제공하여 저희 콘텐츠가 정확하고 유익할 뿐만 아니라 매력적이고 관련성이 있도록 보장합니다. 저희는 학습에 대한 공통된 열정과 게시하는 모든 기사에서 탁월함을 제공하려는 헌신으로 하나가 됩니다.",
+        our_team_p2: "이 여정에 함께 해주셔서 감사합니다. 저희 콘텐츠를 즐기시고 성장하는 커뮤니티의 일원이 되시기를 바랍니다.",
 
         contact_title: "Contact Us - InsightHub",
         contact_heading: "Contact Us",
