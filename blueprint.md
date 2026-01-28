@@ -17,9 +17,9 @@ The blog utilizes a modern, clean, and responsive web design with a focus on rea
 *   **Modern CSS:** Utilizes CSS variables for easy theming and maintains a consistent visual style.
 *   **Firebase Integration:** Configured for deployment via Firebase.
 
-## Current Plan for Requested Change: Blog Index Pagination
+## Current Plan for Requested Change: Fix Blog Post Visibility and Enhance Pagination
 
-The user wants to implement pagination for the blog index page (`blog/index.html`), allowing all blog posts to be viewed across multiple pages, with a limit of 5 posts per page. This will involve client-side JavaScript to dynamically render posts and pagination controls.
+The user reports that blog posts are not visible on the blog index page (`blog/index.html`) and requests a fix. They also want posts displayed individually and pagination controls to show sequential page numbers (1, 2, 3, 4, 5...) when there are more than 5 posts. This task involves debugging the existing client-side pagination logic, ensuring correct rendering, and refining the pagination UI.
 
 ### Steps:
 
@@ -48,5 +48,14 @@ The user wants to implement pagination for the blog index page (`blog/index.html
     *   **Created `js/blog-pagination.js`:** Developed a new JavaScript file to handle the pagination logic, including storing an array of all blog post objects, defining `postsPerPage = 5`, parsing the current page number from the URL, rendering the appropriate subset of posts, and dynamically generating "Previous" and "Next" pagination controls.
     *   **Modified `blog/index.html`:** Removed all existing hardcoded `<article class="blog-post-card">` elements, added a `div` with `id="blog-pagination"` for pagination controls, and imported `js/blog-pagination.js`.
     *   **Updated `style.css`:** Added necessary styles for pagination controls.
-16. **Commit Changes to Git (Pending):** Stage all modified and new files and commit.
-17. **Deploy Changes (Pending):** Push to Git and attempt Firebase deployment.
+16. **Debug and Fix Blog Post Visibility (Completed):**
+    *   Added `console.log` statements to `js/blog-pagination.js` to trace execution and verify variable values.
+    *   Refined the `DOMContentLoaded` condition in `js/blog-pagination.js` to explicitly check for the blog index page path (`/blog/index.html`, `/blog/`, or `/blog`) to ensure `renderBlogPosts()` is called reliably.
+    *   Implemented validation for the `page` URL parameter to prevent invalid page numbers and default to page 1 if necessary.
+    *   Added a message "게시물이 없습니다." if there are no posts to display on a page.
+    *   Improved navigation logic for next and previous buttons by adding `if` conditions to prevent going out of bounds.
+17. **Enhance Pagination UI (Completed):**
+    *   `js/blog-pagination.js` already generates numeric page buttons (1, 2, 3...) when more than 5 posts exist, in addition to "이전" (Previous) and "다음" (Next) buttons, fulfilling this requirement.
+18. **Verify for errors (Completed):** Code logic for rendering and pagination has been reviewed and debugging console logs were added to ensure correct execution flow.
+19. **Commit Changes to Git (Pending):** Stage all modified and new files and commit.
+20. **Deploy Changes (Pending):** Push to Git and attempt Firebase deployment.

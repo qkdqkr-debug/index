@@ -37,10 +37,18 @@ const postsPerPage = 5;
 let currentPage = 1;
 
 function renderBlogPosts() {
+    console.log('renderBlogPosts called');
     const blogPostsContainer = document.getElementById('blog-posts');
     const paginationContainer = document.getElementById('blog-pagination');
 
-    if (!blogPostsContainer || !paginationContainer) return;
+    if (!blogPostsContainer) {
+        console.error('Error: blogPostsContainer not found');
+        return;
+    }
+    if (!paginationContainer) {
+        console.error('Error: paginationContainer not found');
+        return;
+    }
 
     // Clear existing content
     blogPostsContainer.innerHTML = '';
@@ -49,6 +57,14 @@ function renderBlogPosts() {
     const startIndex = (currentPage - 1) * postsPerPage;
     const endIndex = startIndex + postsPerPage;
     const paginatedPosts = blogPostsData.slice(startIndex, endIndex);
+
+    console.log(`Rendering page ${currentPage} with posts from index ${startIndex} to ${endIndex}. Number of posts: ${paginatedPosts.length}`);
+    
+    if (paginatedPosts.length === 0) {
+        blogPostsContainer.innerHTML = '<p>게시물이 없습니다.</p>';
+        console.log('No posts to display on this page.');
+        return;
+    }
 
     paginatedPosts.forEach(post => {
         const article = document.createElement('article');
@@ -66,21 +82,33 @@ function renderBlogPosts() {
 }
 
 function renderPaginationControls() {
+    console.log('renderPaginationControls called');
     const paginationContainer = document.getElementById('blog-pagination');
-    if (!paginationContainer) return;
+    if (!paginationContainer) {
+        console.error('Error: paginationContainer not found for controls');
+        return;
+    }
 
     const totalPages = Math.ceil(blogPostsData.length / postsPerPage);
+    if (totalPages <= 1) { 
+        console.log('Only one page, no pagination needed.');
+        return;
+    }
 
+    // Previous Button
     const prevButton = document.createElement('button');
     prevButton.textContent = '이전';
     prevButton.disabled = currentPage === 1;
     prevButton.addEventListener('click', () => {
-        currentPage--;
-        renderBlogPosts();
-        window.scrollTo(0, 0); // Scroll to top on page change
+        if (currentPage > 1) { // Ensure currentPage doesn't go below 1
+            currentPage--;
+            renderBlogPosts();
+            window.scrollTo(0, 0); 
+        }
     });
     paginationContainer.appendChild(prevButton);
 
+    // Page number buttons
     for (let i = 1; i <= totalPages; i++) {
         const pageButton = document.createElement('button');
         pageButton.textContent = i;
@@ -93,27 +121,53 @@ function renderPaginationControls() {
         paginationContainer.appendChild(pageButton);
     }
 
+    // Next Button
     const nextButton = document.createElement('button');
     nextButton.textContent = '다음';
     nextButton.disabled = currentPage === totalPages;
     nextButton.addEventListener('click', () => {
-        currentPage++;
-        renderBlogPosts();
-        window.scrollTo(0, 0);
+        if (currentPage < totalPages) { // Ensure currentPage doesn't exceed totalPages
+            currentPage++;
+            renderBlogPosts();
+            window.scrollTo(0, 0);
+        }
     });
     paginationContainer.appendChild(nextButton);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if on the blog index page
-    if (window.location.pathname.includes('blog/index.html') || window.location.pathname.endsWith('/blog/') || window.location.pathname.endsWith('/blog')) {
+    console.log('DOM fully loaded and parsed');
+    const currentPathname = window.location.pathname;
+    console.log('Current pathname:', currentPathname);
+
+    // More explicit check for the blog index page
+    // Covers: /blog/index.html, /blog/, /blog, /blog/index.html?page=1 etc.
+    const isBlogIndexPage = currentPathname.endsWith('/blog/index.html') ||
+                           currentPathname.endsWith('/blog/') ||
+                           currentPathname.endsWith('/blog');
+
+    if (isBlogIndexPage) {
+        console.log('On blog index page, attempting to render posts.');
         // Parse page number from URL if available
         const urlParams = new URLSearchParams(window.location.search);
         const pageParam = urlParams.get('page');
         if (pageParam && !isNaN(parseInt(pageParam))) {
-            currentPage = parseInt(pageParam);
+            const parsedPage = parseInt(pageParam);
+            // Validate page number
+            const totalPages = Math.ceil(blogPostsData.length / postsPerPage);
+            if (parsedPage >= 1 && parsedPage <= totalPages) {
+                currentPage = parsedPage;
+                console.log('Page param found and valid:', currentPage);
+            } else {
+                console.warn('Invalid page param, defaulting to page 1.');
+                currentPage = 1;
+            }
+        } else {
+            console.log('No valid page param, defaulting to page 1.');
         }
         renderBlogPosts();
+    } else {
+        console.log('Not on blog index page, skipping post rendering.');
     }
 });
 
