@@ -151,20 +151,6 @@ function renderPaginationControls() {
     paginationContainer.appendChild(nextButton);
 }
 
-function performSearch(query) {
-    currentPage = 1; // Reset to first page on new search
-    if (query) {
-        const lowerCaseQuery = query.toLowerCase();
-        currentPosts = enrichedBlogPostsData.filter(post =>
-            post.title.toLowerCase().includes(lowerCaseQuery) ||
-            post.excerpt.toLowerCase().includes(lowerCaseQuery)
-        );
-    } else {
-        currentPosts = [...enrichedBlogPostsData]; // If query is empty, show all posts
-    }
-    renderBlogPosts();
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     const currentPathname = window.location.pathname;
 
@@ -188,14 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } else {
                 currentPage = 1;
-            }
-
-            // Add event listener for search input
-            const searchInput = document.getElementById('blog-search-input');
-            if (searchInput) {
-                searchInput.addEventListener('input', (event) => {
-                    performSearch(event.target.value);
-                });
             }
 
             renderBlogPosts(); // Initial render
