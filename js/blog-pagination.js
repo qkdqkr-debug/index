@@ -133,9 +133,7 @@ function renderPaginationControls() {
 document.addEventListener('DOMContentLoaded', () => {
     const currentPathname = window.location.pathname;
 
-    const isBlogIndexPage = currentPathname.endsWith('/blog/index.html') ||
-                           currentPathname.endsWith('/blog/') ||
-                           currentPathname.endsWith('/blog');
+    const isBlogIndexPage = currentPathname.includes('/blog/') || currentPathname.includes('/blog/index.html');
 
     if (isBlogIndexPage) {
         const urlParams = new URLSearchParams(window.location.search);
