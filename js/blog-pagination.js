@@ -33,7 +33,7 @@ const blogPostsData = [
     }
 ];
 
-const postsPerPage = 5;
+const postsPerPage = 6;
 let currentPage = 1;
 
 function renderBlogPosts() {
