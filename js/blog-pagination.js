@@ -33,8 +33,11 @@ const blogPostsData = [
     }
 ];
 
-const postsPerPage = 5;
+const postsPerPage = 999; // Temporarily set to a high number to show all posts
+
 let currentPage = 1;
+
+
 
 function renderBlogPosts() {
 
@@ -43,6 +46,22 @@ function renderBlogPosts() {
     const blogPostsContainer = document.getElementById('blog-posts');
 
     const paginationContainer = document.getElementById('blog-pagination');
+
+
+
+    if (blogPostsData.length === 0) {
+
+        console.warn('blogPostsData is empty. No posts to render.');
+
+        if (blogPostsContainer) {
+
+            blogPostsContainer.innerHTML = '<p>게시물 데이터가 없습니다.</p>';
+
+        }
+
+        return;
+
+    }
 
 
 
@@ -104,31 +123,41 @@ function renderBlogPosts() {
 
 
 
-    paginatedPosts.forEach((post, index) => {
+    try {
 
-        console.log(`Processing post ${index + 1}: ${post.title}`);
+        paginatedPosts.forEach((post, index) => {
 
-        const article = document.createElement('article');
+            console.log(`Processing post ${index + 1}: ${post.title}`);
 
-        article.classList.add('blog-post-card');
+            const article = document.createElement('article');
 
-        article.innerHTML = `
+            article.classList.add('blog-post-card');
 
-            <h3><a href="${post.filename}">${post.title}</a></h3>
+            article.innerHTML = `
 
-            <p class="post-date">2026년 1월 28일 게시됨</p>
+                <h3><a href="${post.filename}">${post.title}</a></h3>
 
-            <p>${post.excerpt}</p>
+                <p class="post-date">2026년 1월 28일 게시됨</p>
 
-            <a href="${post.filename}" class="read-more">더 읽기</a>
+                <p>${post.excerpt}</p>
 
-        `;
+                <a href="${post.filename}" class="read-more">더 읽기</a>
 
-        blogPostsContainer.appendChild(article);
+            `;
 
-        console.log(`Appended article for post: ${post.title}`);
+            blogPostsContainer.appendChild(article);
 
-    });
+            console.log(`Appended article for post: ${post.title}`);
+
+        });
+
+    } catch (error) {
+
+        console.error('Error rendering blog posts:', error);
+
+        blogPostsContainer.innerHTML = '<p>게시글을 로드하는 중 오류가 발생했습니다.</p>';
+
+    }
 
 
 
