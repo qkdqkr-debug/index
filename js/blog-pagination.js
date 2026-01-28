@@ -37,45 +37,105 @@ const postsPerPage = 5;
 let currentPage = 1;
 
 function renderBlogPosts() {
+
     console.log('renderBlogPosts called');
+
     const blogPostsContainer = document.getElementById('blog-posts');
+
     const paginationContainer = document.getElementById('blog-pagination');
 
+
+
     if (!blogPostsContainer || !paginationContainer) {
-        console.error('Error: blogPostsContainer or paginationContainer not found');
+
+        console.error('Error: blogPostsContainer or paginationContainer not found in renderBlogPosts.');
+
+        console.error('blogPostsContainer:', blogPostsContainer);
+
+        console.error('paginationContainer:', paginationContainer);
+
         return;
+
     }
+
+    console.log('blogPostsContainer successfully found:', blogPostsContainer);
+
+    console.log('paginationContainer successfully found:', paginationContainer);
+
+
 
     // Clear existing content and show a loading message
+
     blogPostsContainer.innerHTML = '<p>블로그 게시물을 로드하는 중...</p>';
+
     paginationContainer.innerHTML = '';
 
+
+
     const startIndex = (currentPage - 1) * postsPerPage;
+
     const endIndex = startIndex + postsPerPage;
+
     const paginatedPosts = blogPostsData.slice(startIndex, endIndex);
 
+
+
     console.log(`Rendering page ${currentPage} with posts from index ${startIndex} to ${endIndex}. Number of posts: ${paginatedPosts.length}`);
+
+    console.log('paginatedPosts:', paginatedPosts);
+
     
+
     // Clear loading message before rendering actual posts or "no posts" message
-    blogPostsContainer.innerHTML = '';     if (paginatedPosts.length === 0) {
+
+    blogPostsContainer.innerHTML = ''; 
+
+    
+
+    if (paginatedPosts.length === 0) {
+
         blogPostsContainer.innerHTML = '<p>게시물이 없습니다.</p>';
+
         console.log('No posts to display on this page.');
+
         return;
+
     }
 
-    paginatedPosts.forEach(post => {
+
+
+    paginatedPosts.forEach((post, index) => {
+
+        console.log(`Processing post ${index + 1}: ${post.title}`);
+
         const article = document.createElement('article');
+
         article.classList.add('blog-post-card');
+
         article.innerHTML = `
+
             <h3><a href="${post.filename}">${post.title}</a></h3>
+
             <p class="post-date">2026년 1월 28일 게시됨</p>
+
             <p>${post.excerpt}</p>
+
             <a href="${post.filename}" class="read-more">더 읽기</a>
+
         `;
+
         blogPostsContainer.appendChild(article);
+
+        console.log(`Appended article for post: ${post.title}`);
+
     });
 
+
+
     renderPaginationControls();
+
+    console.log('renderBlogPosts completed execution.');
+
 }
 
 function renderPaginationControls() {
