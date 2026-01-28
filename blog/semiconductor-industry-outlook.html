@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +8,27 @@
 </head>
 <body>
     <header>
-        <h1>Our Blog</h1>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="index.html">Blog</a>
-            <a href="../about.html">About</a>
-            <a href="../contact.html">Contact</a>
-        </nav>
+        <div class="header-content">
+            <nav>
+                <div class="logo">
+                    <a href="../index.html">InsightHub</a>
+                </div>
+                <ul>
+                    <li><a href="../index.html">홈</a></li>
+                    <li><a href="index.html">블로그</a></li>
+                    <li><a href="../about.html">회사 소개</a></li>
+                    <li><a href="../contact.html">연락처</a></li>
+                </ul>
+                <div class="controls">
+                    <button id="theme-toggle" class="theme-toggle-button">🌙</button>
+                </div>
+            </nav>
+        </div>
     </header>
     <main>
         <article>
             <h1>2026년 반도체 산업 전망: AI가 이끄는 슈퍼사이클</h1>
-            <p class="post-meta">Published on January 28, 2026</p>
+            <p class="post-meta">2026년 1월 28일 게시됨</p>
 
             <section>
                 <h2>AI 확산이 견인하는 반도체 슈퍼사이클</h2>
@@ -50,7 +59,9 @@
         </article>
     </main>
     <footer>
-        <p>&copy; 2026 Your Company. All rights reserved.</p>
+        <p>&copy; 2026 귀하의 회사. 모든 권리 보유.</p>
     </footer>
+    <script type="module" src="../js/i18n.js"></script>
+    <script type="module" src="../js/theme.js"></script>
 </body>
 </html>

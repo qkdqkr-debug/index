@@ -17,24 +17,26 @@ The blog utilizes a modern, clean, and responsive web design with a focus on rea
 *   **Modern CSS:** Utilizes CSS variables for easy theming and maintains a consistent visual style.
 *   **Firebase Integration:** Configured for deployment via Firebase.
 
-## Current Plan for Requested Change: Adding Multiple Blog Posts
+## Current Plan for Requested Change: Website Translation and Dark/Light Mode
 
-The user has requested the creation of four new blog posts on specific topics: Hyundai Motor Company, Semiconductor Industry Outlook, Power Shortage, and the Necessity of Nuclear Power. These posts will include analysis, forecasts, and opinions. Following their creation, the blog's main index will be updated, and all changes will be committed and deployed.
+The user has requested to translate the entire website to Korean and implement a site-wide dark/light mode toggle. After these changes, all modifications will be committed to Git and deployment will be attempted.
 
 ### Steps:
 
-1.  **Create Blueprint.md (Done):** This file is being created to document the plan.
-2.  **Research and Draft Blog Posts (Completed):**
-    *   **Hyundai Motor Company:** Researched and drafted.
-    *   **Semiconductor Industry Outlook:** Researched and drafted.
-    *   **Power Shortage:** Researched and drafted.
-    *   **Necessity of Nuclear Power:** Researched and drafted.
-3.  **Create HTML Files for Each Post (Completed):**
-    *   `blog/hyundai-motor-outlook.html` created.
-    *   `blog/semiconductor-industry-outlook.html` created.
-    *   `blog/power-shortage-analysis.html` created.
-    *   `blog/necessity-of-nuclear-power.html` created.
-    *   Each file followed the established blog post structure.
-4.  **Update `blog/index.html`:** Add new blog post cards for each of the four new articles to `blog/index.html`, ensuring proper linking and display.
-5.  **Commit Changes to Git:** Stage and commit all new and modified files with a clear and concise commit message.
-6.  **Deploy Changes:** Attempt to deploy the updated project using the configured Firebase deployment command. Acknowledge and report any potential authentication issues.
+1.  **Create Blueprint.md (Completed):** This file documents the plan.
+2.  **Research and Draft Blog Posts (Completed):** Four blog posts were researched and drafted.
+3.  **Create HTML Files for Each Post (Completed):** Four HTML files for the new blog posts were created.
+4.  **Update `blog/index.html` (Completed):** Added new blog post cards for all four new articles.
+5.  **Commit Changes to Git (Completed):** All new and modified files were staged and committed for the previous task.
+6.  **Deploy Changes (Uncompleted):** Attempted deployment via Firebase, but failed due to authentication issues ("Failed to authenticate, have you run firebase login?"). Manual deployment or authentication will be required.
+7.  **Translate Website to Korean (Completed):**
+    *   **Identified Text:** Scanned `index.html`, `about.html`, `contact.html`, `privacy.html`, `terms.html`, and `blog/index.html` for English text.
+    *   **Translated Content:** Replaced English strings with Korean equivalents directly in the HTML for hardcoded text, and ensured `i18n.js` handles dynamic content. All blog post content was already in Korean.
+    *   **Set `lang="ko"`:** Updated the `<html>` tag in all relevant HTML files to `lang="ko"`.
+    *   **Removed Language Toggles:** Removed `EN` and `KO` language selection buttons from all HTML files and removed the corresponding logic from `js/i18n.js`.
+8.  **Implement Dark/Light Mode Toggle (Completed):**
+    *   **Added Toggle Button:** Integrated the theme toggle button (moon/sun icon) into the header of `index.html`, `about.html`, `contact.html`, `privacy.html`, `terms.html`, `blog/index.html`, and all individual blog post HTML files.
+    *   **Developed JavaScript Logic:** Verified `js/theme.js` already contains the necessary functionality for theme switching, storing preference in `localStorage`, and applying the theme on page load.
+    *   **Integrated CSS:** `style.css` already supports the `dark-mode` class.
+9.  **Commit Changes to Git (Pending):** Stage all modified files and commit with a descriptive message.
+10. **Deploy Changes (Pending):** Attempt to deploy the updated project using the configured Firebase deployment command, acknowledging potential authentication issues.

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +8,36 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">InsightHub</a>
-            </div>
-            <ul>
-                <li><a href="index.html" data-key="nav_home"></a></li>
-                <li><a href="blog/index.html" data-key="nav_blog"></a></li>
-                <li><a href="about.html" data-key="nav_about"></a></li>
-                <li><a href="contact.html" data-key="nav_contact"></a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">InsightHub</a>
+                </div>
+                <ul>
+                    <li><a href="index.html" data-key="nav_home"></a></li>
+                    <li><a href="blog/index.html" data-key="nav_blog"></a></li>
+                    <li><a href="about.html" data-key="nav_about"></a></li>
+                    <li><a href="contact.html" data-key="nav_contact"></a></li>
+                </ul>
+                <div class="controls">
+                    <button id="theme-toggle" class="theme-toggle-button">🌙</button>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section class="about-section">
-            <h1>About InsightHub</h1>
-            <p>Welcome to InsightHub, your source for insightful articles, in-depth analyses, and thought-provoking content. We are a passionate team of writers, thinkers, and creators dedicated to exploring a wide range of topics, from technology and science to lifestyle and culture.</p>
-            <p>Our mission is to provide our readers with high-quality, well-researched, and engaging content that not only informs but also inspires. We believe in the power of knowledge and the importance of sharing diverse perspectives. At InsightHub, we strive to create a community of curious minds who are eager to learn, grow, and make a positive impact on the world.</p>
+            <h1 data-key="about_heading"></h1>
+            <p data-key="about_p1"></p>
+            <p data-key="about_p2"></p>
 
-            <h2>Our Vision</h2>
-            <p>At InsightHub, we envision a world where knowledge is accessible, understanding is deepened, and ideas are freely exchanged. We are committed to fostering intellectual curiosity and providing a platform for thoughtful discussion. Our goal is to be a trusted resource for anyone seeking to broaden their horizons and engage with the complexities of the modern world through well-curated and insightful content.</p>
+            <h2 data-key="our_vision_heading"></h2>
+            <p data-key="our_vision_p1"></p>
 
-            <h2>Our Team</h2>
-            <p>InsightHub is powered by a diverse team of dedicated writers, editors, and subject matter experts. Each member brings a unique perspective and a wealth of experience, ensuring that our content is not only accurate and informative but also engaging and relevant. We are united by a shared passion for learning and a commitment to delivering excellence in every article we publish.</p>
-            <p>Thank you for joining us on this journey. We hope you enjoy our content and become a part of our growing community.</p>
+            <h2 data-key="our_team_heading"></h2>
+            <p data-key="our_team_p1"></p>
+            <p data-key="our_team_p2"></p>
         </section>
     </main>
 
@@ -47,5 +52,7 @@
         </nav>
         <p data-key="footer_copyright"></p>
     </footer>
+    <script type="module" src="js/i18n.js"></script>
+    <script type="module" src="js/theme.js"></script>
 </body>
 </html>

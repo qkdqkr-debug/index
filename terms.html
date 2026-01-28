@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,71 +8,76 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">InsightHub</a>
-            </div>
-            <ul>
-                <li><a href="index.html" data-key="nav_home"></a></li>
-                <li><a href="blog/index.html" data-key="nav_blog"></a></li>
-                <li><a href="about.html" data-key="nav_about"></a></li>
-                <li><a href="contact.html" data-key="nav_contact"></a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">InsightHub</a>
+                </div>
+                <ul>
+                    <li><a href="index.html" data-key="nav_home"></a></li>
+                    <li><a href="blog/index.html" data-key="nav_blog"></a></li>
+                    <li><a href="about.html" data-key="nav_about"></a></li>
+                    <li><a href="contact.html" data-key="nav_contact"></a></li>
+                </ul>
+                <div class="controls">
+                    <button id="theme-toggle" class="theme-toggle-button">🌙</button>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section id="terms-of-service">
-            <h2>Terms of Service</h2>
+            <h2>서비스 약관</h2>
             
-            <p>Please read these terms of service ("Terms") carefully before using the InsightHub website (the "Service") operated by us.</p>
+            <p>당사가 운영하는 인사이트허브 웹사이트("서비스")를 사용하기 전에 이 서비스 약관("약관")을 주의 깊게 읽어 주십시오.</p>
 
-            <h3>Conditions of Use</h3>
-            <p>We will provide their services to you, which are subject to the conditions stated below in this document. Every time you visit this website, use its services or make a purchase, you accept the following conditions. This is why we urge you to read them carefully.</p>
+            <h3>사용 조건</h3>
+            <p>당사는 본 문서에 명시된 조건에 따라 서비스를 제공합니다. 본 웹사이트를 방문하거나 서비스를 이용하거나 구매할 때마다 다음 조건에 동의하는 것입니다. 따라서 이를 주의 깊게 읽어 보시기 바랍니다.</p>
 
-            <h3>Privacy Policy</h3>
-            <p>Before you continue using our website we advise you to read our <a href="privacy.html">privacy policy</a> regarding our user data collection. It will help you better understand our practices.</p>
+            <h3>개인정보처리방침</h3>
+            <p>당사 웹사이트를 계속 사용하기 전에 당사의 사용자 데이터 수집에 관한 <a href="privacy.html">개인정보처리방침</a>을 읽어 보시기 바랍니다. 이는 당사의 관행을 더 잘 이해하는 데 도움이 될 것입니다.</p>
 
-            <h3>User Accounts</h3>
-            <p>If you create an account on this website, you are responsible for maintaining the confidentiality of your account and password and for restricting access to your computer. You agree to accept responsibility for all activities that occur under your account or password. We reserve the right to refuse service, terminate accounts, remove or edit content, or cancel orders in their sole discretion.</p>
+            <h3>사용자 계정</h3>
+            <p>본 웹사이트에서 계정을 생성하는 경우, 귀하는 계정 및 비밀번호의 기밀을 유지하고 컴퓨터에 대한 액세스를 제한할 책임이 있습니다. 귀하는 귀하의 계정 또는 비밀번호 하에서 발생하는 모든 활동에 대한 책임을 수락하는 데 동의합니다. 당사는 단독 재량으로 서비스를 거부하거나, 계정을 해지하거나, 콘텐츠를 제거 또는 편집하거나, 주문을 취소할 권리를 보유합니다.</p>
 
-            <h3>Prohibited Activities</h3>
-            <p>You may not access or use the Service for any purpose other than that for which we make the Service available. The Service may not be used in connection with any commercial endeavors except those that are specifically endorsed or approved by us. As a user of the Service, you agree not to:</p>
+            <h3>금지된 활동</h3>
+            <p>귀하는 당사가 서비스를 제공하는 목적 이외의 다른 목적으로 서비스에 액세스하거나 서비스를 사용할 수 없습니다. 서비스는 당사가 특별히 승인하거나 승인한 상업적 활동을 제외하고는 어떠한 상업적 활동과 관련하여서도 사용될 수 없습니다. 서비스 사용자로서 귀하는 다음을 하지 않을 것에 동의합니다:</p>
             <ul>
-                <li>Systematically retrieve data or other content from the Service to create or compile, directly or indirectly, a collection, compilation, database, or directory without written permission from us.</li>
-                <li>Make any unauthorized use of the Service, including collecting usernames and/or email addresses of users by electronic or other means for the purpose of sending unsolicited email, or creating user accounts by automated means or under false pretenses.</li>
-                <li>Circumvent, disable, or otherwise interfere with security-related features of the Service, including features that prevent or restrict use or copying of any Content or enforce limitations on use of the Service and/or the Content contained therein.</li>
-                <li>Engage in unauthorized framing of or linking to the Service.</li>
-                <li>Interfere with, disrupt, or create an undue burden on the Service or the networks or services connected to the Service.</li>
-                <li>Use the Service as part of any effort to compete with us or otherwise use the Service and/or the Content for any revenue-generating endeavor or commercial enterprise.</li>
+                <li>당사의 서면 허가 없이 서비스에서 데이터 또는 기타 콘텐츠를 체계적으로 검색하여 직간접적으로 컬렉션, 편집, 데이터베이스 또는 디렉토리를 생성하거나 편집하는 행위.</li>
+                <li>원치 않는 이메일을 보내거나 자동화된 수단 또는 허위로 사용자 계정을 생성할 목적으로 전자적 또는 기타 수단을 통해 사용자 이름 및/또는 이메일 주소를 수집하는 것을 포함하여 서비스의 무단 사용.</li>
+                <li>콘텐츠 사용을 방지하거나 제한하는 기능 또는 서비스 및/또는 그 안에 포함된 콘텐츠 사용에 대한 제한을 강제하는 기능을 포함하여 서비스의 보안 관련 기능을 우회, 비활성화 또는 달리 방해하는 행위.</li>
+                <li>서비스에 대한 무단 프레이밍 또는 링크 연결에 참여하는 행위.</li>
+                <li>서비스 또는 서비스에 연결된 네트워크 또는 서비스를 방해하거나, 중단하거나, 과도한 부담을 주는 행위.</li>
+                <li>당사와 경쟁하려는 노력의 일환으로 서비스를 사용하거나 달리 서비스 및/또는 콘텐츠를 수익 창출 활동 또는 상업적 기업에 사용하는 행위.</li>
             </ul>
 
-            <h3>Copyright</h3>
-            <p>Content published on this website (digital downloads, images, texts, graphics, logos) is the property of InsightHub and/or its content creators and protected by international copyright laws. The entire compilation of the content found on this website is the exclusive property of InsightHub, with copyright authorship for this compilation by InsightHub.</p>
+            <h3>저작권</h3>
+            <p>본 웹사이트에 게시된 콘텐츠(디지털 다운로드, 이미지, 텍스트, 그래픽, 로고)는 인사이트허브 및/또는 그 콘텐츠 제작자의 재산이며 국제 저작권법에 의해 보호됩니다. 본 웹사이트에서 발견되는 콘텐츠의 전체 편집물은 인사이트허브의 독점 재산이며, 이 편집물에 대한 저작권은 인사이트허브에 있습니다.</p>
 
-            <h3>Communications</h3>
-            <p>The entire communication with us is electronic. Every time you send us an email or visit our website, you are going to be communicating with us. You hereby consent to receive communications from us. If you subscribe to the news on our website, you are going to receive regular emails from us. We will continue to communicate with you by posting news and notices on our website and by sending you emails. You also agree that all notices, disclosures, agreements and other communications we provide to you electronically meet the legal requirements that such communications be in writing.</p>
+            <h3>커뮤니케이션</h3>
+            <p>당사와의 모든 커뮤니케이션은 전자적입니다. 귀하가 당사에 이메일을 보내거나 당사 웹사이트를 방문할 때마다 귀하는 당사와 소통하게 됩니다. 귀하는 이로써 당사로부터 통신을 수신하는 데 동의합니다. 당사 웹사이트에서 뉴스레터를 구독하는 경우, 당사로부터 정기적인 이메일을 수신하게 됩니다. 당사는 웹사이트에 뉴스 및 공지 사항을 게시하고 이메일을 보내는 방식으로 귀하와 계속 소통할 것입니다. 귀하는 또한 당사가 전자적으로 제공하는 모든 통지, 공개, 계약 및 기타 통신이 그러한 통신이 서면으로 이루어져야 하는 법적 요건을 충족한다는 데 동의합니다.</p>
 
-            <h3>Disclaimer of Warranties</h3>
-            <p>The Service is provided on an as-is and as-available basis. You agree that your use of the Service will be at your sole risk. To the fullest extent permitted by law, we disclaim all warranties, express or implied, in connection with the Service and your use thereof, including, without limitation, the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. We make no warranties or representations about the accuracy or completeness of the Service's content or the content of any websites linked to the Service and we will assume no liability or responsibility for any (1) errors, mistakes, or inaccuracies of content and materials, (2) personal injury or property damage, of any nature whatsoever, resulting from your access to and use of the Service, (3) any unauthorized access to or use of our secure servers and/or any and all personal information and/or financial information stored therein, (4) any interruption or cessation of transmission to or from the Service, (5) any bugs, viruses, Trojan horses, or the like which may be transmitted to or through the Service by any third party, and/or (6) any errors or omissions in any content and materials or for any loss or damage of any kind incurred as a result of the use of any content posted, transmitted, or otherwise made available via the Service.</p>
+            <h3>보증의 부인</h3>
+            <p>서비스는 "있는 그대로" 및 "사용 가능한 상태로" 제공됩니다. 귀하는 서비스 사용이 전적으로 귀하의 위험 부담임을 동의합니다. 법이 허용하는 최대 범위 내에서 당사는 서비스 및 귀하의 서비스 사용과 관련하여 명시적 또는 묵시적 모든 보증을 부인하며, 여기에는 상품성, 특정 목적에의 적합성, 비침해에 대한 묵시적 보증이 포함되나 이에 국한되지 않습니다. 당사는 서비스의 내용 또는 서비스에 링크된 웹사이트 내용의 정확성 또는 완전성에 대해 어떠한 보증이나 진술도 하지 않으며, (1) 오류, 실수 또는 내용 및 자료의 부정확성, (2) 서비스 액세스 및 사용으로 인해 발생하는 모든 종류의 개인 상해 또는 재산 피해, (3) 당사의 보안 서버 및/또는 그 안에 저장된 모든 개인 정보 및/또는 금융 정보에 대한 무단 액세스 또는 사용, (4) 서비스로 또는 서비스로부터의 전송 중단 또는 중지, (5) 제3자에 의해 서비스로 또는 서비스를 통해 전송될 수 있는 버그, 바이러스, 트로이 목마 등, 및/또는 (6) 내용 및 자료의 오류 또는 누락 또는 서비스를 통해 게시, 전송 또는 기타 방식으로 제공된 콘텐츠 사용으로 인해 발생하는 모든 종류의 손실 또는 손해에 대해 어떠한 책임도 지지 않습니다.</p>
 
-            <h3>Limitation of Liability</h3>
-            <p>In no event will we or our directors, employees, or agents be liable to you or any third party for any direct, indirect, consequential, exemplary, incidental, special, or punitive damages, including lost profit, lost revenue, loss of data, or other damages arising from your use of the Service, even if we have been advised of the possibility of such damages.</p>
+            <h3>책임의 제한</h3>
+            <p>어떠한 경우에도 당사 또는 당사의 이사, 직원 또는 대리인은 귀하 또는 제3자에게 손실된 이익, 손실된 수익, 데이터 손실 또는 서비스 사용으로 인해 발생하는 기타 손해를 포함하여 직접, 간접, 결과적, 예시적, 우발적, 특별 또는 징벌적 손해에 대해 책임을 지지 않으며, 당사가 그러한 손해의 가능성을 통보받은 경우에도 마찬가지입니다.</p>
 
-            <h3>Applicable Law</h3>
-            <p>By visiting this website, you agree that the laws of the State of [Your State, e.g., California], United States, without regard to principles of conflict laws, will govern these terms of service, or any dispute of any sort that might come between InsightHub and you, or its business partners and associates.</p>
+            <h3>준거법</h3>
+            <p>본 웹사이트를 방문함으로써 귀하는 법률 상충 원칙에 관계없이 미국 [귀하의 주, 예: 캘리포니아] 주의 법률이 본 서비스 약관 또는 인사이트허브와 귀하, 또는 그 비즈니스 파트너 및 관련자들 사이에 발생할 수 있는 모든 종류의 분쟁을 규율한다는 데 동의합니다.</p>
 
-            <h3>Disputes</h3>
-            <p>Any dispute related in any way to your visit to this website or to products you purchase from us shall be arbitrated by state or federal court in [Your City, e.g., San Francisco], California, United States and you consent to exclusive jurisdiction and venue of such courts.</p>
+            <h3>분쟁</h3>
+            <p>본 웹사이트 방문 또는 당사로부터 구매한 제품과 어떤 방식으로든 관련된 모든 분쟁은 미국 캘리포니아 [귀하의 도시, 예: 샌프란시스코] 주 또는 연방 법원에서 중재되며, 귀하는 해당 법원의 독점적인 관할권 및 재판지에 동의합니다.</p>
 
-            <h3>Comments, Reviews, and Emails</h3>
-            <p>Visitors may post content as long as it is not obscene, illegal, defamatory, threatening, infringing of intellectual property rights, invasive of privacy or injurious in any other way to third parties. Content has to be free of software viruses, political campaign, and commercial solicitation.</p>
-            <p>We reserve all rights (but not the obligation) to remove and/or edit such content. When you post your content, you grant InsightHub non-exclusive, royalty-free and irrevocable right to use, reproduce, publish, modify such content throughout the world in any media.</p>
+            <h3>댓글, 리뷰 및 이메일</h3>
+            <p>방문자는 외설적이거나, 불법적이거나, 명예를 훼손하거나, 위협적이거나, 지적 재산권을 침해하거나, 사생활을 침해하거나, 제3자에게 어떤 다른 방식으로든 해로운 콘텐츠가 아닌 한 콘텐츠를 게시할 수 있습니다. 콘텐츠는 소프트웨어 바이러스, 정치 캠페인 및 상업적 권유가 없어야 합니다.</p>
+            <p>당사는 그러한 콘텐츠를 제거 및/또는 편집할 모든 권리(의무는 아님)를 보유합니다. 귀하가 콘텐츠를 게시할 때, 귀하는 인사이트허브에게 비독점적이고, 로열티 없는 취소 불가능한 권리를 부여하여 모든 미디어에서 전 세계적으로 그러한 콘텐츠를 사용, 복제, 게시, 수정할 수 있도록 합니다.</p>
 
-            <h3>License and Site Access</h3>
-            <p>We grant you a limited license to access and make personal use of this website. You are not allowed to download or modify it. This may be done only with written consent from us.</p>
+            <h3>라이선스 및 사이트 액세스</h3>
+            <p>당사는 귀하에게 본 웹사이트에 액세스하고 개인적으로 사용할 수 있는 제한된 라이선스를 부여합니다. 귀하는 이를 다운로드하거나 수정할 수 없습니다. 이는 당사의 서면 동의가 있는 경우에만 가능합니다.</p>
 
-            <p><strong>Effective Date:</strong> January 26, 2026</p>
+            <p><strong>발효일:</strong> 2026년 1월 26일</p>
         </section>
     </main>
 
@@ -87,5 +92,7 @@
         </nav>
         <p data-key="footer_copyright"></p>
     </footer>
+    <script type="module" src="js/i18n.js"></script>
+    <script type="module" src="js/theme.js"></script>
 </body>
 </html>
