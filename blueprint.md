@@ -17,9 +17,9 @@ The blog utilizes a modern, clean, and responsive web design with a focus on rea
 *   **Modern CSS:** Utilizes CSS variables for easy theming and maintains a consistent visual style.
 *   **Firebase Integration:** Configured for deployment via Firebase.
 
-## Current Plan for Requested Change: "About Us" to "About Blog" and New Top Companies Post
+## Current Plan for Requested Change: Blog Index Pagination
 
-The user wants to change the "회사 소개" (About Us) section to "블로그 소개" (About Blog) and create a new blog post analyzing the three most searched companies on today's stock market, including their issues, analysis, and opinions. The blog index and homepage "Latest Posts" section will be updated accordingly.
+The user wants to implement pagination for the blog index page (`blog/index.html`), allowing all blog posts to be viewed across multiple pages, with a limit of 5 posts per page. This will involve client-side JavaScript to dynamically render posts and pagination controls.
 
 ### Steps:
 
@@ -36,13 +36,17 @@ The user wants to change the "회사 소개" (About Us) section to "블로그 �
     *   Updated `nav_about` translation key in `js/i18n.js` to "블로그 소개".
     *   Modified `about.html` content to describe the blog.
 11. **Find Top 3 Most Searched Companies (Revised - Hypothetical & Completed):**
-    *   Due to limitations in accessing future or real-time stock market search trends, three hypothetical companies (넥스트칩스, 에코배터리솔루션즈, 그린에너지퓨처) were selected based on current and projected industry trends.
-    *   Hypothetical issues, analysis, and opinions were outlined for these companies.
+    *   Three hypothetical companies were selected, and their issues/analysis were outlined.
 12. **Create New Blog Post (Completed):**
-    *   A new HTML blog post `blog/2026-01-28-top-searched-companies.html` was drafted based on the hypothetical research.
+    *   A new HTML blog post `blog/2026-01-28-top-searched-companies.html` was drafted.
 13. **Update `blog/index.html` (Completed):**
     *   A link to the new blog post was added to `blog/index.html` at the top of the list.
 14. **Update `index.html` "Latest Posts" (Completed):**
-    *   The content of the `<div class="post-grid">` in `index.html` was adjusted to feature the three most recent blog posts, including the newly created one.
-15. **Commit Changes to Git (Pending):** Stage all modified and new files and commit.
-16. **Deploy Changes (Pending):** Push to Git and attempt Firebase deployment.
+    *   The content of the `<div class="post-grid">` in `index.html` was adjusted to feature the three most recent blog posts.
+15. **Implement Blog Index Pagination (Completed):**
+    *   **Gathered all blog post data:** Read all blog post HTML files (excluding `blog/index.html`) to extract titles, excerpts, and file paths. This data was hardcoded into `js/blog-pagination.js`.
+    *   **Created `js/blog-pagination.js`:** Developed a new JavaScript file to handle the pagination logic, including storing an array of all blog post objects, defining `postsPerPage = 5`, parsing the current page number from the URL, rendering the appropriate subset of posts, and dynamically generating "Previous" and "Next" pagination controls.
+    *   **Modified `blog/index.html`:** Removed all existing hardcoded `<article class="blog-post-card">` elements, added a `div` with `id="blog-pagination"` for pagination controls, and imported `js/blog-pagination.js`.
+    *   **Updated `style.css`:** Added necessary styles for pagination controls.
+16. **Commit Changes to Git (Pending):** Stage all modified and new files and commit.
+17. **Deploy Changes (Pending):** Push to Git and attempt Firebase deployment.

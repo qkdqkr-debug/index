@@ -660,3 +660,41 @@ header nav ul {
         font-size: 1.3em;
     }
 }
+
+/* Pagination Styles */
+#blog-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#blog-pagination button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+#blog-pagination button:hover:not(:disabled) {
+    background-color: #3A7BDC; /* Darker primary */
+    transform: translateY(-2px);
+}
+
+#blog-pagination button:disabled {
+    background-color: var(--light-text-color);
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+}
+
+#blog-pagination button.active {
+    background-color: var(--accent-color);
+    font-weight: bold;
+}
